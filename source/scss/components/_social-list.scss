@@ -1,0 +1,28 @@
+.social-list{   
+    display: flex;
+    align-items: center;
+    grid-gap: 15px;
+
+    &__link{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: solid 1px var(--br-a);
+        border-radius: 50%;
+        background-color: rgba(var(--cl-c),1.0);
+        transition: all .4s;
+
+        &:hover{
+            border-color: transparent;
+            background-color: rgba(var(--bg-g),1.0);
+        }
+    }
+
+  
+}
+
+
+
+  

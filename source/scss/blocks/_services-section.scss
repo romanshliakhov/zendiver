@@ -1,0 +1,13 @@
+.services-section{
+    padding: clamp(96px, 7.6923vw, 100px) 0 clamp(50px, 9.1538vw, 119px);
+
+    @include small-tablet{
+        overflow: hidden;
+    }
+    
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(23px, 8.0769vw, 105px);
+    }
+}

@@ -1,0 +1,33 @@
+.work-section{
+    padding-top: clamp(15px, 1.9231vw, 25px);
+
+    &__box{
+        display: grid;
+
+        @include for-laptop{
+            grid-gap: clamp(25px, 5.3077vw, 69px);
+        }
+
+        @include laptop{
+            grid-gap: 30px;
+        }
+
+        @include for-tablet{
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include tablet{
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(25px, 2.6923vw, 35px);
+
+        @include tablet{
+            order: -1;
+        }
+    }
+}

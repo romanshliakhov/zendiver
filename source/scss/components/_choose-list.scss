@@ -1,0 +1,36 @@
+.choose-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    grid-gap: clamp(20px, 3.0769vw, 40px) clamp(25px, 3.8462vw, 50px);
+    grid-template-columns: repeat(2, 1fr);
+
+    @include small-tablet{
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+    }
+
+    &__item{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 10px;
+    }
+
+    &__title{
+        margin-bottom: 5px;
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: clamp(18px, 1.6923vw, 22px);
+        line-height: 120%;
+        color: rgba(var(--cl-a),1.0);
+    }
+
+    p{
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: clamp(14px, 1.1538vw, 15px);
+        line-height: 130%;
+        color: rgba(var(--cl-d),1.0);
+    }
+
+   
+}

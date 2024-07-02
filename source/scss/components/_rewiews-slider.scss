@@ -1,0 +1,40 @@
+.rewiews-slider{
+    height: 100%;
+     width: 100%;
+
+    &__wrapper{
+        @include for-small-tablet{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 445px 50px;
+        }
+    }
+
+    &__slide{
+       @include for-small-tablet{
+            width: 100%;
+            position: relative;
+            display: grid;
+       }
+       @include small-tablet{
+       max-width: 331px;
+       }
+    }
+}
+
+.info-slider{
+    overflow: hidden;
+    .swiper-wrapper{
+        display: flex;
+        grid-gap: initial;
+    
+    }
+
+    .rewiew-card{
+
+        @include for-small-tablet{
+        max-width: 100%;
+        }
+    }
+}

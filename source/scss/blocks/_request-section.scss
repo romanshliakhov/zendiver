@@ -1,0 +1,9 @@
+.request-section{
+    padding-bottom: clamp(50px, 4.6154vw, 60px);
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 30px;
+    }
+}

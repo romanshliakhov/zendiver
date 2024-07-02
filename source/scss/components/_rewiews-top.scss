@@ -1,0 +1,64 @@
+.rewiews-top{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+     
+    &__value{
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 50px;
+        line-height: 130%;
+        text-transform: uppercase;
+        text-align: center;
+        color: rgba(var(--cl-f),1.0);
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(10px, 1.4615vw, 19px);
+        align-items: center;
+
+        @include small-tablet{
+            grid-gap: 0;
+        }
+    }
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    p{
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        color: rgba(var(--cl-b),1.0);
+
+        b{
+            font-weight: 700;
+        }
+    }
+
+    .title{
+        font-weight: 400;
+        text-transform: uppercase;
+
+        @include small-tablet{
+            display: none;
+        }
+    }
+
+    .main-buttom{
+        @include small-tablet{
+            margin-top: 15px;
+        }
+
+        @include mobile{
+            width: 100%;
+        }
+    }
+}

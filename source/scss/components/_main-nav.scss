@@ -1,0 +1,45 @@
+.main-nav{
+    display: flex;
+    align-items: center;
+    grid-gap: clamp(10px, 1.6154vw, 21px);
+
+    &__link{
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 600;
+        font-size: clamp(15px, 1.2308vw, 16px);
+        color: rgba(var(--cl-a),1.0);
+        transition: all .4s;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            content: "";
+            right: -1%;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            transition: .4s ease-in;
+             border-radius: 30px;
+            background-color: rgba(var(--bg-c), 1);
+        }
+        
+        &.active{
+            color: rgba(var(--cl-c),1.0);
+            &::before{
+                right: auto;
+                left: -1%;
+                width: 102%;
+            }
+        }
+
+        &:hover{
+            color: rgba(var(--cl-c),1.0);
+            &::before{
+                right: auto;
+                left: -1%;
+                width: 102%;
+            }
+        }
+    }
+}

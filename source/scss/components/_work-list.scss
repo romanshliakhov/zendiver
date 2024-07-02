@@ -1,0 +1,256 @@
+.work-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 18px;
+
+    &__row{
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-gap: 19px 11px;
+        justify-items:end;
+        width: fit-content;
+
+        @include mobile{
+            grid-template-columns: 85px 1fr 85px;
+        }
+
+        &--first{
+            align-items: end;
+           
+            .work-list__link{
+                &:nth-child(3), &:last-child{
+                    justify-self: start;
+                }
+
+                &:last-child{
+                    grid-column: 3/4;
+                    border-radius: 14px;
+
+                    @include for-tablet{
+                        width: Min(13.5385vw, 176px);
+                        height: Min(6.6154vw, 86px);
+                    }
+                    @include tablet{
+                        @include for-mobile{
+                        width: Min(17.1875vw, 176px);
+                        height: Min(8.3984vw, 86px);
+                    }
+                    }
+                    @include mobile{
+                        width: Min(27.0833vw, 156px);
+                        height: Min(14.9306vw, 86px);
+                    }
+                }
+                
+                &:first-child{
+                    border-radius: 13px;
+                    @include for-tablet{
+                        width: Min(12.0769vw, 157px);
+                        height: Min(5.9231vw, 77px);
+                    }
+                    @include tablet{
+                        @include for-mobile{
+                        width: Min(15.332vw, 157px);
+                        height: clamp(57px, 7.5195vw, 77px);
+                    }
+                    }
+                    @include mobile{
+                        width: Min(22.0486vw, 127px);
+                        height: Min(13.3681vw, 77px);
+                    }
+                }
+            }
+
+            @include for-tablet{
+                padding-left: Min(2.846vw, 37px);
+            }
+
+            @include tablet{
+                @include for-mobile{
+                    padding-left: Min(3.6133vw, 37px);
+                }
+            }
+
+            @include mobile{
+                padding-left: 0;
+            }
+        }
+
+        &--double{
+            .work-list__link{
+                &:nth-child(3), &:last-child{
+                    justify-self: start;
+                }
+            }
+
+            .work-list__link--big{
+                grid-row: 1/3;
+                grid-column: 2/3;
+            }
+        }
+
+        &--mode{
+            .work-list__link{
+                &:nth-child(3), &:last-child{
+                    justify-self: start;
+                }
+
+                &:last-child{
+                    grid-column: 3/4;
+                }
+                
+                &:first-child{
+                    border-radius: 11px;
+
+                    @include for-tablet{
+                        width: Min(10.3077vw, 134px);
+                        height: Min(5.0769vw, 66px);
+                    }
+                    @include tablet{
+                        @include for-mobile{
+                        width: Min(13.0859vw, 134px);
+                        height: Min(6.4453vw, 66px);
+                    }
+                    }
+                    @include mobile{
+                        width: Min(23.2639vw, 134px);
+                        height: Min(9.8958vw, 57px);
+                    }
+                }
+
+                &:nth-child(3){
+                    @include for-tablet{
+                        width: Min(9vw, 117px);
+                        height: Min(4.3846vw, 57px);
+                    }
+                    @include tablet{
+                        @include for-mobile{
+                        width: Min(11.4258vw, 117px);
+                        height: Min(5.5664vw, 57px);
+                    }
+                    }
+                    @include mobile{
+                        width: Min(20.3125vw, 117px);
+                        height: Min(9.8958vw, 57px);
+                    }
+                }
+            }
+
+            .work-list__link--mode{
+                grid-row: 1/3;
+                grid-column: 2/3;
+            }
+        }
+    }
+
+    &__link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(var(--bg-g),1.0);
+        border: 0.61px solid var(--br-a);
+        border-radius: 10px;
+        padding: 9px 11px;
+     
+
+        @include for-tablet{
+            width: Min(8.9231vw, 116px);
+            height: Min(4.3846vw, 57px);
+        }
+        @include tablet{
+            @include for-mobile{
+                width: Min(11.328vw, 116px);
+                height: Min(5.566vw, 57px);
+            }
+        }
+        @include mobile{
+            width: Min(20.1389vw, 116px);
+            height: Min(9.8958vw, 57px);
+        }
+
+        img{
+            object-fit: contain;
+            mix-blend-mode: darken;
+        }
+
+        &--middle{
+            border-radius: 12px;
+
+            @include for-tablet{
+                width: Min(11.4615vw, 149px);
+                height: Min(5.6154vw, 73px);
+            }
+            @include tablet{
+                @include for-mobile{
+                width: Min(14.5508vw, 149px);
+                height: Min(7.1289vw, 73px);
+            }
+            }
+            @include mobile{
+                width: Min(22.3958vw, 129px);
+                height: Min(12.6736vw, 73px);
+            }
+        }
+
+        &--small{
+            padding: 5px;
+            border-radius: 6px;
+
+            @include for-tablet{
+                width: Min(5.3846vw, 70px);
+                height: Min(2.6154vw, 34px);
+            }
+            @include tablet{
+                @include for-mobile{
+                width: Min(6.8359vw, 70px);
+                height: Min(3.3203vw, 34px);
+            }
+            }
+            @include mobile{
+                width: Min(12.1528vw, 70px);
+                height: Min(5.9028vw, 34px);
+            }
+        }
+
+        &--big{
+            padding: 24px 31px;
+            height: 100%;
+            border-radius: 25px;
+
+            @include for-tablet{
+                width: Min(23.5385vw, 306px);
+            }
+            @include tablet{
+                @include for-mobile{
+                width: Min(29.8828vw, 306px);
+            }
+            }
+            @include mobile{
+                width: Min(39.5833vw, 228px);
+                border-radius: clamp(18px, 4.3403vw, 25px);
+            }
+        }
+
+        &--mode{
+            padding: 18px 23px;
+            height: 100%;
+            border-radius: 19px;
+
+            @include for-tablet{
+                width: Min(17.6154vw, 229px);
+                min-height: Min(8.6154vw, 112px);
+            }
+            @include tablet{
+                @include for-mobile{
+                width: Min(22.3633vw, 229px);
+                min-height: Min(10.9375vw, 112px);
+            }
+            }
+            @include mobile{
+                width: Min(31.25vw, 180px);
+                min-height: Min(19.4444vw, 112px);
+            }
+        }
+    }
+}

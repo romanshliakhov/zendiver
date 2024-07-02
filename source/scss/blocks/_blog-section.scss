@@ -1,0 +1,19 @@
+.blog-section{
+    padding-bottom: clamp(50px, 6.1538vw, 80px);
+    overflow: hidden;
+    
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(24px, 4.6154vw, 60px);
+        align-items: center;
+
+        @include mobile{
+            align-items: flex-start;
+        }
+
+        .subscribe-form{
+            margin-top: clamp(26px, 4.6154vw, 60px);
+        }
+    }
+}

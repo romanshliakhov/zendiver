@@ -1,0 +1,22 @@
+.pin-list{
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px clamp(28px, 3.8462vw, 50px);
+
+    &__text{
+        display: flex;
+        align-items: center;
+        grid-gap: 10px;
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: clamp(15px, 1.3846vw, 18px);
+        line-height: 130%;
+        color: rgba(var(--cl-b),1.0);
+
+        svg{
+            width: clamp(25px, 2.4615vw, 32px);
+            height: clamp(25px, 2.4615vw, 32px);
+        }
+    }
+}

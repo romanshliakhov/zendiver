@@ -1,0 +1,61 @@
+.referral-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(12px, 1.0417vw, 20px);
+    user-select: none;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        grid-gap: clamp(12px, 1.0417vw, 20px);
+    }
+
+    &__label{
+        width: 100%;
+        border-radius: 8px;
+        border: 1px solid var(--br-k);
+        background: rgba(var(--bg-f),1.0);
+        padding: clamp(6.5px, .7813vw, 15px) clamp(12px, .7813vw, 15px);
+        position: relative;
+
+        .just-validate-error-label {
+            position: absolute;
+            left: clamp(14px, .8854vw, 17px);
+            bottom: 0;
+            font-size: clamp(9px, .8333vw, 16px);
+            font-family: var(--font-family);
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        input:-internal-autofill-selected{
+            -webkit-box-shadow: 0 0 0 30px rgba(var(--bg-f),1.0) inset !important;
+            -webkit-text-fill-color: rgba(var(--cl-j),1.0) !important;
+        }
+
+        
+    }
+
+    &__input{
+        width: 100%;
+        color: rgba(var(--cl-j),1.0);
+        font-family: var(--font-family);
+        font-size: clamp(11px, 1.3021vw, 25px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        caret-color: rgba(var(--cl-a),1.0) !important;
+
+        &::placeholder{
+            color: rgba(var(--cl-j),0.8);
+        }
+    }
+
+
+    [for="code"],
+    [for="code"] input {
+        user-select: none;
+        pointer-events: none;
+    }
+}

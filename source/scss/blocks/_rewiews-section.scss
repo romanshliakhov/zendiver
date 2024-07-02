@@ -1,0 +1,51 @@
+.rewiews-section{
+    padding-bottom: clamp(50px, 4.6154vw, 60px);
+    overflow: hidden;
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-gap: 21px;
+        position: relative;
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(26px, 2.7692vw, 36px);
+    }
+
+    .rewiews-top{
+        @include for-small-tablet{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -52%);
+            z-index: 3;
+        }
+    }
+
+    &__title{
+        align-self: flex-start;
+        text-transform: uppercase;
+
+        @include for-small-tablet{
+            display: none;
+        }
+    }
+
+    &--mode{
+        
+
+        .rewiews-section{
+            &__title{
+                display: flex;
+            }
+
+            &__box{
+                grid-gap: clamp(60px, 9.1538vw, 119px);
+            }
+        }
+    }
+}

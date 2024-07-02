@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="Ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="Description" content="ZenDriver">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ZenDriver</title>
+
+    <link rel="preload" href="fonts/Inter-SemiBold.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Inter-Regular.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Inter-Medium.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Inter-Bold.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Golos-Text-Medium.woff" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+
+<body>
+  <header>
+    <div class="container">
+        <div class="header" data-aos="zoom-in" data-aos-duration="1000">
+            <button class="burger" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="50">
+                <span class="burger__bg"></span>
+                <span class="burger__line"></span>
+            </button>
+
+            <ul class="main-nav">
+                <li class="main-nav__item">
+                    <a href="#" class="main-nav__link" data-aos="zoom-in" data-aos-duration="1000"
+                        data-aos-delay="50">Services</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#" class="main-nav__link" data-aos="zoom-in" data-aos-duration="1000"
+                        data-aos-delay="50">Commercial appliance</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#" class="main-nav__link" data-aos="zoom-in" data-aos-duration="1000"
+                        data-aos-delay="50">Appliance</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#" class="main-nav__link" data-aos="zoom-in" data-aos-duration="1000"
+                        data-aos-delay="50">Blog</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#" class="main-nav__link" data-aos="zoom-in" data-aos-duration="1000"
+                        data-aos-delay="50">Contacts</a>
+                </li>
+            </ul>
+
+            <a href="index.html" class="logo" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="50">
+                IFIX
+            </a>
+
+            <div class="header__box">
+                <a href="tel:(980)-987–70-83" class="tel-link" data-aos="zoom-in" data-aos-duration="1000"
+                    data-aos-delay="50">(980) 987 – 7083</a>
+                <button class="main-button main-button--mode" data-btn-modal="order" data-aos="zoom-in"
+                    data-aos-duration="1000" data-aos-delay="50">Book a Call</button>
+            </div>
+        </div>
+
+        <div class="header-menu">
+            <div class="header-menu__box">
+                <div class="header-menu__inner">
+                    <ul class="main-nav">
+                        <li class="main-nav__item">
+                            <a href="#" class="main-nav__link">Services</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#" class="main-nav__link">Commercial appliance</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#" class="main-nav__link">Appliance</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#" class="main-nav__link">Blog</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#" class="main-nav__link">Contacts</a>
+                        </li>
+                    </ul>
+                    <ul class="social-list">
+                        <li class="social-list__item">
+                            <a href="#" class="social-list__link">
+                                <svg width='18' height='18'>
+                                    <use href='img/sprite/sprite.svg#inst'></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-list__item">
+                            <a href="#" class="social-list__link">
+                                <svg width='18' height='18'>
+                                    <use href='img/sprite/sprite.svg#fb'></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-list__item">
+                            <a href="#" class="social-list__link">
+                                <svg width='18' height='18'>
+                                    <use href='img/sprite/sprite.svg#youtube'></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="header-menu__wrapp">
+                        <a href="tel:(980)-987–70-83" class="tel-link">(980) 987 – 7083</a>
+                        <button class="main-button">Book a Call</button>
+                    </div>
+                </div>
+
+                <form id="menuForm" class="main-form main-form--mode">
+                    <div class="main-form__box">
+                        <span class="title">заказать услугу</span>
+
+                        <ul class="main-form__list">
+                            <li class="main-form__row">
+                                <label for="name_1" class="main-form__label">
+                                    <input type="text" id="name_1" class="main-form__input" placeholder="First Name">
+                                </label>
+                                <label for="last_2" class="main-form__label">
+                                    <input type="text" id="last_2" class="main-form__input" placeholder="Last Name">
+                                </label>
+                            </li>
+                            <li class="main-form__row">
+                                <label for="phone_3" class="main-form__label">
+                                    <input type="tel" id="phone_3" class="main-form__input" placeholder="Your phone">
+                                </label>
+                                <label for="device_3" class="main-form__label">
+                                    <input type="text" id="device_3" class="main-form__input" placeholder="Device type">
+                                </label>
+                            </li>
+                            <li class="main-form__row main-form__row--mode">
+                                <textarea class="main-form__area" id="message_2" placeholder="Message"></textarea>
+                            </li>
+                        </ul>
+                        <button type="submit" class="main-button">Book a Call</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+  <main>
+    <section class="terms-section">
+      <div class="container">
+        <div class="terms-section__box">
+          <div class="main-top">
+            <div class="main-top__box">
+              <ul class="social-list">
+                <li class="social-list__item">
+                  <a href="#" class="social-list__link"  data-aos="zoom-in" data-aos-duration="1000">
+                    <svg width='18' height='18'>
+                      <use href='img/sprite/sprite.svg#inst'></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-list__item">
+                  <a href="#" class="social-list__link" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="150">
+                    <svg width='18' height='18'>
+                      <use href='img/sprite/sprite.svg#fb'></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-list__item">
+                  <a href="#" class="social-list__link" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
+                    <svg width='18' height='18'>
+                      <use href='img/sprite/sprite.svg#youtube'></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+  
+              <h1 class="title title--mode" data-aos="zoom-in-right" data-aos-duration="1000">Dryer Repair</h1>
+              
+              <p  data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="100">Don't let a dryer disrupt your laundry routine. Our experienced technicians specialize in diagnosing and repairing a wide range of dryer..</p>
+    
+            </div>
+           
+            <button class="main-button" data-btn-modal="advice" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500">Book service</button>
+          </div>
+
+          <div class="terms-section__image">
+            <picture data-aos="zoom-in-up" data-aos-duration="1000">
+              <source type='image/webp' srcset='img/terms/img1.webp'>
+              <img width='380' height='424' src='img/terms/img1.png' alt='image'>
+            </picture>
+  
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="choose-section choose-section--mode">
+      <div class="container">
+        <div class="choose-section__box">
+          <div class="choose-section__top">
+            <h3 class="title title--white" data-aos="zoom-out-right" data-aos-duration="1000">Условия обслуживания</h3>
+
+          </div>
+
+          <ul class="terms-info">
+            <li class="terms-info__item">
+              <span class="terms-info__title" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
+                75$</span>
+              <p data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">75$ Стоимость вызова техника</p>
+            </li>
+            <li class="terms-info__item">
+              <span class="terms-info__title" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+                0$</span>
+              <p data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">0 $ Стоимость вызова, если будет
+                исполнен ремонт</p>
+            </li>
+            <li class="terms-info__item">
+              <span class="terms-info__title" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">1</span>
+              <p data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500">В тот же день – техник выедет к вам
+              </p>
+            </li>
+
+            <li class="terms-info__item terms-info__item--mode">
+              <span class="terms-info__title" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">2</span>
+              <p data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">В течении 2-х суток доставим и
+                установим новые запчасти</p>
+            </li>
+            <li class="terms-info__item terms-info__item--mode">
+              <span class="terms-info__title" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">2</span>
+              <p data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">2 года – гарантия<br>
+                на работы</p>
+            </li>
+            <li class="terms-info__item terms-info__item--mode">
+              <span class="terms-info__title" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500">6</span>
+              <p data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600">До 6-ти лет – гарантия<br>
+                на оборудование</p>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
+    
+    <section class="offers-section offers-section--mode">
+      <div class="container">
+        <div class="offers-section__box">
+            <h4 class="title"  data-aos="zoom-out" data-aos-duration="1000">OUR WORK</h4>
+
+            <div class="works-slider swiper">
+              <div class="works-slider__container swiper-container">
+                <div class="works-slider__wrapper swiper-wrapper">
+                  <div class="works-slider__slide swiper-slide" data-aos="zoom-in" data-aos-duration="800">
+                    <a href="#" class="work-card">
+                        <div class="work-card__box">
+                          <div class="work-card__top">
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Refrigerator Repair</span>
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="200">Що саме було зроблено</span>
+                          </div>
+                          <div class="work-card__bottom">
+                            <span class="work-card__info" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Ціна: 230$</span>
+                            <span class="work-card__info" data-aos="zoom-in-left" data-aos-duration="800" data-aos-delay="100">Час: 2 години</span>
+                          </div>
+                        </div>
+                        <div class="work-card__img">
+                          <picture>
+                            <source type='image/webp' srcset='img/works/img1.webp'>
+                            <img width='171' height='231' src='img/works/img1.png' alt='image'>
+                          </picture>
+                        </div>
+                    </a>  
+                  </div>
+                  <div class="works-slider__slide swiper-slide" data-aos="zoom-in" data-aos-duration="800">
+                    <a href="#" class="work-card">
+                       <div class="work-card__box">
+                          <div class="work-card__top">
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Refrigerator Repair</span>
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="200">Що саме було зроблено</span>
+                          </div>
+                          <div class="work-card__bottom">
+                            <span class="work-card__info" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Ціна: 230$</span>
+                            <span class="work-card__info" data-aos="zoom-in-left" data-aos-duration="800" data-aos-delay="100">Час: 2 години</span>
+                          </div>
+                        </div>
+                    <div class="work-card__img">
+                      <picture>
+                        <source type='image/webp' srcset='img/works/img2.webp'>
+                        <img width='171' height='231' src='img/works/img2.png' alt='image'>
+                      </picture>
+                    </div>
+                  </a>
+                  </div>
+                  <div class="works-slider__slide swiper-slide" data-aos="zoom-in" data-aos-duration="800">
+                    <a href="#" class="work-card">
+                       <div class="work-card__box">
+                          <div class="work-card__top">
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Refrigerator Repair</span>
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="200">Що саме було зроблено</span>
+                          </div>
+                          <div class="work-card__bottom">
+                            <span class="work-card__info" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Ціна: 230$</span>
+                            <span class="work-card__info" data-aos="zoom-in-left" data-aos-duration="800" data-aos-delay="100">Час: 2 години</span>
+                          </div>
+                        </div>
+                      <div class="work-card__img">
+                        <picture>
+                          <source type='image/webp' srcset='img/works/img3.webp'>
+                          <img width='171' height='231' src='img/works/img3.png' alt='image'>
+                        </picture>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="works-slider__slide swiper-slide" data-aos="zoom-in" data-aos-duration="800">
+                    <a href="#" class="work-card">
+                       <div class="work-card__box">
+                          <div class="work-card__top">
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Refrigerator Repair</span>
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="200">Що саме було зроблено</span>
+                          </div>
+                          <div class="work-card__bottom">
+                            <span class="work-card__info" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Ціна: 230$</span>
+                            <span class="work-card__info" data-aos="zoom-in-left" data-aos-duration="800" data-aos-delay="100">Час: 2 години</span>
+                          </div>
+                        </div>
+                      <div class="work-card__img">
+                        <picture>
+                          <source type='image/webp' srcset='img/works/img4.webp'>
+                          <img width='171' height='231' src='img/works/img4.png' alt='image'>
+                        </picture>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="works-slider__slide swiper-slide" data-aos="zoom-in" data-aos-duration="800">
+                    <a href="#" class="work-card">
+                       <div class="work-card__box">
+                          <div class="work-card__top">
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Refrigerator Repair</span>
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="200">Що саме було зроблено</span>
+                          </div>
+                          <div class="work-card__bottom">
+                            <span class="work-card__info" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Ціна: 230$</span>
+                            <span class="work-card__info" data-aos="zoom-in-left" data-aos-duration="800" data-aos-delay="100">Час: 2 години</span>
+                          </div>
+                        </div>
+                      <div class="work-card__img">
+                        <picture>
+                          <source type='image/webp' srcset='img/works/img5.webp'>
+                          <img width='171' height='231' src='img/works/img5.png' alt='image'>
+                        </picture>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="works-slider__slide swiper-slide" data-aos="zoom-in" data-aos-duration="800">
+                    <a href="#" class="work-card">
+                       <div class="work-card__box">
+                          <div class="work-card__top">
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Refrigerator Repair</span>
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="200">Що саме було зроблено</span>
+                          </div>
+                          <div class="work-card__bottom">
+                            <span class="work-card__info" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Ціна: 230$</span>
+                            <span class="work-card__info" data-aos="zoom-in-left" data-aos-duration="800" data-aos-delay="100">Час: 2 години</span>
+                          </div>
+                        </div>
+                      <div class="work-card__img">
+                        <picture>
+                          <source type='image/webp' srcset='img/works/img6.webp'>
+                          <img width='171' height='231' src='img/works/img6.png' alt='image'>
+                        </picture>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="works-slider__slide swiper-slide" data-aos="zoom-in" data-aos-duration="800">
+                    <a href="#" class="work-card">
+                       <div class="work-card__box">
+                          <div class="work-card__top">
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Refrigerator Repair</span>
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="200">Що саме було зроблено</span>
+                          </div>
+                          <div class="work-card__bottom">
+                            <span class="work-card__info" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Ціна: 230$</span>
+                            <span class="work-card__info" data-aos="zoom-in-left" data-aos-duration="800" data-aos-delay="100">Час: 2 години</span>
+                          </div>
+                        </div>
+                      <div class="work-card__img">
+                        <picture>
+                          <source type='image/webp' srcset='img/works/img7.webp'>
+                          <img width='171' height='231' src='img/works/img7.png' alt='image'>
+                        </picture>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="works-slider__slide swiper-slide" data-aos="zoom-in" data-aos-duration="800">
+                    <a href="#" class="work-card">
+                       <div class="work-card__box">
+                          <div class="work-card__top">
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Refrigerator Repair</span>
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="200">Що саме було зроблено</span>
+                          </div>
+                          <div class="work-card__bottom">
+                            <span class="work-card__info" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Ціна: 230$</span>
+                            <span class="work-card__info" data-aos="zoom-in-left" data-aos-duration="800" data-aos-delay="100">Час: 2 години</span>
+                          </div>
+                        </div>
+                      <div class="work-card__img">
+                        <picture>
+                          <source type='image/webp' srcset='img/works/img8.webp'>
+                          <img width='171' height='231' src='img/works/img8.png' alt='image'>
+                        </picture>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="works-slider__slide swiper-slide" data-aos="zoom-in" data-aos-duration="800">
+                    <a href="#" class="work-card">
+                       <div class="work-card__box">
+                          <div class="work-card__top">
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Refrigerator Repair</span>
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="200">Що саме було зроблено</span>
+                          </div>
+                          <div class="work-card__bottom">
+                            <span class="work-card__info" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Ціна: 230$</span>
+                            <span class="work-card__info" data-aos="zoom-in-left" data-aos-duration="800" data-aos-delay="100">Час: 2 години</span>
+                          </div>
+                        </div>
+                      <div class="work-card__img">
+                        <picture>
+                          <source type='image/webp' srcset='img/works/img9.webp'>
+                          <img width='171' height='231' src='img/works/img9.png' alt='image'>
+                        </picture>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="works-slider__slide swiper-slide" data-aos="zoom-in" data-aos-duration="800">
+                    <a href="#" class="work-card">
+                       <div class="work-card__box">
+                          <div class="work-card__top">
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Refrigerator Repair</span>
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="200">Що саме було зроблено</span>
+                          </div>
+                          <div class="work-card__bottom">
+                            <span class="work-card__info" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Ціна: 230$</span>
+                            <span class="work-card__info" data-aos="zoom-in-left" data-aos-duration="800" data-aos-delay="100">Час: 2 години</span>
+                          </div>
+                        </div>
+                      <div class="work-card__img">
+                        <picture>
+                          <source type='image/webp' srcset='img/works/img10.webp'>
+                          <img width='171' height='231' src='img/works/img10.png' alt='image'>
+                        </picture>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="works-slider__slide swiper-slide" data-aos="zoom-in" data-aos-duration="800">
+                    <a href="#" class="work-card">
+                       <div class="work-card__box">
+                          <div class="work-card__top">
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Refrigerator Repair</span>
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="200">Що саме було зроблено</span>
+                          </div>
+                          <div class="work-card__bottom">
+                            <span class="work-card__info" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Ціна: 230$</span>
+                            <span class="work-card__info" data-aos="zoom-in-left" data-aos-duration="800" data-aos-delay="100">Час: 2 години</span>
+                          </div>
+                        </div>
+                      <div class="work-card__img">
+                        <picture>
+                          <source type='image/webp' srcset='img/works/img3.webp'>
+                          <img width='171' height='231' src='img/works/img3.png' alt='image'>
+                        </picture>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="works-slider__slide swiper-slide" data-aos="zoom-in" data-aos-duration="800">
+                    <a href="#" class="work-card">
+                       <div class="work-card__box">
+                          <div class="work-card__top">
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Refrigerator Repair</span>
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="200">Що саме було зроблено</span>
+                          </div>
+                          <div class="work-card__bottom">
+                            <span class="work-card__info" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Ціна: 230$</span>
+                            <span class="work-card__info" data-aos="zoom-in-left" data-aos-duration="800" data-aos-delay="100">Час: 2 години</span>
+                          </div>
+                        </div>
+                      <div class="work-card__img">
+                        <picture>
+                          <source type='image/webp' srcset='img/works/img4.webp'>
+                          <img width='171' height='231' src='img/works/img4.png' alt='image'>
+                        </picture>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="works-slider__slide swiper-slide" data-aos="zoom-in" data-aos-duration="800">
+                    <a href="#" class="work-card">
+                       <div class="work-card__box">
+                          <div class="work-card__top">
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Refrigerator Repair</span>
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="200">Що саме було зроблено</span>
+                          </div>
+                          <div class="work-card__bottom">
+                            <span class="work-card__info" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Ціна: 230$</span>
+                            <span class="work-card__info" data-aos="zoom-in-left" data-aos-duration="800" data-aos-delay="100">Час: 2 години</span>
+                          </div>
+                        </div>
+                      <div class="work-card__img">
+                        <picture>
+                          <source type='image/webp' srcset='img/works/img5.webp'>
+                          <img width='171' height='231' src='img/works/img5.png' alt='image'>
+                        </picture>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="works-slider__slide swiper-slide" data-aos="zoom-in" data-aos-duration="800">
+                    <a href="#" class="work-card">
+                       <div class="work-card__box">
+                          <div class="work-card__top">
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Refrigerator Repair</span>
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="200">Що саме було зроблено</span>
+                          </div>
+                          <div class="work-card__bottom">
+                            <span class="work-card__info" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Ціна: 230$</span>
+                            <span class="work-card__info" data-aos="zoom-in-left" data-aos-duration="800" data-aos-delay="100">Час: 2 години</span>
+                          </div>
+                        </div>
+                      <div class="work-card__img">
+                        <picture>
+                          <source type='image/webp' srcset='img/works/img6.webp'>
+                          <img width='171' height='231' src='img/works/img6.png' alt='image'>
+                        </picture>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="works-slider__slide swiper-slide" data-aos="zoom-in" data-aos-duration="800">
+                    <a href="#" class="work-card">
+                       <div class="work-card__box">
+                          <div class="work-card__top">
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Refrigerator Repair</span>
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="200">Що саме було зроблено</span>
+                          </div>
+                          <div class="work-card__bottom">
+                            <span class="work-card__info" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Ціна: 230$</span>
+                            <span class="work-card__info" data-aos="zoom-in-left" data-aos-duration="800" data-aos-delay="100">Час: 2 години</span>
+                          </div>
+                        </div>
+                      <div class="work-card__img">
+                        <picture>
+                          <source type='image/webp' srcset='img/works/img7.webp'>
+                          <img width='171' height='231' src='img/works/img7.png' alt='image'>
+                        </picture>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="works-slider__slide swiper-slide" data-aos="zoom-in" data-aos-duration="800">
+                    <a href="#" class="work-card">
+                       <div class="work-card__box">
+                          <div class="work-card__top">
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Refrigerator Repair</span>
+                            <span class="work-card__label" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="200">Що саме було зроблено</span>
+                          </div>
+                          <div class="work-card__bottom">
+                            <span class="work-card__info" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">Ціна: 230$</span>
+                            <span class="work-card__info" data-aos="zoom-in-left" data-aos-duration="800" data-aos-delay="100">Час: 2 години</span>
+                          </div>
+                        </div>
+                      <div class="work-card__img">
+                        <picture>
+                          <source type='image/webp' srcset='img/works/img8.webp'>
+                          <img width='171' height='231' src='img/works/img8.png' alt='image'>
+                        </picture>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="main-form" data-aos="zoom-in-up" data-aos-duration="1000">
+              <div class="main-form__image"  data-aos="zoom-in-up" data-aos-duration="1200" data-aos-delay="100">
+                <svg width='460' height='367'>
+                  <use href='img/sprite/sprite.svg#service'></use>
+                </svg>
+              </div>
+
+              <div class="main-form__box">
+                <span class="title"  data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="100">Get professional advice right now!</span>
+
+                <form id="form_2" class="main-form__inner">
+                  <label class="main-form__label" for="name_3"  data-aos="zoom-in-up" data-aos-duration="1100" data-aos-delay="150">
+                    <input class="main-form__input" type="text" id="name_3" placeholder="Your Name">
+                  </label>
+                  <label  class="main-form__label" for="phone_5"  data-aos="zoom-in-up" data-aos-duration="1100" data-aos-delay="150">
+                    <input  class="main-form__input" type="tel" id="phone_5" placeholder="Your phone">
+                  </label>
+                  <button type="submit" class="main-button" data-aos="zoom-in-up" data-aos-duration="1100" data-aos-delay="200">Book a Call</button>
+                </form>
+              </div>
+            </div>
+         
+        </div>
+      </div>
+    </section>
+
+    <section class="rewiews-section">
+      <div class="container">
+        <div class="rewiews-section__box">
+          <h5 class="rewiews-section__title title">Reviews</h5>
+          <div class='rewiews-slider'>
+            <div class='rewiews-slider__container swiper-container'>
+              <ul class='rewiews-slider__wrapper swiper-wrapper'>
+                <li class='rewiews-slider__slide swiper-slide'>
+                  <div class="rewiew-card">
+                    <div class="rewiew-card__content" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="50">
+                      <div class="rewiew-card__top">
+                        <div class="rewiew-card__user" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
+                          <img width="58" height="58" src="./img/index/user.png" alt="image">
+                        </div>
+                        <span class="rewiew-card__name" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">Michael Condon</span>
+                        <span class="rewiew-card__date" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">2024-01-27</span>
+
+                        <span class="rewiew-card__icon" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="150">
+                          <img width="22" height="22" src="./img/index/google.png" alt="image">
+                        </span>
+                      </div>
+                      <div class="rewiew-card__box">
+                        <span class="rewiew-card__stars" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="150">
+                          <img width='89' height='18' src="./img/index/stars.png" alt="image">
+                        </span>
+                        <p data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">Igor walked in and knew what the issue was before he even got to the dishwasher. A few minutes and back I business!...</p>
+                        <a href="#" class="rewiew-card__link" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="250">Read more</a>
+                      </div>
+                    </div>
+                    <div class="rewiew-card__image">
+                      <picture data-aos="zoom-in" data-aos-duration="1300" data-aos-delay="350">
+                        <source type='image/webp' srcset='img/rewiews/img2.webp'>
+                        <img width='668' height='528' src='img/rewiews/img2.png' alt='image'>
+                      </picture>
+                    </div>
+                  </div>
+                </li>
+                <li class='rewiews-slider__slide swiper-slide'>
+                  <div class="rewiew-card rewiew-card--second" >
+                    <div class="rewiew-card__content" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="50">
+                      <div class="rewiew-card__top">
+                        <div class="rewiew-card__user" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
+                          <img width="58" height="58" src="./img/index/user.png" alt="image">
+                        </div>
+                        <span class="rewiew-card__name" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">Michael Condon</span>
+                        <span class="rewiew-card__date" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">2024-01-27</span>
+
+                        <span class="rewiew-card__icon" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="150">
+                          <img width="22" height="22" src="./img/index/google.png" alt="image">
+                        </span>
+                      </div>
+                      <div class="rewiew-card__box">
+                        <span class="rewiew-card__stars" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="150">
+                          <img width='89' height='18' src="./img/index/stars.png" alt="image">
+                        </span>
+                        <p data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">Igor walked in and knew what the issue was before he even got to the dishwasher. A few minutes and back I business!...</p>
+                        <a href="#" class="rewiew-card__link" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="250">Read more</a>
+                      </div>
+                    </div>
+                    <div class="rewiew-card__image">
+                      <picture data-aos="zoom-in" data-aos-duration="1300" data-aos-delay="300">
+                        <source type='image/webp' srcset='img/rewiews/img3.webp'>
+                        <img width='255' height='206' src='img/rewiews/img3.png' alt='image'>
+                      </picture>
+                    </div>
+                  </div>
+                </li>
+                <li class='rewiews-slider__slide swiper-slide'>
+                  <div class="rewiew-card rewiew-card--third">
+                    <div class="rewiew-card__content" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="50">
+                      <div class="rewiew-card__top">
+                        <div class="rewiew-card__user" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
+                          <img width="58" height="58" src="./img/index/user.png" alt="image">
+                        </div>
+                        <span class="rewiew-card__name" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">Michael Condon</span>
+                        <span class="rewiew-card__date" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">2024-01-27</span>
+
+                        <span class="rewiew-card__icon" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="150">
+                          <img width="22" height="22" src="./img/index/google.png" alt="image">
+                        </span>
+                      </div>
+                      <div class="rewiew-card__box">
+                        <span class="rewiew-card__stars" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="150">
+                          <img width='89' height='18' src="./img/index/stars.png" alt="image">
+                        </span>
+                        <p data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">Igor walked in and knew what the issue was before he even got to the dishwasher. A few minutes and back I business!...</p>
+                        <a href="#" class="rewiew-card__link" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="250">Read more</a>
+                      </div>
+                    </div>
+                    <div class="rewiew-card__image">
+                      <picture data-aos="zoom-in" data-aos-duration="1300" data-aos-delay="300">
+                        <source type='image/webp' srcset='img/rewiews/img1.webp'>
+                        <img width='521' height='312' src='img/rewiews/img1.png' alt='image'>
+                      </picture>
+                    </div>
+                  </div>
+                </li>
+                <li class='rewiews-slider__slide swiper-slide'>
+                  <div class="rewiew-card rewiew-card--fourth">
+                    <div class="rewiew-card__content" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="50">
+                      <div class="rewiew-card__top">
+                        <div class="rewiew-card__user" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
+                          <img width="58" height="58" src="./img/index/user.png" alt="image">
+                        </div>
+                        <span class="rewiew-card__name" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">Michael Condon</span>
+                        <span class="rewiew-card__date" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">2024-01-27</span>
+
+                        <span class="rewiew-card__icon">
+                          <img width="22" height="22" src="./img/index/google.png" alt="image">
+                        </span>
+                      </div>
+                      <div class="rewiew-card__box">
+                        <span class="rewiew-card__stars" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="150">
+                          <img width='89' height='18' src="./img/index/stars.png" alt="image">
+                        </span>
+                        <p data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">Igor walked in and knew what the issue was before he even got to the dishwasher. A few minutes and back I business!...</p>
+                        <a href="#" class="rewiew-card__link" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="250">Read more</a>
+                      </div>
+                    </div>
+                    <div class="rewiew-card__image">
+                      <picture data-aos="zoom-in" data-aos-duration="1300" data-aos-delay="300">
+                        <source type='image/webp' srcset='img/rewiews/img4.webp'>
+                        <img width='650' height='453' src='img/rewiews/img4.png' alt='image'>
+                      </picture>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="rewiews-top">
+            <div class="rewiews-top__inner">
+              <h5 class="title" data-aos="zoom-in-up" data-aos-duration="1000">rewiews</h5>
+              <span class="rewiews-top__icon" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="50">
+                <svg width='119' height='37'>
+                  <use href='img/sprite/sprite.svg#google'></use>
+                </svg>
+              </span>
+            </div>
+            <div class="rewiews-top__box">
+              <span class="rewiews-top__value" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="100">4,9</span>
+              <p data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="150">на основании <b>115 оценок</b></p>
+              <button class="main-button" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200">All Reviiews</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="request-section">
+      <div class="container">
+        <div class="request-section__box">
+          <div class="request">
+            <h5 class="subtitle">Dishwasher repair 
+              service & maintenance</h5>
+              <a href="#" class="request__btn main-button">Request a call</a>
+              <span class="request__number">(980) 987 – 7083</span>
+          </div>
+        </div>
+      </div>
+    </section>
+     
+    <a href="#" class="fixed-btn main-button">Schedule service</a>
+  </main>
+
+  <footer>
+  <div class="container">
+    <div class="footer">
+      <div class="footer__box">
+
+        <div class="footer__col">
+          <a href="index.html" class="logo" data-aos="zoom-in-up" data-aos-duration="1000">
+            IFIX
+          </a> 
+          <span class="footer__text" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="50">Appliance repair & service
+            in Charlotte NC</span>
+          <div class="footer__image">
+            <svg width='181' height='210' data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="150">
+              <use href='img/sprite/sprite.svg#man2'></use>
+            </svg>
+          </div>
+
+        </div>
+
+        <div class="footer__col">
+          <span class="subtitle subtitle--mode" data-aos="zoom-in-up" data-aos-duration="1000">Pages</span>
+
+          <ul class="main-nav">
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="50">Services</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="100">Commercial</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="150">Appliance</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200">Blog</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="250">Contacts</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__col footer__col--mode">
+          <div class="footer__wrapp">
+            <span class="subtitle subtitle--mode" data-aos="zoom-in-up" data-aos-duration="1000">Contacts</span>
+            <div class="footer__social">
+              <a href="tel:+1(980)–500-0942" class="tel-link" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="50">+1 980-500-0942</a>
+              <ul class="social-list">
+                <li class="social-list__item">
+                  <a href="#" class="social-list__link" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="100">
+                    <svg width='18' height='18'>
+                      <use href='img/sprite/sprite.svg#inst'></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-list__item">
+                  <a href="#" class="social-list__link" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200">
+                    <svg width='18' height='18'>
+                      <use href='img/sprite/sprite.svg#fb'></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-list__item">
+                  <a href="#" class="social-list__link" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300">
+                    <svg width='18' height='18'>
+                      <use href='img/sprite/sprite.svg#youtube'></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer__map" data-aos="zoom-in-up" data-aos-duration="1200" data-aos-delay="200">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12994.994959954707!2d-80.89796683003185!3d35.485760000000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8856abf7afccbd07%3A0x4e222a0d3a840ec6!2sIfix%20Appliances%20Cornelius%2C%20NC!5e0!3m2!1sru!2sua!4v1710434998485!5m2!1sru!2sua" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        </div>
+      </div>
+      
+     <div class="footer__bottom">
+      <div class="footer__links">
+        <a href="#" class="footer__link">Privacy policy</a>
+        <a href="#" class="footer__link">Cookies policy</a>
+      </div>
+      <div class="footer__links footer__links--mode">
+        <span class="footer__info">Developed and promoted <a href="https://yappi.agency/" class="footer__link footer__link--mode">Yappi agency</a></span>
+        <span class="footer__info">Marketing support <a href="https://haivoronskyi.com/" class="footer__link footer__link--mode">Haivoronskyi</a></span>
+      </div>
+     </div>
+    </div>
+  </div>
+</footer>
+  <div class="overlay" data-overlay>
+
+    <div class="modal" data-popup="order">
+        <div class="modal__box" role="dialog" aria-modal="true">
+            <form id="orderForm" class="main-form main-form--mode">
+                <div class="main-form__box">
+                <span class="title">заказать услугу</span>
+      
+                <ul class="main-form__list">
+                  <li class="main-form__row">
+                    <label for="first" class="main-form__label">
+                      <input type="text" id="first" class="main-form__input" placeholder="First Name">
+                    </label>
+                    <label for="last" class="main-form__label">
+                      <input type="text" id="last" class="main-form__input" placeholder="Last Name">
+                    </label>
+                  </li>
+                  <li class="main-form__row">
+                    <label for="phone" class="main-form__label">
+                      <input type="tel" id="phone" class="main-form__input" placeholder="Your phone">
+                    </label>
+                    <label for="device" class="main-form__label">
+                      <input type="text" id="device" class="main-form__input" placeholder="Device type">
+                    </label>
+                  </li>
+                  <li class="main-form__row main-form__row--mode">
+                    <textarea class="main-form__area" id="message" placeholder="Message"></textarea>
+                  </li>
+                </ul>
+                <button type="submit" class="main-button">Book a Call</button>
+              </div>
+              </form>
+        </div>
+    </div>
+
+    <div class="modal advice" data-popup="advice">
+        <div class="modal__box" role="dialog" aria-modal="true">
+            <form class="main-form main-form--mode">
+                <div class="main-form__box">
+                <span class="title">Get professional advice right now!</span>
+      
+                  <div class="main-form__row">
+                    <label for="first_name" class="main-form__label">
+                      <input type="text" id="first_name" class="main-form__input" placeholder="Your Name">
+                    </label>
+                    <label for="type" class="main-form__label">
+                        <input type="text" id="type" class="main-form__input" placeholder="Device type">
+                      </label>
+                  </div>
+         
+                <button type="submit" class="main-button">Book a Call</button>
+              </div>
+              </form>
+        </div>
+    </div>
+
+ 
+</div>
+
+<div class="cookies-inner">
+  <div class="cookies">
+    <span class="cookies__icon">
+      <svg width='51' height='51'>
+        <use href='img/sprite/sprite.svg#cookies'></use>
+      </svg>
+    </span>
+    <p>Как и многие другие приложения, мы собираем персональные данные пользователей, чтобы обеспечить оптимальный опыт обучения. Чтобы узнать больше о том, как мы обрабатываем эти данные, ознакомьтесь с нашей политикой конфиденциальности. Узнать больше</p>
+    <button class="main-button">Хорошо, понятно</button>
+  </div>
+</div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

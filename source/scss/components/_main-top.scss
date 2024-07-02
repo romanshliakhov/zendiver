@@ -1,0 +1,12 @@
+.main-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  grid-gap: clamp(23px, 4.6154vw, 60px);
+
+  &__box{
+    grid-gap: clamp(14px, 2.3077vw, 30px);
+    display: flex;
+    flex-direction: column;
+  }
+}
