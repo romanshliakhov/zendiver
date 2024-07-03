@@ -5206,7 +5206,7 @@ footer {
   width: calc(100% - var(--container-offset) * 2);
   border: 1px solid rgba(var(--bg-c), 1);
   border-radius: 9px;
-  background: rgba(var(--bg-e), 1);
+  background: rgba(var(--bg-d), 1);
   overflow-y: auto;
   padding: 30px 28px 34px 36px;
 }
@@ -5518,6 +5518,85 @@ footer {
   -ms-flex-pack: center;
   justify-content: center;
   margin-left: auto;
+}
+
+.new-section {
+  padding: 100px 0;
+}
+.new-section__wrapp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 32px;
+}
+.new-section__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 10px;
+}
+.new-section__more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 500;
+}
+.new-section__articles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.new-section__article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 32px;
+  border-right: 1px solid rgba(var(--bg-b), 0.2);
+}
+.new-section__article:first-child {
+  padding-left: 0;
+}
+.new-section__article:last-child {
+  padding-right: 0;
+  border-right: none;
+}
+.new-section__article-title {
+  font-family: var(--font-primary);
+  font-size: 24px;
+  line-height: 133%;
+  font-weight: 700;
+}
+.new-section__article-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  line-height: 150%;
+  color: rgba(var(--cl-d), 1);
 }
 
 .info-section {
