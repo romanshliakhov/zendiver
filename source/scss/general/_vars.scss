@@ -4,10 +4,10 @@
 }
 :root {
 // --------------- default global variable ---------------
-  --body-bg: #fff;
+  --body-bg: #f9f1e7;
   --body-font-size: 16px;
-  --content-width: 1300px;
-  --container-offset: 20px;
+  --content-width: 1320px;
+  --container-offset: 16px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   @include small-tablet{
@@ -15,52 +15,45 @@
   }
 
 // --------------- default js variable ---------------
-  --header-height: 121px;
+  --header-height: 72px;
 
-  @include tablet{
-    --header-height: 96px;
-  }
+  // @include tablet{
+  //   --header-height: 96px;
+  // }
 
-  @include small-tablet{
-    --header-height: 84px;
-  }
+  // @include small-tablet{
+  //   --header-height: 84px;
+  // }
 
-  @include mobile{
-    --header-height: 81px;
-  }
+  // @include mobile{
+  //   --header-height: 81px;
+  // }
 
 // --------------- default scroll variable ---------------
-  --scrollbar-thumb: #FFCD07;
-  --scrollbar-track:  #e4e4e4;
-  --scrollbar-track-hover: #ffffff;
+  // --scrollbar-thumb: #FFCD07;
+  // --scrollbar-track:  #e4e4e4;
+  // --scrollbar-track-hover: #ffffff;
   --overlay-bg: rgba(39, 39, 39, 0.3);
 
 // --------------- default font-family variable ---------------
-  --font-family: "Inter" , sans-serif; // var(--font-family);
-  --font-family2: "Golos" , sans-serif; // var(--font-family2);
+  --font-primary: "Dosis" , sans-serif; // var(--font-primary);
+  --font-second: "Geologica" , sans-serif; // var(--font-second);
 
 // --------------- default text color variable ---------------
   --cl-a: #{HexToRGB(#ffffff)}; // rgba(var(--cl-a),1.0);
   --cl-b: #{HexToRGB(#000000)}; // rgba(var(--cl-b),1.0);
-  --cl-c: #{HexToRGB(#FFCD07)}; // rgba(var(--cl-c),1.0);
-  --cl-d: #{HexToRGB(#a7a7a7)}; // rgba(var(--cl-d),1.0);
-  --cl-e: #{HexToRGB(#757575)}; // rgba(var(--cl-e),1.0);
-  --cl-f: #{HexToRGB(#181818)}; // rgba(var(--cl-f),1.0);
-  --cl-g: #{HexToRGB(#929292)}; // rgba(var(--cl-g),1.0);
+  
+  --cl-c: #{HexToRGB(#2f2f2f)}; // rgba(var(--cl-c),1.0);
+  --cl-d: #{HexToRGB(#0d7768)}; // rgba(var(--cl-d),1.0);
+
 // --------------- default background color variable ---------------
   --bg-a: #{HexToRGB(#ffffff)}; // rgba(var(--bg-a),1.0);
   --bg-b: #{HexToRGB(#000000)}; // rgba(var(--bg-b),1.0);
-  --bg-c: #{HexToRGB(#ffcd07)}; // rgba(var(--bg-c),1.0);
-  --bg-d: #{HexToRGB(#ef5040)}; // rgba(var(--bg-d),1.0);
-  --bg-e: #{HexToRGB(#272727)}; // rgba(var(--bg-e),1.0);
-  --bg-f: #{HexToRGB(#12d03c)}; // rgba(var(--bg-f),1.0);
-  --bg-g: #{HexToRGB(#F5F5F5)}; // rgba(var(--bg-g),1.0);
-  --bg-h: #{HexToRGB(#202020)}; // rgba(var(--bg-h),1.0);
-  --bg-i: #{HexToRGB(#48c733)}; // rgba(var(--bg-i),1.0);
-  --bg-j: #{HexToRGB(#c1da6a)}; // rgba(var(--bg-j),1.0);
-  --bg-k: #{HexToRGB(#e24625)}; // rgba(var(--bg-k),1.0);
-  --bg-l: #{HexToRGB(#fdb533)}; // rgba(var(--bg-l),1.0);
-  --bg-m: #{HexToRGB(#3382c7)}; // rgba(var(--bg-m),1.0);
+
+  --bg-c: #{HexToRGB(#2f2f2f)}; // rgba(var(--bg-c),1.0);
+  --bg-d: #{HexToRGB(#0d7768)}; // rgba(var(--bg-d),1.0);
+  
+
 
 // --------------- default border color variable ---------------
   --br-a: #000000; // var(--br-a);

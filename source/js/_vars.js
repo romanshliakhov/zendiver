@@ -23,11 +23,16 @@ export default {
   socialParent: document.querySelector('.footer__wrapp'),
   asideMenu: document.querySelector('.aside-menu'),
   socialParentMob: document.querySelector('.footer__box').firstElementChild,
+
   modals: [...document.querySelectorAll('[data-popup]')],
   modalsButton: [...document.querySelectorAll("[data-btn-modal]")],
 
   activeMode: 'active-mode',
   innerButtonModal: [...document.querySelectorAll('[data-btn-inner]')],
+
+
+
+  usefullSlider: document.querySelector('.usefull-section__slider'),
 }
 
 

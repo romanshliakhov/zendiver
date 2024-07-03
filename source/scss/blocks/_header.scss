@@ -1,72 +1,71 @@
-header{
-  padding: clamp(10px, 1.5385vw, 20px) 0;
+header {
+  padding-top: 16px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 80;
-
-  &.sticky{
-    .header{
-    box-shadow: 0px 4px 6px 2px rgba(0,0,0,.43);
-    }
-}
 }
 
-.header{
-  padding: clamp(12px, 1.1538vw, 15px) clamp(14px, 1.5385vw, 20px);
-  border-radius: 10px;
-  background-color: rgba(var(--bg-e),1.0);
+.header {
   position: relative;
   z-index: 30;
-  display: grid;
-  grid-template-columns: repeat(2, auto)  1fr;
-  align-items: center;
-  grid-gap: clamp(14px, 1.5385vw, 20px);
-  transition: box-shadow .4s;
-
-  .logo{
-   @include for-tablet{
-    position: absolute;
-    top: 20%;
-    left: 47.5%;
   
-   }
-    @include tablet{
-      margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, auto) 1fr;
+  align-items: center;
+  grid-gap: 16px;
+
+  padding: 12px;
+  background-color: rgba(var(--bg-a),1.0);
+  border-radius: 72px;
+  box-shadow: 0 32px 64px 0 rgba(50, 50, 71, 0.04), 0 16px 32px 0 rgba(50, 50, 71, 0.04);
+
+  // @include tablet {
+  //   grid-template-columns: auto 1fr auto;
+
+  //   .main-nav {
+  //     display: none;
+  //   }
+
+  //   .burger {
+  //     order: 3;
+  //   }
+  // }
+
+  // @include mobile {
+  //   width: calc(100% + 20px);
+  //   margin-left: -10px;
+  // }
+
+  // &__burger {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   width: 48px;
+  //   height: 48px;
+  //   background: linear-gradient(180deg, #eaeaea 0%, #cbcbcb 100%);
+  //   border-radius: 100px;
+  // }
+
+  &__logo {
+    display: flex;
+
+    @include for-tablet {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 
-  &__box{
-   display: flex;
-   align-items: center;
-   grid-gap: clamp(12px, 1.5385vw, 20px);
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 
-    @include for-tablet{
+    @include for-tablet {
       justify-self: end;
     }
-
-   @include tablet{
-    justify-self: end;
-   }
-  }
-
-  @include tablet{
-    grid-template-columns: auto 1fr auto;
-    .main-nav{
-      display: none;
-    }
-
-    .burger{
-      order: 3;
-    }
-  }
-
-  @include mobile{
-    width: calc(100% + 20px);
-    margin-left: -10px;
   }
 }
-
-
-

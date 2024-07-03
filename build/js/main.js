@@ -79,7 +79,8 @@ __webpack_require__.r(__webpack_exports__);
   modals: [...document.querySelectorAll('[data-popup]')],
   modalsButton: [...document.querySelectorAll("[data-btn-modal]")],
   activeMode: 'active-mode',
-  innerButtonModal: [...document.querySelectorAll('[data-btn-inner]')]
+  innerButtonModal: [...document.querySelectorAll('[data-btn-inner]')],
+  usefullSlider: document.querySelector('.usefull-section__slider')
 });
 
 /***/ }),
@@ -623,134 +624,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const {
-  blogSlider,
-  rewiewsSlider,
-  brandsSlider,
-  worksSlider
+  usefullSlider
 } = _vars__WEBPACK_IMPORTED_MODULE_1__["default"];
-let containerWidth = document.documentElement.clientWidth;
-if (blogSlider) {
-  const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](blogSlider.querySelector('.blog-slider__container'), {
-    slidesPerView: 3,
-    spaceBetween: 21,
-    observer: true,
-    observeParents: true,
-    breakpoints: {
-      320: {
-        slidesPerView: 'auto'
-      },
-      1024: {
-        slidesPerView: 3
-      }
+if (usefullSlider) {
+  const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](usefullSlider, {
+    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Autoplay, swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Navigation],
+    slidesPerView: 4,
+    spaceBetween: 32,
+    navigation: {
+      nextEl: ".slide-next",
+      prevEl: ".slide-prev"
     }
   });
-}
-if (brandsSlider) {
-  const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](brandsSlider.querySelector('.brands-slider__container'), {
-    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Autoplay],
-    slidesPerView: 'auto',
-    spaceBetween: 19,
-    observer: true,
-    observeParents: true,
-    loop: true,
-    speed: 4000,
-    autoplay: {
-      delay: 0
-    },
-    breakpoints: {
-      320: {
-        spaceBetween: 7
-      },
-      1024: {
-        spaceBetween: 19
-      }
-    }
-  });
-}
-if (worksSlider) {
-  const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](worksSlider.querySelector('.works-slider__container'), {
-    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Grid],
-    slidesPerView: 'auto',
-    spaceBetween: 25,
-    observer: true,
-    observeParents: true,
-    grid: {
-      fill: 'row',
-      rows: 2
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1
-      },
-      768: {
-        slidesPerView: 'auto'
-      }
-    },
-    on: {
-      init: function () {
-        const slides = Array.from(this.slides);
-        const halfSlidesLength = Math.ceil(slides.length / 2);
-        const firstRowSlides = slides.slice(0, halfSlidesLength);
-        const secondRowSlides = slides.slice(halfSlidesLength);
-        if (firstRowSlides.length > 0) {
-          const lastSlideFirstRow = firstRowSlides[firstRowSlides.length - 1];
-          lastSlideFirstRow.classList.add('last-row-slide');
-        }
-        if (secondRowSlides.length > 0) {
-          const lastSlideSecondRow = secondRowSlides[secondRowSlides.length - 1];
-          lastSlideSecondRow.classList.add('last-row-slide');
-        }
-        slides.forEach(function (slide, index) {
-          if (index >= slides.length / 2) {
-            slide.classList.add('second-row-slide');
-          }
-        });
-      }
-    }
-  });
-}
-if (rewiewsSlider) {
-  const rewiewsSliderContainer = rewiewsSlider.querySelector('.rewiews-slider__container');
-  let swiper;
-  let flag = rewiewsSlider.classList.contains('info-slider') ? true : false;
-  function initSwiper(container) {
-    return new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](container, {
-      slidesPerView: flag ? 3 : 'auto',
-      spaceBetween: 15,
-      observer: true,
-      observeParents: true,
-      breakpoints: {
-        0: {
-          slidesPerView: 'auto'
-        },
-        768: {
-          slidesPerView: flag ? 2 : 'auto'
-        },
-        1024: {
-          slidesPerView: flag ? 3 : 'auto'
-        }
-      }
-    });
-  }
-  function destroy(item) {
-    if (item) {
-      item.destroy();
-      item = null;
-    }
-  }
-  function updateSlider() {
-    if (flag) {
-      initSwiper(rewiewsSliderContainer);
-    }
-    if (window.innerWidth < 768 && rewiewsSlider) {
-      destroy(swiper);
-      initSwiper(rewiewsSliderContainer);
-    } else {
-      destroy(swiper);
-    }
-  }
-  window.addEventListener('load', updateSlider);
-  window.addEventListener('resize', updateSlider);
 }
 
 /***/ }),

@@ -1,0 +1,20 @@
+.details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    li {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        p {
+            font-size: 14px;
+            line-height: 129%;
+        }
+
+        svg {
+            fill: transparent;
+        }
+    }
+}

@@ -4,14 +4,4 @@
     &__slide{
         width: clamp(335px, 32.3077vw, 420px);
     }
-
-    // @include tablet{
-    //     width: calc(100vw + (var(--container-offset) * 2));
-        
-     
-    // }
-
-    // &__wrapper{
-    //     padding-right:var(--container-offset);
-    // }
 }

@@ -3,16 +3,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="Description" content="ZenDriver">
+    <meta name="Description" content="ZenDiver">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ZenDriver</title>
+    <title>ZenDiver</title>
 
-    <link rel="preload" href="fonts/Inter-SemiBold.woff" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/Inter-Regular.woff" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/Inter-Medium.woff" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/Inter-Bold.woff" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/Golos-Text-Medium.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Geologica-Light.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Geologica-Regular.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Geologica-Medium.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Dosis-Regular.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Dosis-SemiBold.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Dosis-Bold.woff" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -22,43 +23,37 @@
   <header>
     <div class="container">
         <div class="header" data-aos="zoom-in" data-aos-duration="1000">
-            <button class="burger" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="50">
+            <button class="burger">
                 <span class="burger__bg"></span>
                 <span class="burger__line"></span>
             </button>
 
             <ul class="main-nav">
                 <li class="main-nav__item">
-                    <a href="#" class="main-nav__link" data-aos="zoom-in" data-aos-duration="1000"
-                        data-aos-delay="50">Services</a>
+                    <a href="#" class="main-nav__link" >Blog homepage</a>
                 </li>
                 <li class="main-nav__item">
-                    <a href="#" class="main-nav__link" data-aos="zoom-in" data-aos-duration="1000"
-                        data-aos-delay="50">Commercial appliance</a>
-                </li>
-                <li class="main-nav__item">
-                    <a href="#" class="main-nav__link" data-aos="zoom-in" data-aos-duration="1000"
-                        data-aos-delay="50">Appliance</a>
-                </li>
-                <li class="main-nav__item">
-                    <a href="#" class="main-nav__link" data-aos="zoom-in" data-aos-duration="1000"
-                        data-aos-delay="50">Blog</a>
-                </li>
-                <li class="main-nav__item">
-                    <a href="#" class="main-nav__link" data-aos="zoom-in" data-aos-duration="1000"
-                        data-aos-delay="50">Contacts</a>
+                    <a href="#" class="main-nav__link" >ZenDiver.co</a>
                 </li>
             </ul>
 
-            <a href="index.html" class="logo" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="50">
-                IFIX
+            <a href="/" class="header__logo">
+                <svg width='196' height='40'>
+                    <use href='img/sprite/sprite.svg#logo'></use>
+                </svg>
             </a>
 
-            <div class="header__box">
-                <a href="tel:(980)-987–70-83" class="tel-link" data-aos="zoom-in" data-aos-duration="1000"
-                    data-aos-delay="50">(980) 987 – 7083</a>
-                <button class="main-button main-button--mode" data-btn-modal="order" data-aos="zoom-in"
-                    data-aos-duration="1000" data-aos-delay="50">Book a Call</button>
+            <div class="header__btns">
+                <a href="#" class="" data-aos="zoom-in" data-aos-duration="1000"
+                    data-aos-delay="50">
+                    Take the quiz
+
+                    <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#gift'></use>
+                    </svg>
+                </a>
+                <a href="#" class="" data-btn-modal="order" data-aos="zoom-in"
+                    data-aos-duration="1000" data-aos-delay="50">Try ZenDiver for free</a>
             </div>
         </div>
 
@@ -691,7 +686,6 @@
   </div>
 </footer>
   <div class="overlay" data-overlay>
-
     <div class="modal" data-popup="order">
         <div class="modal__box" role="dialog" aria-modal="true">
             <form id="orderForm" class="main-form main-form--mode">
@@ -745,21 +739,8 @@
               </form>
         </div>
     </div>
-
- 
 </div>
 
-<div class="cookies-inner">
-  <div class="cookies">
-    <span class="cookies__icon">
-      <svg width='51' height='51'>
-        <use href='img/sprite/sprite.svg#cookies'></use>
-      </svg>
-    </span>
-    <p>Как и многие другие приложения, мы собираем персональные данные пользователей, чтобы обеспечить оптимальный опыт обучения. Чтобы узнать больше о том, как мы обрабатываем эти данные, ознакомьтесь с нашей политикой конфиденциальности. Узнать больше</p>
-    <button class="main-button">Хорошо, понятно</button>
-  </div>
-</div>
 
   <script src="js/main.js"></script>
 </body>
