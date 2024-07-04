@@ -12,40 +12,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-&--mode{
-  padding: clamp(11px, 1.1538vw, 15px) clamp(18px, 3.0769vw, 40px);
-  border-radius: clamp(6px, .7692vw, 10px);
-  font-size: clamp(12px, 1.3846vw, 18px);
-}
  
   &:hover {
     background-color: rgba(var(--bg-f),1.0);
-  }
-}
-
-.fixed-btn{
-  z-index: 15;
-  position: fixed;
-  bottom: 15px;
-  left: 13px;
-  right: 13px;
-  animation: 3s .5s infinite pulse;
-
-  &::before {
-    position: absolute;
-    content: '';
-    top: 0;
-    height: 100%;
-    width: 2rem;
-    transform: skewX(-45deg);
-    animation: 5s linear infinite flare;
-    left: -150%;
-    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .4));
-}
-
-  @include for-mobile{
-    display: none;
   }
 }
 
