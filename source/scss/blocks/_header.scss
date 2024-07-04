@@ -68,4 +68,30 @@ header {
       justify-self: end;
     }
   }
+
+  &__boarded {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 20px;
+    border: 2px solid #d36c40;
+    border-radius: 100px;
+    font-size: 16px;
+    line-height: 125%;
+    font-weight: 500;
+    color: #d36c40;
+  }
+
+  &__blue {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 20px;
+    background: linear-gradient(315deg, #0a8bd3 0%, #2ab2ff 100%);
+    border-radius: 100px;
+    font-size: 16px;
+    line-height: 125%;
+    font-weight: 500;
+    color: rgba(var(--cl-a),1.0);
+  }
 }
