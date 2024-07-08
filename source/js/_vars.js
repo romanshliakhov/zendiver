@@ -13,6 +13,7 @@ export default {
 
   // accParrent: [...document.querySelectorAll('[data-accordion-init]')],
   usefullSlider: document.querySelector('.usefull-section__slider'),
+  feedbacksSlider: document.querySelector('.feedbacks-section__slider'),
 
   // blogSlider: document.querySelector('.blog-slider'),
   // rewiewsSlider: document.querySelector('.rewiews-slider'),

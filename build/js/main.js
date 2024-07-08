@@ -59,7 +59,8 @@ __webpack_require__.r(__webpack_exports__);
   mobileMenu: document.querySelector('.header-menu'),
   burger: document.querySelector('.burger'),
   // accParrent: [...document.querySelectorAll('[data-accordion-init]')],
-  usefullSlider: document.querySelector('.usefull-section__slider')
+  usefullSlider: document.querySelector('.usefull-section__slider'),
+  feedbacksSlider: document.querySelector('.feedbacks-section__slider')
 
   // blogSlider: document.querySelector('.blog-slider'),
   // rewiewsSlider: document.querySelector('.rewiews-slider'),
@@ -251,16 +252,33 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const {
-  usefullSlider
+  usefullSlider,
+  feedbacksSlider
 } = _vars__WEBPACK_IMPORTED_MODULE_1__["default"];
 if (usefullSlider) {
   const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](usefullSlider, {
     modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Autoplay, swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Navigation],
+    observer: true,
+    observeParents: true,
     slidesPerView: 4,
     spaceBetween: 32,
     navigation: {
       nextEl: ".slide-next",
       prevEl: ".slide-prev"
+    }
+  });
+}
+if (feedbacksSlider) {
+  const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](feedbacksSlider, {
+    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Autoplay, swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Navigation],
+    observer: true,
+    observeParents: true,
+    slidesPerView: 2,
+    spaceBetween: 55,
+    // loop: true,
+    pagination: {
+      el: ".feedbacks-section__pagination",
+      type: "progressbar"
     }
   });
 }
