@@ -26,7 +26,7 @@
 
     &__tab {
         position: relative;
-        transition: all 0.4s ease;
+        transition: all 0.2s ease;
         cursor: pointer;
 
         &::before {
@@ -37,7 +37,7 @@
             width: 100%;
             border-radius: 6px;
             background-color: currentColor;
-            transition: 0.4s ease;
+            transition: 0.2s ease;
         }
 
         button {
@@ -48,7 +48,7 @@
             letter-spacing: -0.02em;
             text-transform: uppercase;
             color: currentColor;
-            transition: 0.4s ease;
+            transition: 0.2s ease;
             pointer-events: none;
         }
 

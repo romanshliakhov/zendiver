@@ -5,7 +5,11 @@
     &__items {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 32px;
+        gap: clamp(16px, 3.125vw, 32px);
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     &__item {
@@ -60,19 +64,19 @@
 
     &__title {
         font-family: var(--font-primary);
-        font-size: 24px;
+        font-size: clamp(20px, 1.667vw, 24px);
         line-height: 133%;
         font-weight: 700;
         letter-spacing: -0.02em;
     }
 
     &__more {
-        margin: 56px auto 0;
+        margin: clamp(24px, 5.469vw, 56px) auto 0;
         padding: 14px 56px;
         display: flex;
         align-items: center;
         gap: 10px;
-        font-size: 18px;
+        font-size: clamp(16px, 1.758vw, 18px);
         line-height: 167%;
         font-weight: 500;
         letter-spacing: -0.02em;
@@ -80,5 +84,9 @@
         background: rgba(var(--bg-a),1.0);
         border: 2px solid rgba(var(--cl-d),1.0);
         border-radius: 100px;
+
+        svg {
+            stroke: currentColor;
+        }
     }
 }
