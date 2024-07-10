@@ -44,7 +44,7 @@
 }
 
 @mixin laptop {
-  @media (max-width: (1239px)) {
+  @media (max-width: (1240px)) {
     @content;
   }
 }

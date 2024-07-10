@@ -18,6 +18,10 @@
         display: flex;
         align-items: center;
         gap: 12px;
+
+        @include small-tablet {
+            display: none;
+        }
     }
 
     &__control {
@@ -82,7 +86,7 @@
             display: block;
             margin-bottom: 8px;
             font-family: var(--font-primary);
-            font-size: 24px;
+            font-size: clamp(20px, 1.667vw, 24px);
             line-height: 133%;
             font-weight: 700;
         }
@@ -94,6 +98,30 @@
             align-items: center;
             justify-content: center;
             margin-left: auto;
+        }
+    }
+
+    &__pagination {
+        position: relative;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        margin-top: 16px;
+
+        span {
+            width: 6px;
+            height: 6px;
+            background: rgba(var(--bg-c),1.0);
+
+            &.swiper-pagination-bullet-active {
+                width: 12px;
+                height: 12px;
+                background: rgba(var(--bg-d),1.0);
+            }
+        }
+
+        @include tablet {
+            display: flex;
         }
     }
 }

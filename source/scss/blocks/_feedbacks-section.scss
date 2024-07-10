@@ -1,6 +1,19 @@
 .feedbacks-section {
+    position: relative;
     padding: 60px 0;
     overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background-image: var(--feedbacks-bg);
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 491px;
+    }
 
     &__top {
         margin-bottom: 60px;

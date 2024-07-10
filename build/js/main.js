@@ -260,11 +260,27 @@ if (usefullSlider) {
     modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Autoplay, swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Navigation],
     observer: true,
     observeParents: true,
-    slidesPerView: 4,
-    spaceBetween: 32,
     navigation: {
       nextEl: ".slide-next",
       prevEl: ".slide-prev"
+    },
+    pagination: {
+      clickable: true,
+      el: ".usefull-section__pagination"
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 16
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 16
+      },
+      1241: {
+        slidesPerView: 4,
+        spaceBetween: 32
+      }
     }
   });
 }

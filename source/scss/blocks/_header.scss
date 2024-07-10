@@ -14,7 +14,7 @@ header {
   display: grid;
   grid-template-columns: repeat(2, auto) 1fr;
   align-items: center;
-  grid-gap: 16px;
+  grid-gap: clamp(10px, 1.29vw, 16px);
 
   padding: 12px;
   background-color: rgba(var(--bg-a),1.0);
@@ -51,6 +51,10 @@ header {
   &__logo {
     display: flex;
 
+    svg {
+      width: clamp(155px, 15.806vw, 196px);
+    }
+
     @include for-tablet {
       position: absolute;
       top: 50%;
@@ -70,19 +74,67 @@ header {
   }
 
   &__boarded {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 14px 20px;
-    border: 2px solid #d36c40;
+    border: 2px solid rgba(var(--cl-f),1.0);
+    background: transparent;
     border-radius: 100px;
     font-size: 16px;
     line-height: 125%;
     font-weight: 500;
-    color: #d36c40;
+    color: rgba(var(--cl-f),1.0);
+    transition: all 0.4s ease;
+
+    svg {
+      stroke: currentColor;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(225deg, #d36c40 0%, #bf582c 100%);
+      border-radius: 100px;
+      opacity: 0;
+      transition: all 0.4s ease;
+      z-index: -1;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(225deg, #bf582c 0%, #bf582c 100%);
+      border-radius: 100px;
+      opacity: 0;
+      transition: all 0.4s ease;
+      z-index: -1;
+    }
+
+    &:hover {
+      color: rgba(var(--cl-a),1.0);
+      border: 2px solid rgba(var(--cl-a),1.0);
+
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      color: rgba(var(--cl-a),1.0);
+      border: 2px solid #bf582c;
+
+      &::after {
+        opacity: 1;
+      }
+    }
   }
 
   &__blue {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -93,5 +145,35 @@ header {
     line-height: 125%;
     font-weight: 500;
     color: rgba(var(--cl-a),1.0);
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(315deg, #0a8bd3 0%, #0a8bd3 100%);
+      border-radius: 100px;
+      opacity: 0;
+      transition: all 0.4s ease;
+      z-index: -1;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(315deg, #0081c9 0%, #0081c9 100%);
+      border-radius: 100px;
+      opacity: 0;
+      transition: all 0.4s ease;
+      z-index: -1;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+
+    &:active::after {
+      opacity: 1;
+    }
   }
 }

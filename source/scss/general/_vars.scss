@@ -7,12 +7,8 @@
   --body-bg: #f9f1e7;
   --body-font-size: 16px;
   --content-width: 1320px;
-  --container-offset: 16px;
+  --container-offset: clamp(16px, 2.778vw, 40px);
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
-
-  @include small-tablet{
-    --container-offset: 16px;
-  }
 
 // --------------- default js variable ---------------
   --header-height: 72px;
@@ -46,6 +42,7 @@
   --cl-c: #{HexToRGB(#2f2f2f)}; // rgba(var(--cl-c),1.0);
   --cl-d: #{HexToRGB(#0d7768)}; // rgba(var(--cl-d),1.0);
   --cl-e: #{HexToRGB(#0a8bd3)}; // rgba(var(--cl-e),1.0);
+  --cl-f: #{HexToRGB(#d36c40)}; // rgba(var(--cl-f),1.0);
 
 // --------------- default background color variable ---------------
   --bg-a: #{HexToRGB(#ffffff)}; // rgba(var(--bg-a),1.0);
@@ -54,6 +51,7 @@
   --bg-c: #{HexToRGB(#2f2f2f)}; // rgba(var(--bg-c),1.0);
   --bg-d: #{HexToRGB(#0d7768)}; // rgba(var(--bg-d),1.0);
   --bg-e: #{HexToRGB(#0a8bd3)}; // rgba(var(--bg-e),1.0);
+  --bg-f: #{HexToRGB(#d36c40)}; // rgba(var(--bg-f),1.0);
   
 
 

@@ -28,8 +28,24 @@ main {
   padding-top: var(--header-height);
   min-width: 0 !important;
 
-  &.no-padding {
-    padding: 0;
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: var(--main-bg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    right: 0;
+    top: 0;
+    width: 1168px;
+    height: 392px;
+  }
+
+  &::after {
+    position: absolute;
+    content: var(--main-right-frame);
+    right: 0;
+    top: 0;
+    z-index: -1;
   }
 }
 
