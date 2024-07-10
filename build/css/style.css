@@ -4191,7 +4191,7 @@ footer {
 }
 
 .info-section {
-  padding: 100px 0;
+  padding: clamp(40px, 6.944vw, 100px) 0 clamp(80px, 6.944vw, 100px);
 }
 .info-section__logo {
   display: -webkit-box;
@@ -4200,7 +4200,11 @@ footer {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-bottom: 64px;
+  margin-bottom: clamp(32px, 4.444vw, 64px);
+}
+.info-section__logo svg {
+  width: clamp(196px, 20.417vw, 294px);
+  height: clamp(40px, 4.167vw, 60px);
 }
 .info-section__wrapp {
   margin: 0 auto;
