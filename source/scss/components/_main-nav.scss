@@ -17,4 +17,8 @@
             background: rgba(var(--bg-c), 0.08);
         }
     }
+
+    @include tablet {
+        display: none;
+    }
 }

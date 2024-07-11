@@ -10,6 +10,18 @@
         background: linear-gradient(180deg, #f6e2b7 0%, #fade97 100%);
         border-radius: 64px;
         box-shadow: 16px 30px 76px 0 rgba(0, 0, 0, 0.05), 64px 122px 137px 0 rgba(0, 0, 0, 0.04), 144px 274px 186px 0 rgba(0, 0, 0, 0.03), 256px 486px 220px 0 rgba(0, 0, 0, 0.01), 400px 760px 240px 0 rgba(0, 0, 0, 0);
+
+        &::before {
+            content: '';
+            position: absolute;
+        }
+    }
+
+    &__frame {
+        position: absolute;
+        top: -140px;
+        right: 103px;
+        display: flex;
     }
 
     &__text {
@@ -24,6 +36,10 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 32px;
+
+        @include tablet {
+            grid-template-columns: 100%;
+        }
     }
 
     &__more {
@@ -39,5 +55,9 @@
         color: rgba(var(--cl-e),1.0);
         background: linear-gradient(180deg, #fff 0%, #fafafa 100%);
         border-radius: 100px;
+
+        svg {
+            stroke: currentColor;
+        }
     }
 }

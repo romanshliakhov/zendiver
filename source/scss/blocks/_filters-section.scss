@@ -5,7 +5,7 @@
     &__wrapp {
         display: flex;
         flex-direction: column;
-        gap: 32px;
+        gap: clamp(16px, 2.222vw, 32px);
     }
 
     &__top {
@@ -13,6 +13,10 @@
         align-items: center;
         justify-content: space-between;
         gap: 10px;
+
+        // @include small-tablet {
+        //     display: contents;
+        // }
     }
 
     &__link {
@@ -24,6 +28,18 @@
         font-weight: 500;
         letter-spacing: -0.02em;
         color: rgba(var(--cl-d),1.0);
+
+        svg {
+            stroke: currentColor;
+        }
+
+        // @include small-tablet {
+        //     order: 1;
+        // }
+
+        @include small-tablet {
+            display: none;
+        }
     }
 
     &__controls {
@@ -33,7 +49,15 @@
     &__items {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 32px;
+        gap: clamp(16px, 2.222vw, 32px);
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile {
+            grid-template-columns: 100%;
+        }
     }
 
     &__item {
@@ -68,7 +92,7 @@
             display: block;
             margin-bottom: 8px;
             font-family: var(--font-primary);
-            font-size: 24px;
+            font-size: clamp(20px, 1.667vw, 24px);
             line-height: 133%;
             font-weight: 700;
         }
@@ -78,7 +102,21 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            gap: 10px;
             margin-left: auto;
+            color: rgba(var(--cl-d),1.0);
+
+            svg {
+                stroke: currentColor;
+            }
         }
+    }
+
+    &__pagination {
+        margin-top: 32px;
+
+        // @include small-tablet {
+        //     display: none;
+        // }
     }
 }

@@ -1,6 +1,6 @@
 .subscribe-section {
     position: relative;
-    padding: 60px;
+    padding: 60px 0;
 
     &__wrapp {
         width: 100%;
@@ -11,12 +11,18 @@
         background: linear-gradient(180deg, #f6e2b7 0%, #fade97 100%);
         border-radius: 64px;
         box-shadow: 16px 30px 76px 0 rgba(0, 0, 0, 0.05), 64px 122px 137px 0 rgba(0, 0, 0, 0.04), 144px 274px 186px 0 rgba(0, 0, 0, 0.03), 256px 486px 220px 0 rgba(0, 0, 0, 0.01), 400px 760px 240px 0 rgba(0, 0, 0, 0);
+
+        @media (max-width: 992px) {
+            flex-direction: column;
+        }
     }
 
     &__image {
         display: flex;
         max-width: 454px;
         width: 100%;
+        flex-shrink: 0;
+        transform: skew(-3deg);
 
         picture,
         img {
@@ -36,7 +42,7 @@
 
     &__heading {
         font-family: var(--font-primary);
-        font-size: 26px;
+        font-size: clamp(24px, 1.806vw, 26px);
         line-height: 154%;
         font-weight: 600;
 
@@ -50,7 +56,7 @@
     }
 
     &__text {
-        font-size: 16px;
+        font-size: clamp(14px, 1.111vw, 16px);
         font-weight: 300;
         line-height: 169%;
         letter-spacing: -0.02em;

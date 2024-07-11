@@ -5,6 +5,14 @@ header {
   left: 0;
   width: 100%;
   z-index: 80;
+
+  @include tablet {
+    padding-top: 0;
+
+    .container {
+      padding: 0;
+    }
+  }
 }
 
 .header {
@@ -21,32 +29,13 @@ header {
   border-radius: 72px;
   box-shadow: 0 32px 64px 0 rgba(50, 50, 71, 0.04), 0 16px 32px 0 rgba(50, 50, 71, 0.04);
 
-  // @include tablet {
-  //   grid-template-columns: auto 1fr auto;
-
-  //   .main-nav {
-  //     display: none;
-  //   }
-
-  //   .burger {
-  //     order: 3;
-  //   }
-  // }
-
-  // @include mobile {
-  //   width: calc(100% + 20px);
-  //   margin-left: -10px;
-  // }
-
-  // &__burger {
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
-  //   width: 48px;
-  //   height: 48px;
-  //   background: linear-gradient(180deg, #eaeaea 0%, #cbcbcb 100%);
-  //   border-radius: 100px;
-  // }
+  @include tablet {
+    border-radius: 0;
+    gap: 0;
+    width: fit-content;
+    margin-left: auto;
+    padding: 20px 30px;
+  }
 
   &__logo {
     display: flex;
@@ -61,6 +50,10 @@ header {
       left: 50%;
       transform: translate(-50%, -50%);
     }
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__btns {
@@ -70,6 +63,10 @@ header {
 
     @include for-tablet {
       justify-self: end;
+    }
+
+    @include tablet {
+      display: none;
     }
   }
 

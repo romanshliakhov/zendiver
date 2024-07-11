@@ -39,12 +39,30 @@ if(feedbacksSlider) {
     modules: [Autoplay, Pagination, Navigation],
     observer: true,
     observeParents: true,
-    slidesPerView: 2,
-    spaceBetween: 55,
+    // slidesPerView: 2.25,
+    // spaceBetween: 55,
     // loop: true,
     pagination: {
       el: ".feedbacks-section__pagination",
       type: "progressbar",
+    },
+    breakpoints:{
+      320:{
+        slidesPerView: 1.15,
+        spaceBetween: 24,
+      },
+      768:{
+        slidesPerView: 1.55,
+        spaceBetween: 34,
+      },
+      1024:{
+        slidesPerView: 2.15,
+        spaceBetween: 44,
+      },
+      1241:{
+        slidesPerView: 2.25,
+        spaceBetween: 55,
+      },
     },
   });  
 }

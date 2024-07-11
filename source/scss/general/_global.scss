@@ -27,6 +27,7 @@ main {
   z-index: 1;
   padding-top: var(--header-height);
   min-width: 0 !important;
+  overflow: hidden;
 
   &::before {
     content: '';
@@ -38,6 +39,10 @@ main {
     top: 0;
     width: 1168px;
     height: 392px;
+
+    @include tablet {
+      width: 100%;
+    }
   }
 
   &::after {
