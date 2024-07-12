@@ -3,7 +3,7 @@
     align-items: center;
 
     &__link{
-        padding: 10px 12px;
+        padding: clamp(5px, 0.806vw, 10px) clamp(5px, 0.968vw, 12px);
         line-height: 125%;
         border-radius: 40px;
         background: transparent;

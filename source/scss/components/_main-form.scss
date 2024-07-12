@@ -5,20 +5,20 @@
     display: flex;
     align-items: center;
     grid-gap: clamp(9px, 5.7692vw, 75px);
-    padding: clamp(32px, 2.6154vw, 34px) clamp(32px, 2.6154vw, 34px) clamp(32px, 4.6154vw, 60px);
-
-    &__box{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        grid-gap: clamp(20px, 4.6154vw, 60px);
-        text-align: center;
-    }
+    padding: clamp(32px, 2.6154vw, 34px) clamp(25px, 2.6154vw, 34px) clamp(32px, 4.6154vw, 60px);
 
     @include mobile{
         flex-direction: column;
         padding-bottom: 0;
         grid-gap: 9px;
+    }
+
+    &__box { 
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(20px, 4.6154vw, 60px);
+        text-align: center;
     }
 
     &__inner{
@@ -40,7 +40,7 @@
         width: 100%;
         display: flex;
         align-items: center;
-        padding: 24px clamp(20px, 1.9231vw, 25px);
+        padding: clamp(15px, 1.935vw, 24px) clamp(15px, 2.016vw, 25px);
         border: 1px solid rgba(var(--cl-f), 0.4);
         background: rgba(var(--bg-a),1.0);
         border-radius: 10px;
@@ -67,13 +67,13 @@
     &__row{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: clamp(16px, 1.5385vw, 20px);
+        grid-gap: clamp(10px, 1.5385vw, 20px);
 
         &--mode{
             grid-template-columns: 1fr;
         }
 
-        @include mobile{
+        @include tablet{
             grid-template-columns: 1fr;
         }
     }
@@ -82,7 +82,7 @@
         width: 100%;
         display: flex;
         align-items: center;
-        padding: 24px clamp(20px, 1.9231vw, 25px);
+        padding: clamp(15px, 1.935vw, 24px) clamp(15px, 2.016vw, 25px);
         border: 1px solid rgba(var(--cl-f), 0.4);
         background: rgba(var(--bg-a),1.0);
         border-radius: 10px;
