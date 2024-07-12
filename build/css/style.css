@@ -2835,6 +2835,7 @@ h2,
   width: 100%;
   height: 54px;
   background-image: var(--quiz-frame-top);
+  background-size: contain;
   background-repeat: no-repeat;
   z-index: -1;
 }
@@ -2845,6 +2846,7 @@ h2,
   width: 100%;
   height: 54px;
   background-image: var(--quiz-frame-bottom);
+  background-size: contain;
   background-repeat: no-repeat;
   z-index: -1;
 }
@@ -2994,15 +2996,8 @@ h2,
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 16px;
-}
-.feedback::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: var(--feedback-odd-frame);
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: -1;
+  clip-path: polygon(11.596% 7.149%, 11.596% 7.149%, 11.629% 6.572%, 11.71% 6.026%, 11.833% 5.519%, 11.995% 5.058%, 12.193% 4.649%, 12.421% 4.301%, 12.677% 4.02%, 12.956% 3.812%, 13.253% 3.686%, 13.566% 3.649%, 96.545% 5.966%, 96.545% 5.966%, 96.85% 6.019%, 97.138% 6.154%, 97.408% 6.367%, 97.655% 6.649%, 97.876% 6.995%, 98.067% 7.397%, 98.224% 7.849%, 98.344% 8.345%, 98.422% 8.877%, 98.457% 9.439%, 100% 93.503%, 100% 93.503%, 99.985% 94.094%, 99.92% 94.657%, 99.809% 95.184%, 99.657% 95.668%, 99.467% 96.101%, 99.244% 96.474%, 98.991% 96.781%, 98.712% 97.012%, 98.411% 97.161%, 98.093% 97.219%, 12.302% 100%, 12.302% 100%, 11.977% 99.961%, 11.669% 99.826%, 11.382% 99.606%, 11.121% 99.306%, 10.889% 98.936%, 10.691% 98.504%, 10.532% 98.017%, 10.415% 97.484%, 10.345% 96.912%, 10.327% 96.31%, 11.596% 7.149%);
+  background-color: white;
 }
 .feedback__info {
   display: -webkit-box;
@@ -3029,6 +3024,7 @@ h2,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  clip-path: polygon(5.956% 15.076%, 5.956% 15.076%, 6.275% 12.823%, 6.889% 10.698%, 7.774% 8.726%, 8.907% 6.93%, 10.262% 5.338%, 11.815% 3.972%, 13.542% 2.859%, 15.418% 2.022%, 17.419% 1.488%, 19.519% 1.28%, 82.125% 0.223%, 82.125% 0.223%, 84.302% 0.37%, 86.379% 0.869%, 88.329% 1.692%, 90.124% 2.813%, 91.738% 4.203%, 93.143% 5.837%, 94.312% 7.686%, 95.218% 9.724%, 95.835% 11.923%, 96.135% 14.257%, 100% 84.185%, 100% 84.185%, 99.944% 86.712%, 99.511% 89.124%, 98.733% 91.384%, 97.641% 93.457%, 96.264% 95.309%, 94.635% 96.903%, 92.784% 98.205%, 90.741% 99.179%, 88.538% 99.789%, 86.206% 100%, 14.905% 100%, 14.905% 100%, 12.548% 99.784%, 10.325% 99.162%, 8.267% 98.17%, 6.405% 96.844%, 4.771% 95.222%, 3.397% 93.34%, 2.314% 91.235%, 1.553% 88.943%, 1.147% 86.502%, 1.126% 83.947%, 5.956% 15.076%);
 }
 .feedback__author {
   display: -webkit-box;
@@ -3499,8 +3495,6 @@ header {
 }
 
 footer {
-  padding: clamp(34px, 5vw, 65px) 0 clamp(27px, 3.0769vw, 40px);
-  background: rgba(var(--bg-h), 1);
   overflow: hidden;
 }
 
@@ -3621,6 +3615,7 @@ footer {
   }
 }
 .footer__bottom {
+  padding: 21.5px 48px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3631,45 +3626,10 @@ footer {
   -ms-flex-pack: justify;
   justify-content: space-between;
   grid-gap: 15px;
-}
-.footer__col {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  grid-gap: clamp(25px, 2.3077vw, 30px);
-  position: relative;
-}
-.footer__col--mode {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  grid-gap: clamp(50px, 5.97vw, 80px);
-}
-@media (max-width: 1240px) {
-  .footer__col--mode {
-    grid-gap: clamp(20px, 3.226vw, 40px);
-  }
-}
-@media (max-width: 1024px) {
-  .footer__col--mode {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-}
-.footer__text {
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 130%;
-  color: rgba(var(--cl-a), 1);
-  max-width: 197px;
+  background-color: rgba(var(--bg-a), 1);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  clip-path: polygon(1313.72px 10.9572px, 1313.72px 10.9572px, 1313.42183px 9.144085383px, 1312.86584px 7.4377006856px, 1312.07381px 5.8579166387px, 1311.06752px 4.4246039728px, 1309.86875px 3.1576334188px, 1308.49928px 2.0768757072px, 1306.98089px 1.2022015689px, 1305.33536px 0.5534817344px, 1303.58447px 0.1505869346px, 1301.75px 0.0133879px, 14.166px 1.5805px, 14.166px 1.5805px, 12.26310305px 1.73304881px, 10.4541208px 2.17075248px, 8.76258315px 2.87078887px, 7.21202px 3.81033584px, 5.82596125px 4.96657125px, 4.6279368px 6.31667296px, 3.64147655px 7.83781883px, 2.8901104px 9.50718672px, 2.39736825px 11.30195449px, 2.18678px 13.1993px, 0px 82px, 1320px 82px, 1313.72px 10.9572px);
 }
 .footer__links {
   display: -webkit-box;
@@ -3696,56 +3656,6 @@ footer {
     -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end;
-  }
-}
-.footer__info {
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 130%;
-  color: rgba(var(--cl-d), 0.4);
-}
-.footer__link {
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 130%;
-  color: rgba(var(--cl-d), 0.4);
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-.footer__link--mode {
-  text-decoration: underline;
-  -webkit-text-decoration-skip-ink: none;
-  text-decoration-skip-ink: none;
-  color: rgba(var(--cl-a), 0.4);
-}
-.footer__link:hover {
-  color: rgba(var(--cl-c), 1);
-}
-.footer__map {
-  width: clamp(335px, 42.857vw, 600px);
-  height: clamp(197px, 25vw, 350px);
-  border-radius: 6px;
-  overflow: hidden;
-}
-.footer__map img, .footer__map picture, .footer__map iframe {
-  width: 100%;
-  height: 100%;
-}
-@media (max-width: 1240px) {
-  .footer__map {
-    width: 100%;
-  }
-}
-@media (min-width: 1440px) {
-  .footer__map {
-    margin-left: clamp(5px, 1vw, 13px);
-  }
-}
-@media (max-width: 767px) {
-  .footer__map {
-    height: clamp(197px, 32.552vw, 250px);
   }
 }
 .footer .tel-link {
@@ -3919,17 +3829,8 @@ footer {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 188px;
-}
-.first-section__article::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  background-image: var(--first-aside-bg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+  clip-path: polygon(1.4% 85.552%, 1.4% 85.552%, 1.496% 87.933%, 1.687% 90.178%, 1.965% 92.26%, 2.322% 94.152%, 2.75% 95.826%, 3.241% 97.257%, 3.787% 98.417%, 4.38% 99.278%, 5.012% 99.815%, 5.675% 100%, 94.641% 99.998%, 94.641% 99.998%, 95.307% 99.812%, 95.941% 99.271%, 96.536% 98.402%, 97.084% 97.233%, 97.575% 95.792%, 98.004% 94.105%, 98.36% 92.201%, 98.636% 90.106%, 98.825% 87.848%, 98.918% 85.454%, 100% 22.287%, 100% 22.287%, 99.985% 19.687%, 99.855% 17.202%, 99.62% 14.87%, 99.288% 12.725%, 98.87% 10.805%, 98.374% 9.144%, 97.809% 7.78%, 97.184% 6.748%, 96.51% 6.085%, 95.795% 5.826%, 4.451% 0.285%, 4.451% 0.285%, 3.715% 0.467%, 3.018% 1.078%, 2.373% 2.081%, 1.787% 3.438%, 1.272% 5.109%, 0.837% 7.056%, 0.493% 9.241%, 0.249% 11.626%, 0.116% 14.172%, 0.103% 16.842%, 1.4% 85.552%);
+  background-color: white;
 }
 .first-section__article-image {
   position: relative;
@@ -3939,9 +3840,7 @@ footer {
   -webkit-box-ordinal-group: 2;
   -ms-flex-order: 1;
   order: 1;
-  -webkit-transform: skew(-1deg);
-  -ms-transform: skew(-1deg);
-  transform: skew(-1deg);
+  clip-path: polygon(1.873% 15.71%, 1.873% 15.71%, 2.033% 13.764%, 2.415% 11.919%, 3% 10.198%, 3.771% 8.624%, 4.71% 7.219%, 5.799% 6.006%, 7.02% 5.009%, 8.355% 4.251%, 9.787% 3.753%, 11.298% 3.541%, 88.607% 0.399%, 88.607% 0.399%, 90.198% 0.5%, 91.714% 0.918%, 93.135% 1.628%, 94.439% 2.604%, 95.606% 3.821%, 96.614% 5.253%, 97.444% 6.875%, 98.073% 8.662%, 98.481% 10.587%, 98.648% 12.626%, 100% 85.604%, 100% 85.604%, 99.909% 87.652%, 99.572% 89.601%, 99.009% 91.425%, 98.239% 93.097%, 97.284% 94.589%, 96.163% 95.877%, 94.895% 96.931%, 93.501% 97.727%, 92.001% 98.236%, 90.414% 98.433%, 10.17% 100%, 10.17% 100%, 8.542% 99.858%, 6.999% 99.386%, 5.561% 98.612%, 4.252% 97.564%, 3.092% 96.271%, 2.103% 94.761%, 1.307% 93.062%, 0.725% 91.201%, 0.379% 89.209%, 0.29% 87.111%, 1.873% 15.71%);
 }
 .first-section__article-image picture,
 .first-section__article-image img {
@@ -3983,12 +3882,15 @@ footer {
   grid-row: span 3;
   display: grid;
   grid-template-columns: 100%;
+  clip-path: none;
+  background-color: transparent;
 }
 .first-section__article:first-child .first-section__article-image {
   -webkit-box-ordinal-group: 0;
   -ms-flex-order: -1;
   order: -1;
   margin-bottom: 24px;
+  clip-path: polygon(1.825% 17.904%, 1.825% 17.904%, 1.994% 15.597%, 2.383% 13.412%, 2.975% 11.375%, 3.753% 9.513%, 4.697% 7.853%, 5.791% 6.423%, 7.016% 5.25%, 8.355% 4.36%, 9.789% 3.782%, 11.301% 3.541%, 88.738% 0.395%, 88.738% 0.395%, 90.319% 0.525%, 91.826% 1.026%, 93.237% 1.869%, 94.533% 3.024%, 95.693% 4.461%, 96.697% 6.15%, 97.523% 8.063%, 98.152% 10.168%, 98.562% 12.437%, 98.734% 14.84%, 100% 83.145%, 100% 83.145%, 99.915% 85.587%, 99.581% 87.912%, 99.019% 90.088%, 98.249% 92.082%, 97.291% 93.863%, 96.165% 95.398%, 94.891% 96.655%, 93.49% 97.601%, 91.982% 98.206%, 90.388% 98.436%, 10.205% 100%, 10.205% 100%, 8.573% 99.825%, 7.027% 99.257%, 5.589% 98.33%, 4.279% 97.078%, 3.121% 95.534%, 2.134% 93.733%, 1.342% 91.708%, 0.765% 89.492%, 0.426% 87.121%, 0.345% 84.627%, 1.825% 17.904%);
 }
 .first-section__article:first-child .first-section__article-image picture,
 .first-section__article:first-child .first-section__article-image img {
@@ -4024,9 +3926,6 @@ footer {
   display: -ms-flexbox;
   display: flex;
 }
-.first-section__article:first-child::before {
-  display: none;
-}
 @media (max-width: 1024px) {
   .first-section__article {
     display: -webkit-box;
@@ -4036,9 +3935,6 @@ footer {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-  }
-  .first-section__article::before {
-    display: none;
   }
   .first-section__article:first-child {
     grid-row: initial;
@@ -4179,22 +4075,16 @@ footer {
 }
 .usefull-section__material {
   position: relative;
-  padding: 24px;
 }
-.usefull-section__material::before {
-  content: "";
-  position: absolute;
-  background-image: var(--material-frame-bg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  inset: 0;
-  z-index: -1;
+.usefull-section__material-top {
+  clip-path: polygon(100% 31.909%, 100% 100%, 0% 100%, 0% 23.16%, 0% 23.16%, 0.091% 19.441%, 0.356% 15.92%, 0.778% 12.646%, 1.344% 9.667%, 2.038% 7.032%, 2.845% 4.789%, 3.752% 2.986%, 4.742% 1.671%, 5.801% 0.892%, 6.914% 0.699%, 93.491% 9.447%, 93.491% 9.447%, 94.554% 9.837%, 95.56% 10.758%, 96.496% 12.165%, 97.349% 14.014%, 98.105% 16.26%, 98.753% 18.86%, 99.279% 21.77%, 99.671% 24.944%, 99.916% 28.338%, 100% 31.909%);
+  background-color: white;
+  padding: 24px 24px 0;
 }
 .usefull-section__material-image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 24px;
 }
 .usefull-section__material-image picture,
 .usefull-section__material-image img {
@@ -4203,6 +4093,11 @@ footer {
   -o-object-fit: cover;
   object-fit: cover;
   border-radius: 8px;
+}
+.usefull-section__material-info {
+  padding: 24px;
+  background-color: #fff;
+  clip-path: polygon(92.907% 100%, 6.33% 89.101%, 6.33% 89.101%, 5.289% 88.79%, 4.307% 88.143%, 3.396% 87.191%, 2.567% 85.959%, 1.833% 84.476%, 1.205% 82.771%, 0.696% 80.872%, 0.317% 78.806%, 0.081% 76.602%, 0% 74.288%, 0% 0%, 100% 0%, 100% 85.187%, 100% 85.187%, 99.905% 87.687%, 99.632% 90.048%, 99.196% 92.238%, 98.612% 94.224%, 97.897% 95.973%, 97.067% 97.451%, 96.137% 98.626%, 95.123% 99.464%, 94.041% 99.933%, 92.907% 100%);
 }
 .usefull-section__material-title {
   display: block;
@@ -4744,25 +4639,15 @@ footer {
 }
 .filters-section__item {
   position: relative;
-  padding: 24px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-}
-.filters-section__item::before {
-  content: "";
-  position: absolute;
-  background-image: var(--material-frame-bg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  inset: 0;
-  z-index: -1;
 }
 .filters-section__item-image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 24px;
+  padding: 12px 24px 0;
 }
 .filters-section__item-image picture,
 .filters-section__item-image img {
@@ -4799,6 +4684,23 @@ footer {
 }
 .filters-section__item-link svg {
   stroke: currentColor;
+}
+.filters-section__head {
+  clip-path: polygon(100% 31.909%, 100% 100%, 0% 100%, 0% 23.16%, 0% 23.16%, 0.091% 19.441%, 0.356% 15.92%, 0.778% 12.646%, 1.344% 9.667%, 2.038% 7.032%, 2.845% 4.789%, 3.752% 2.986%, 4.742% 1.671%, 5.801% 0.892%, 6.914% 0.699%, 93.491% 9.447%, 93.491% 9.447%, 94.554% 9.837%, 95.56% 10.758%, 96.496% 12.165%, 97.349% 14.014%, 98.105% 16.26%, 98.753% 18.86%, 99.279% 21.77%, 99.671% 24.944%, 99.916% 28.338%, 100% 31.909%);
+  background-color: white;
+  padding-top: 24px;
+}
+.filters-section__info {
+  position: relative;
+  z-index: 1;
+  padding: 24px 24px 0;
+  background-color: #fff;
+}
+.filters-section__bottom {
+  margin-top: -24px;
+  padding: 24px;
+  clip-path: polygon(0% 44.976%, 0% 44.976%, 0.061% 49.892%, 0.237% 54.57%, 0.519% 58.948%, 0.898% 62.966%, 1.364% 66.564%, 1.91% 69.681%, 2.525% 72.257%, 3.201% 74.232%, 3.929% 75.544%, 4.698% 76.134%, 94.894% 100%, 94.894% 100%, 95.714% 99.785%, 96.495% 98.745%, 97.225% 96.946%, 97.895% 94.457%, 98.491% 91.347%, 99.005% 87.682%, 99.424% 83.531%, 99.736% 78.962%, 99.932% 74.043%, 100% 68.842%, 100% 0%, 0% 0%, 0% 44.976%);
+  background-color: #fff;
 }
 .filters-section__pagination {
   margin-top: 32px;
@@ -4838,9 +4740,7 @@ footer {
   width: 100%;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  -webkit-transform: skew(-3deg);
-  -ms-transform: skew(-3deg);
-  transform: skew(-3deg);
+  clip-path: polygon(2.554% 14.783%, 2.554% 14.783%, 2.792% 12.745%, 3.35% 10.814%, 4.204% 9.012%, 5.327% 7.363%, 6.693% 5.893%, 8.277% 4.624%, 10.052% 3.581%, 11.993% 2.787%, 14.074% 2.267%, 16.269% 2.045%, 85.388% 0.024%, 85.388% 0.024%, 87.771% 0.139%, 90.034% 0.604%, 92.147% 1.391%, 94.076% 2.47%, 95.79% 3.812%, 97.257% 5.386%, 98.443% 7.163%, 99.318% 9.114%, 99.847% 11.209%, 100% 13.418%, 98.486% 87.104%, 98.486% 87.104%, 98.256% 89.235%, 97.677% 91.249%, 96.778% 93.121%, 95.59% 94.824%, 94.141% 96.331%, 92.462% 97.616%, 90.582% 98.652%, 88.531% 99.412%, 86.34% 99.87%, 84.037% 100%, 14.098% 98.704%, 14.098% 98.704%, 11.787% 98.487%, 9.604% 97.941%, 7.578% 97.095%, 5.737% 95.978%, 4.111% 94.617%, 2.729% 93.041%, 1.62% 91.278%, 0.813% 89.357%, 0.336% 87.306%, 0.219% 85.153%, 2.554% 14.783%);
 }
 .subscribe-section__image picture,
 .subscribe-section__image img {

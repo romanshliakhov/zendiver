@@ -1,6 +1,6 @@
 footer{
-  padding:clamp(34px, 5vw, 65px) 0 clamp(27px, 3.0769vw, 40px);
-  background: rgba(var(--bg-h),1.0);
+  // padding:clamp(34px, 5vw, 65px) 0 clamp(27px, 3.0769vw, 40px);
+  // background: rgba(var(--bg-h),1.0);
   overflow: hidden;
 }
 
@@ -89,39 +89,15 @@ footer{
   }
  
   &__bottom{
+    padding: 21.5px 48px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     grid-gap: 15px;
-  }
+    background-color: rgba(var(--bg-a),1.0);
+    backdrop-filter: blur(20px);
+    clip-path: polygon(1313.72px 10.9572px, 1313.72px 10.9572px, 1313.42183px 9.14408538295px, 1312.86584px 7.4377006856px, 1312.07381px 5.85791663865px, 1311.06752px 4.4246039728px, 1309.86875px 3.15763341875px, 1308.49928px 2.0768757072px, 1306.98089px 1.20220156885px, 1305.33536px 0.5534817344px, 1303.58447px 0.15058693455px, 1301.75px 0.0133879px, 14.166px 1.5805px, 14.166px 1.5805px, 12.26310305px 1.73304881px, 10.4541208px 2.17075248px, 8.76258315px 2.87078887px, 7.21202px 3.81033584px, 5.82596125px 4.96657125px, 4.6279368px 6.31667296px, 3.64147655px 7.83781883px, 2.8901104px 9.50718672px, 2.39736825px 11.30195449px, 2.18678px 13.1993px, 0px 82px, 1320px 82px, 1313.72px 10.9572px); 
 
-  &__col{
-    display: flex;
-    flex-direction: column;
-    grid-gap: clamp(25px, 2.3077vw, 30px);
-    position: relative;
-
-    &--mode{
-      flex-direction: row;
-      grid-gap: clamp(50px, 5.97vw, 80px);
-
-      @include laptop{
-        grid-gap: clamp(20px, 3.226vw, 40px);
-      }
-
-      @include tablet{
-        flex-direction: column;
-      }
-    }
-  }
-
-  &__text{
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 130%;
-    color: rgba(var(--cl-a),1.0);
-    max-width: 197px;
   }
 
   &__links{
@@ -137,58 +113,6 @@ footer{
       @include small-tablet{
         align-items: flex-end;
       }
-    }
-  }
-
-  &__info{
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 130%;
-    color: rgba(var(--cl-d),.4);
-  }
-
-  &__link{
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 130%;
-    color: rgba(var(--cl-d),.4);
-    transition: all .4s;
-
-    &--mode{
-      text-decoration: underline;
-      text-decoration-skip-ink: none;
-      color: rgba(var(--cl-a),.4);
-    }
-
-    &:hover{
-      color: rgba(var(--cl-c),1.0);
-    }
-  }
-
-  &__map{
-    width: clamp(335px, 42.857vw, 600px);
-    height: clamp(197px, 25vw, 350px);
-    border-radius: 6px;
-    overflow: hidden;
-   
-
-    img,picture,iframe{
-      width: 100%;
-      height: 100%;
-    }
-
-    @include laptop{
-        width: 100%;
-    }
-
-    @include for-desktop{
-      margin-left: clamp(5px, 1vw, 13px);
-    }
-
-    @include small-tablet{
-      height: clamp(197px, 32.552vw, 250px);
     }
   }
   

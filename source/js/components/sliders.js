@@ -39,9 +39,9 @@ if(feedbacksSlider) {
     modules: [Autoplay, Pagination, Navigation],
     observer: true,
     observeParents: true,
-    // slidesPerView: 2.25,
-    // spaceBetween: 55,
-    // loop: true,
+    slidesPerView: 'auto',
+    spaceBetween: 55,
+    loop: true,
     pagination: {
       el: ".feedbacks-section__pagination",
       type: "progressbar",

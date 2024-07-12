@@ -289,9 +289,9 @@ if (feedbacksSlider) {
     modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Autoplay, swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Navigation],
     observer: true,
     observeParents: true,
-    // slidesPerView: 2.25,
-    // spaceBetween: 55,
-    // loop: true,
+    slidesPerView: 'auto',
+    spaceBetween: 55,
+    loop: true,
     pagination: {
       el: ".feedbacks-section__pagination",
       type: "progressbar"
