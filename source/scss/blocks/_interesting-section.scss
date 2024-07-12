@@ -2,9 +2,9 @@
     position: relative;
     max-width: 1488px;
     margin: 0 auto;
-    padding: 60px 0;
+    padding: clamp(40px, 4.167vw, 60px) 0;
     background: #fafafa;
-    border-radius: 64px;
+    border-radius: clamp(32px, 4.444vw, 64px);
     box-shadow: 16px 30px 76px 0 rgba(0, 0, 0, 0.05), 64px 122px 137px 0 rgba(0, 0, 0, 0.04), 144px 274px 186px 0 rgba(0, 0, 0, 0.03), 256px 486px 220px 0 rgba(0, 0, 0, 0.01), 400px 760px 240px 0 rgba(0, 0, 0, 0);
 
 
@@ -37,7 +37,9 @@
         &-controls {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
             gap: 24px;
+            gap: clamp(8px, 1.667vw, 24px);
         }
     }
 
@@ -72,6 +74,28 @@
         &:hover,
         &.active {
             color: rgba(var(--cl-d),1.0);
+        }
+
+        @include tablet {
+            &:before {
+                display: none;
+            }
+
+            button {
+                background: rgba(var(--cl-b), 0.4);
+                border-radius: clamp(4px, 0.781vw, 8px);
+                padding: clamp(2px, 1.302vw, 10px) clamp(6px, 1.302vw, 10px) clamp(4px, 1.302vw, 10px);
+                font-size: clamp(16px, 1.953vw, 20px);
+                line-height: 114%;
+                text-transform: initial;
+                color: rgba(var(--cl-a),1.0);
+            }
+
+            &:hover,
+            &.active {
+                border-radius: clamp(4px, 0.781vw, 8px);
+                background: rgba(var(--bg-d),1.0);
+            }
         }
     }
 }
