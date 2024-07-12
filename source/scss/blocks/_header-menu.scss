@@ -38,40 +38,38 @@
    } 
 
    &__inner{
-    display: flex;
-    flex-direction: column;
-    grid-gap: clamp(15px, 1.7692vw, 23px);
-
-    @include mobile{
-        width: 100%;
-        align-items: center;
-        grid-gap: 25px;
-        justify-content: center;
-    }
-   }
-
-   &__wrapp{
-    display: flex;
-    flex-direction: column;
-    grid-gap: clamp(16px, 1.8462vw, 24px);
-
-    .tel-link{
-        font-size: clamp(18px, 1.6923vw, 22px);
-    }
-
-    .main-button{
-        width: fit-content;
-        padding: 15px 40px;
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(15px, 1.7692vw, 23px);
+        justify-content: space-between;
 
         @include mobile{
-            max-width: 300px;
             width: 100%;
+            align-items: center;
+            grid-gap: 25px;
+            justify-content: center;
         }
-    }
+   }
 
-    @include mobile{
-        width: 100%;
-        align-items: center;
+   &__navs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+   }
+
+   &__nav {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+    span {
+        padding-left: 12px;
+        font-size: 14px;
+        line-height: 129%;
+        font-weight: 500;
+        color: rgba(var(--cl-c), 0.75);
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
     }
    }
   

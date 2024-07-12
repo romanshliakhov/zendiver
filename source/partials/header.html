@@ -39,75 +39,106 @@
         <div class="header-menu">
             <div class="header-menu__box">
                 <div class="header-menu__inner">
-                    <div class="header-menu__explore explore">
-                        <span>ExploRe ZenDiver:</span>
+                    <div class="explore">
+                        <span class="explore__heading">ExploRe ZenDiver:</span>
 
-                        <ul class="explore__items">
-                            <li>
-                                <a href="#">ZenDiver for personal use</a>
-                            </li>
+                        <a class="explore__link personal" href="#">
+                            <svg width='20' height='20'>
+                                <use href='img/sprite/sprite.svg#avatar'></use>
+                            </svg>
 
-                            <li>
-                                <a href="#">Corporate solution</a>
-                            </li>
-                        </ul>
+                            ZenDiver for personal use
+
+                            <svg width='20' height='20'>
+                                <use href='img/sprite/sprite.svg#proceed-arrow'></use>
+                            </svg>
+                        </a>
+
+                        <a class="explore__link corporate" href="#">
+                            <svg width='20' height='20'>
+                                <use href='img/sprite/sprite.svg#corporate'></use>
+                            </svg>
+
+                            Corporate solution
+
+                            <svg width='20' height='20'>
+                                <use href='img/sprite/sprite.svg#proceed-arrow'></use>
+                            </svg>
+                        </a>
                     </div>
 
-                    <div class="header-menu__navigations">
-                        <ul class="main-nav">
-                            <li class="main-nav__item">
-                                <a href="#" class="main-nav__link">For CEO of a company</a>
-                            </li>
-                            <li class="main-nav__item">
-                                <a href="#" class="main-nav__link">For self-employed</a>
-                            </li>
-                            <li class="main-nav__item">
-                                <a href="#" class="main-nav__link">For office workers</a>
-                            </li>
-                            <li class="main-nav__item">
-                                <a href="#" class="main-nav__link">For biohackers</a>
-                            </li>
-                            <li class="main-nav__item">
-                                <a href="#" class="main-nav__link">For spiritual seeker</a>
-                            </li>
-                        </ul>
-    
-                        <ul class="main-nav">
-                            <li class="main-nav__item">
-                                <a href="#" class="main-nav__link">Stress and Burnout</a>
-                            </li>
-                            <li class="main-nav__item">
-                                <a href="#" class="main-nav__link">Anxiety</a>
-                            </li>
-                            <li class="main-nav__item">
-                                <a href="#" class="main-nav__link">Guilt</a>
-                            </li>
-                            <li class="main-nav__item">
-                                <a href="#" class="main-nav__link">Overweight</a>
-                            </li>
-                            <li class="main-nav__item">
-                                <a href="#" class="main-nav__link">Sleep Quality</a>
-                            </li>
-                            <li class="main-nav__item">
-                                <a href="#" class="main-nav__link">Motivation</a>
-                            </li>
-                            <li class="main-nav__item">
-                                <a href="#" class="main-nav__link">Goal Setting and Achievement</a>
-                            </li>
-                            <li class="main-nav__item">
-                                <a href="#" class="main-nav__link">Integrity</a>
-                            </li>
-                            <li class="main-nav__item">
-                                <a href="#" class="main-nav__link">Awareness</a>
-                            </li>
-                            <li class="main-nav__item">
-                                <a href="#" class="main-nav__link">Emotional Intelligence</a>
-                            </li>
-                        </ul>
-                    </div>
+                    <ul class="header-menu__navs">
+                        <li class="header-menu__nav">
+                            <span>Fields</span>
 
-                    <div class="header-menu__apps apps">
+                            <ul class="main-nav">
+                                <li class="main-nav__item">
+                                    <a href="#" class="main-nav__link">For CEO of a company</a>
+                                </li>
+                                <li class="main-nav__item">
+                                    <a href="#" class="main-nav__link">For self-employed</a>
+                                </li>
+                                <li class="main-nav__item">
+                                    <a href="#" class="main-nav__link">For office workers</a>
+                                </li>
+                                <li class="main-nav__item">
+                                    <a href="#" class="main-nav__link">For biohackers</a>
+                                </li>
+                                <li class="main-nav__item">
+                                    <a href="#" class="main-nav__link">For spiritual seeker</a>
+                                </li>
+                            </ul>
+                        </li>
 
+                        <li class="header-menu__nav">
+                            <span>Topics</span>
+
+                            <ul class="main-nav">
+                                <li class="main-nav__item">
+                                    <a href="#" class="main-nav__link">Stress and Burnout</a>
+                                </li>
+                                <li class="main-nav__item">
+                                    <a href="#" class="main-nav__link">Anxiety</a>
+                                </li>
+                                <li class="main-nav__item">
+                                    <a href="#" class="main-nav__link">Guilt</a>
+                                </li>
+                                <li class="main-nav__item">
+                                    <a href="#" class="main-nav__link">Overweight</a>
+                                </li>
+                                <li class="main-nav__item">
+                                    <a href="#" class="main-nav__link">Sleep Quality</a>
+                                </li>
+                                <li class="main-nav__item">
+                                    <a href="#" class="main-nav__link">Motivation</a>
+                                </li>
+                                <li class="main-nav__item">
+                                    <a href="#" class="main-nav__link">Goal Setting and Achievement</a>
+                                </li>
+                                <li class="main-nav__item">
+                                    <a href="#" class="main-nav__link">Integrity</a>
+                                </li>
+                                <li class="main-nav__item">
+                                    <a href="#" class="main-nav__link">Awareness</a>
+                                </li>
+                                <li class="main-nav__item">
+                                    <a href="#" class="main-nav__link">Emotional Intelligence</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="apps">
+                        <a class="apps__link" href="#">
+                            <svg width='135' height='60'>
+                                <use href='img/sprite/sprite.svg#google-app'></use>
+                            </svg>
+                        </a>
+                        <a class="apps__link" href="#">
+                            <svg width='120' height='60'>
+                                <use href='img/sprite/sprite.svg#ios-app'></use>
+                            </svg>
+                        </a>
                     </div>
                 </div>
 
@@ -136,7 +167,7 @@
                                 <textarea class="main-form__area" id="message_2" placeholder="Message"></textarea>
                             </li>
                         </ul>
-                        
+
                         <button type="submit" class="main-button">Apply</button>
                     </div>
                 </form>
