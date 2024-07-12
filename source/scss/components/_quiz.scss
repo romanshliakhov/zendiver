@@ -1,36 +1,28 @@
 .quiz {
     position: relative;
     z-index: 2;
-    display: grid;
-    grid-template-columns: 1fr 218px;
-    // background-color: white;
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 54px;
-        background-image: var(--quiz-frame-top);
-        background-size: contain;
-        background-repeat: no-repeat;
-        z-index: -1;
+    &__top-frame {
+        height: 32px;
+        clip-path: polygon( 0% 100%,100% 100%,100% 64.92%,100% 64.92%,99.952% 57.655%,99.813% 50.755%,99.591% 44.311%,99.292% 38.415%,98.925% 33.156%,98.497% 28.626%,98.014% 24.917%,97.485% 22.119%,96.917% 20.324%,96.318% 19.622%,3.808% 0.776%,3.808% 0.776%,3.193% 1.257%,2.609% 2.892%,2.063% 5.587%,1.564% 9.245%,1.119% 13.77%,0.738% 19.068%,0.427% 25.043%,0.195% 31.6%,0.05% 38.642%,0% 46.074%,0% 100% );
+        background-color: white; 
     }
 
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 54px;
-        background-image: var(--quiz-frame-bottom);
-        background-size: contain;
-        background-repeat: no-repeat;
-        z-index: -1;
+    &__bottom-frame {
+        height: 32px;
+        clip-path: polygon( 0% 33.098%,0% 33.098%,0.047% 39.048%,0.183% 44.706%,0.401% 49.997%,0.694% 54.848%,1.055% 59.184%,1.477% 62.932%,1.952% 66.019%,2.473% 68.37%,3.034% 69.912%,3.626% 70.571%,96.136% 100%,96.136% 100%,96.758% 99.686%,97.349% 98.394%,97.903% 96.204%,98.409% 93.198%,98.861% 89.455%,99.249% 85.058%,99.565% 80.085%,99.801% 74.619%,99.949% 68.739%,100% 62.527%,100% 1.21%,0% 1.21%,0% 33.098% );
+        background-color: white;
+    }
+
+    &__content {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 218px;
+        background-color: white;
     }
 
     &__info {
-        padding: 32px 24px;
+        padding: 0 24px;
         display: flex;
         flex-direction: column;
         gap: 16px;
@@ -66,10 +58,15 @@
         font-weight: 500;
         letter-spacing: -0.02em;
         color: rgba(var(--cl-a),1.0);
+
+        svg {
+            stroke: currentColor;
+        }
     }
 
     &__image {
         position: relative;
         display: flex;
+        display: none;
     }
 }

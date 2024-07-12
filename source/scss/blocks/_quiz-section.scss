@@ -10,10 +10,34 @@
         background: linear-gradient(180deg, #f6e2b7 0%, #fade97 100%);
         border-radius: 64px;
         box-shadow: 16px 30px 76px 0 rgba(0, 0, 0, 0.05), 64px 122px 137px 0 rgba(0, 0, 0, 0.04), 144px 274px 186px 0 rgba(0, 0, 0, 0.03), 256px 486px 220px 0 rgba(0, 0, 0, 0.01), 400px 760px 240px 0 rgba(0, 0, 0, 0);
+        overflow: hidden;
 
         &::before {
             content: '';
             position: absolute;
+            background-image: var(--mount-right);
+            background-position: center;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 86px;
+            right: 0;
+            bottom: 0;
+            border-bottom-right-radius: 64px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            background-image: var(--mount-left);
+            background-position: left;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            width: 1231px;
+            height: 778px;
+            left: 0;
+            bottom: 0;
+            border-bottom-left-radius: 64px;
         }
     }
 
