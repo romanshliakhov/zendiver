@@ -198,6 +198,7 @@
   --bg-d: 13, 119, 104;
   --bg-e: 10, 139, 211;
   --bg-f: 211, 108, 64;
+  --bg-g: 249, 241, 231;
 }
 
 /**
@@ -2655,17 +2656,10 @@ h2,
 }
 
 .main-button {
-  font-family: var(--font-family);
-  font-weight: 600;
-  font-size: clamp(16px, 1.3846vw, 18px);
-  letter-spacing: 0.03em;
-  text-align: center;
-  color: rgba(var(--cl-a), 1);
-  border-radius: 10px;
   padding: clamp(21px, 1.9231vw, 25px) clamp(42px, 4.6154vw, 60px);
-  background-color: rgba(var(--bg-d), 1);
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  background-color: rgba(var(--bg-a), 1);
+  border: 1px solid rgba(var(--cl-f), 1);
+  border-radius: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2675,56 +2669,21 @@ h2,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  gap: 10px;
+  font-family: var(--font-second);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: rgba(var(--cl-f), 1);
+  text-align: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .main-button:hover {
+  color: rgba(var(--bg-a), 1);
   background-color: rgba(var(--bg-f), 1);
 }
 
-@-webkit-keyframes pulse {
-  0%, 100%, 50% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-box-shadow: 0 0 0 rgba(var(--bg-k), 1);
-    box-shadow: 0 0 0 rgba(var(--bg-k), 1);
-  }
-  25% {
-    -webkit-transform: scale(1.035);
-    transform: scale(1.035);
-    -webkit-box-shadow: 0 0 3vw rgba(var(--bg-k), 1);
-    box-shadow: 0 0 3vw rgba(var(--bg-k), 1);
-  }
-}
-
-@keyframes pulse {
-  0%, 100%, 50% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-box-shadow: 0 0 0 rgba(var(--bg-k), 1);
-    box-shadow: 0 0 0 rgba(var(--bg-k), 1);
-  }
-  25% {
-    -webkit-transform: scale(1.035);
-    transform: scale(1.035);
-    -webkit-box-shadow: 0 0 3vw rgba(var(--bg-k), 1);
-    box-shadow: 0 0 3vw rgba(var(--bg-k), 1);
-  }
-}
-@-webkit-keyframes flare {
-  0% {
-    left: -150%;
-  }
-  100%, 25% {
-    left: 150%;
-  }
-}
-@keyframes flare {
-  0% {
-    left: -150%;
-  }
-  100%, 25% {
-    left: 150%;
-  }
-}
 .details {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3095,8 +3054,7 @@ h2,
 .main-form {
   border: 1px solid rgba(var(--bg-b), 0.1);
   border-radius: 10px;
-  background: rgba(var(--bg-a), 1);
-  background: #F9F1E7;
+  background: rgba(var(--bg-g), 1);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3104,9 +3062,10 @@ h2,
   -ms-flex-align: center;
   align-items: center;
   grid-gap: clamp(9px, 5.7692vw, 75px);
-  padding: clamp(32px, 2.6154vw, 34px) clamp(24px, 5vw, 65px) clamp(32px, 4.6154vw, 60px);
+  padding: clamp(32px, 2.6154vw, 34px) clamp(32px, 2.6154vw, 34px) clamp(32px, 4.6154vw, 60px);
 }
 .main-form__box {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3115,6 +3074,7 @@ h2,
   -ms-flex-direction: column;
   flex-direction: column;
   grid-gap: clamp(20px, 4.6154vw, 60px);
+  text-align: center;
 }
 @media (max-width: 576px) {
   .main-form {
@@ -3149,76 +3109,31 @@ h2,
   -ms-flex-align: center;
   align-items: center;
   padding: 24px clamp(20px, 1.9231vw, 25px);
-  border: 1px solid var(--br-a);
+  border: 1px solid rgba(var(--cl-f), 0.4);
+  background: rgba(var(--bg-a), 1);
   border-radius: 10px;
-  font-family: var(--font-family);
-  font-weight: 400;
+  font-family: var(--font-second);
   font-size: 15px;
   line-height: 130%;
-  color: rgba(var(--cl-b), 1);
+  color: rgba(var(--cl-c), 1);
 }
 .main-form__input::-webkit-input-placeholder {
-  color: rgba(var(--cl-e), 1);
+  color: rgba(var(--cl-c), 0.5);
 }
 .main-form__input::-moz-placeholder {
-  color: rgba(var(--cl-e), 1);
+  color: rgba(var(--cl-c), 0.5);
 }
 .main-form__input:-ms-input-placeholder {
-  color: rgba(var(--cl-e), 1);
+  color: rgba(var(--cl-c), 0.5);
 }
 .main-form__input::-ms-input-placeholder {
-  color: rgba(var(--cl-e), 1);
+  color: rgba(var(--cl-c), 0.5);
 }
 .main-form__input::placeholder {
-  color: rgba(var(--cl-e), 1);
+  color: rgba(var(--cl-c), 0.5);
 }
 .main-form .title {
-  font-weight: 600;
   text-transform: uppercase;
-  max-width: 90%;
-}
-@media (max-width: 1240px) {
-  .main-form .title {
-    max-width: 100%;
-  }
-}
-.main-form .main-button {
-  grid-column: 1/-1;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-.main-form__image {
-  width: clamp(200px, 35.3846vw, 460px);
-  height: clamp(160px, 28.5385vw, 371px);
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-.main-form__image svg {
-  width: 100%;
-  height: auto;
-  fill: none;
-}
-@media (max-width: 1024px) {
-  .main-form__image {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-item-align: end;
-    align-self: flex-end;
-  }
-}
-@media (max-width: 576px) {
-  .main-form__image {
-    -ms-flex-item-align: center;
-    align-self: center;
-    margin-bottom: -1px;
-    width: calc(100% - clamp(24px, 5vw, 65px) * 2);
-    height: auto;
-    -webkit-box-ordinal-group: 3;
-    -ms-flex-order: 2;
-    order: 2;
-  }
 }
 .main-form__list {
   display: -webkit-box;
@@ -3252,38 +3167,29 @@ h2,
   -ms-flex-align: center;
   align-items: center;
   padding: 24px clamp(20px, 1.9231vw, 25px);
-  border: 1px solid var(--br-a);
+  border: 1px solid rgba(var(--cl-f), 0.4);
+  background: rgba(var(--bg-a), 1);
   border-radius: 10px;
-  font-family: var(--font-family);
-  font-weight: 400;
+  font-family: var(--font-second);
   font-size: 15px;
   line-height: 130%;
-  color: rgba(var(--cl-b), 1);
-  background-color: transparent;
+  color: rgba(var(--cl-c), 1);
   min-height: clamp(120px, 11.0769vw, 144px);
 }
 .main-form__area::-webkit-input-placeholder {
-  color: rgba(var(--cl-e), 1);
+  color: rgba(var(--cl-c), 0.5);
 }
 .main-form__area::-moz-placeholder {
-  color: rgba(var(--cl-e), 1);
+  color: rgba(var(--cl-c), 0.5);
 }
 .main-form__area:-ms-input-placeholder {
-  color: rgba(var(--cl-e), 1);
+  color: rgba(var(--cl-c), 0.5);
 }
 .main-form__area::-ms-input-placeholder {
-  color: rgba(var(--cl-e), 1);
+  color: rgba(var(--cl-c), 0.5);
 }
 .main-form__area::placeholder {
-  color: rgba(var(--cl-e), 1);
-}
-.main-form--mode .title {
-  max-width: 100%;
-  margin-bottom: 2px;
-}
-.main-form--mode .main-form__box {
-  grid-gap: 15px;
-  width: 100%;
+  color: rgba(var(--cl-c), 0.5);
 }
 
 .main-nav {

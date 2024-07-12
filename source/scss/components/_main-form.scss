@@ -1,17 +1,18 @@
 .main-form{
     border: 1px solid rgba(var(--bg-b), 0.1);
     border-radius: 10px;
-    background: rgba(var(--bg-a),1.0);
-    background: #F9F1E7;
+    background: rgba(var(--bg-g),1.0);
     display: flex;
     align-items: center;
     grid-gap: clamp(9px, 5.7692vw, 75px);
-    padding: clamp(32px, 2.6154vw, 34px) clamp(24px, 5vw, 65px) clamp(32px, 4.6154vw, 60px);
+    padding: clamp(32px, 2.6154vw, 34px) clamp(32px, 2.6154vw, 34px) clamp(32px, 4.6154vw, 60px);
 
     &__box{
+        width: 100%;
         display: flex;
         flex-direction: column;
         grid-gap: clamp(20px, 4.6154vw, 60px);
+        text-align: center;
     }
 
     @include mobile{
@@ -40,56 +41,21 @@
         display: flex;
         align-items: center;
         padding: 24px clamp(20px, 1.9231vw, 25px);
-        border: 1px solid var(--br-a);
+        border: 1px solid rgba(var(--cl-f), 0.4);
+        background: rgba(var(--bg-a),1.0);
         border-radius: 10px;
-        font-family: var(--font-family);
-        font-weight: 400;
+        font-family: var(--font-second);
         font-size: 15px;
         line-height: 130%;
-        color: rgba(var(--cl-b),1.0);
+        color: rgba(var(--cl-c),1.0);
 
         &::placeholder{
-            color: rgba(var(--cl-e),1.0);
+            color: rgba(var(--cl-c), 0.5);
         }
     }
 
     .title{
-        font-weight: 600;
         text-transform: uppercase;
-        max-width: 90%;
-
-        @include laptop{
-            max-width: 100%;
-        }
-    }
-
-    .main-button{
-        grid-column: 1/-1;
-        justify-content: center;
-    }
-
-    &__image{
-        width: clamp(200px, 35.3846vw, 460px);
-        height: clamp(160px, 28.5385vw, 371px);
-        flex-shrink: 0;
-        svg{
-            width: 100%;
-            height: auto;
-            fill: none;
-        }
-
-        @include tablet{
-            display: flex;
-            align-self: flex-end;
-        }
-
-        @include mobile{
-            align-self: center;
-            margin-bottom: -1px;
-            width: calc(100% - (clamp(24px, 5vw, 65px) * 2));
-            height: auto;
-            order: 2;
-        }
     }
 
     &__list{
@@ -117,33 +83,17 @@
         display: flex;
         align-items: center;
         padding: 24px clamp(20px, 1.9231vw, 25px);
-        border: 1px solid var(--br-a);
+        border: 1px solid rgba(var(--cl-f), 0.4);
+        background: rgba(var(--bg-a),1.0);
         border-radius: 10px;
-        font-family: var(--font-family);
-        font-weight: 400;
+        font-family: var(--font-second);
         font-size: 15px;
         line-height: 130%;
-        color: rgba(var(--cl-b),1.0);
-        background-color: transparent;
+        color: rgba(var(--cl-c),1.0);
         min-height: clamp(120px, 11.0769vw, 144px);
 
         &::placeholder{
-            color: rgba(var(--cl-e),1.0);
-        }
-    }
-
-    &--mode{
-        
-        .title{
-            max-width: 100%;
-            margin-bottom: 2px;
-        }
-
-        .main-form{
-            &__box{
-                grid-gap: 15px;
-                width: 100%;
-            }
+            color: rgba(var(--cl-c), 0.5);
         }
     }
 }
