@@ -21,6 +21,41 @@
     color: rgba(var(--bg-a),1.0);
     background-color: rgba(var(--bg-f),1.0);
   }
+
+  &--green{
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 167%;
+    letter-spacing: -0.02em;
+    color: rgba(var(--cl-a), 1);
+    background: linear-gradient(180deg, #0d7768 0%, #006758 100%);
+    padding: 13px 24px;
+    border-color: transparent;
+    position: relative;
+    z-index: 1;
+
+    &::before{
+      content: '';
+      inset: 0;
+      border-radius: inherit;
+      z-index: -1;
+      position: absolute;
+      background-color: rgba(var(--bg-a),1.0);
+      transition: all .2s;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &:hover {
+      &::before{
+        opacity: 1;
+        visibility: visible;
+      }
+
+      color: rgba(var(--cl-d),1.0);
+    }
+  }
 }
 
 

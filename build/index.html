@@ -194,6 +194,119 @@
                 </form>
             </div>
         </div>
+
+        <div class="filter-menu">
+            <div class="filter-menu__top">
+                <span class="filter-menu__title">Filters</span>
+
+                <button class="filter-menu__close">
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#close'></use>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="filter-menu__box">
+                <div class="search">
+                    <span class="search__title">Search by keywords</span>
+                    <input type="text" name="search_filter" id="search_filter" class="search__input" placeholder="Type here">
+                </div>
+
+                <div class="filter-menu__inner">
+                    <span class="filter-menu__subtitle">I’m a(n)</span>
+
+                    <div class="filter-menu__wrapp">
+                        <label class="radio-checkbox">
+                            <input type="radio" checked name="categories" class="radio-checkbox__field">
+                            <span class="radio-checkbox__content">All categories</span>
+                          </label>
+                          <label class="radio-checkbox">
+                            <input type="radio" name="categories" class="radio-checkbox__field">
+                            <span class="radio-checkbox__content">I am a CEO of a company</span>
+                          </label>
+                          <label class="radio-checkbox">
+                            <input type="radio" name="categories" class="radio-checkbox__field">
+                            <span class="radio-checkbox__content">I am self-employed</span>
+                          </label>
+                          <label class="radio-checkbox">
+                            <input type="radio" name="categories" class="radio-checkbox__field">
+                            <span class="radio-checkbox__content">I work in an office</span>
+                          </label>
+                          <label class="radio-checkbox">
+                            <input type="radio" name="categories" class="radio-checkbox__field">
+                            <span class="radio-checkbox__content">I am into biohacking</span>
+                          </label>
+                          <label class="radio-checkbox">
+                            <input type="radio" name="categories" class="radio-checkbox__field">
+                            <span class="radio-checkbox__content">I am a spiritual seeker</span>
+                          </label>
+                    </div>
+                </div>
+
+                <div class="filter-menu__inner">
+                    <span class="filter-menu__subtitle">I’m interested in</span>
+                    
+
+                    <div class="filter-menu__wrapp">
+                        <label class="custom-checkbox">
+                          <input type="checkbox" checked class="custom-checkbox__field">
+                          <span class="custom-checkbox__content">Everything</span>
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox__field">
+                            <span class="custom-checkbox__content">Stress and Burnout</span>
+                          </label>
+                          <label class="custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox__field">
+                            <span class="custom-checkbox__content">Anxiety</span>
+                          </label>
+                          <label class="custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox__field">
+                            <span class="custom-checkbox__content">Guilt</span>
+                          </label>
+                          <label class="custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox__field">
+                            <span class="custom-checkbox__content">Overweight</span>
+                          </label>
+                          <label class="custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox__field">
+                            <span class="custom-checkbox__content">Sleep Quality</span>
+                          </label>
+                          <label class="custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox__field">
+                            <span class="custom-checkbox__content">Motivation</span>
+                          </label>
+                          <label class="custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox__field">
+                            <span class="custom-checkbox__content">Goal Setting and Achievement</span>
+                          </label>
+                          <label class="custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox__field">
+                            <span class="custom-checkbox__content">Integrity</span>
+                          </label>
+                          <label class="custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox__field">
+                            <span class="custom-checkbox__content">Awareness</span>
+                          </label>
+                          <label class="custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox__field">
+                            <span class="custom-checkbox__content">Emotional Intelligence</span>
+                          </label>
+                    </div>
+                </div>
+
+                <div class="filter-menu__bottom">
+                    <button class="filter-menu__clear">Clear filters</button>
+                    <button class="main-button main-button--green">
+                        Apply filters
+                        <svg width='20' height='20'>
+                          <use href='img/sprite/sprite.svg#filter'></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+        </div>
     </div>
 </header>
 
@@ -210,8 +323,9 @@
                             <div class="first-section__article-picture">
                                 <div class="first-section__article-image">
                                     <picture>
-                                      <source type='image/webp' srcset='img/first/article1.webp'>
-                                      <img width='628' height='411' src='img/first/article1.png' alt='Breaking Free from Limiting Beliefs'>
+                                        <source type='image/webp' srcset='img/first/article1.webp'>
+                                        <img width='628' height='411' src='img/first/article1.png'
+                                            alt='Breaking Free from Limiting Beliefs'>
                                     </picture>
                                 </div>
                             </div>
@@ -219,7 +333,9 @@
                             <div class="first-section__article-info">
                                 <span class="first-section__article-heading">Breaking Free from Limiting Beliefs</span>
 
-                                <p class="first-section__article-text">As a CEO, your mindset is critical to your success. Discover how identifying and    transforming your limiting beliefs can unlock new levels of performance and innovation within your organization.</p>
+                                <p class="first-section__article-text">As a CEO, your mindset is critical to your
+                                    success. Discover how identifying and transforming your limiting beliefs can unlock
+                                    new levels of performance and innovation within your organization.</p>
 
                                 <ul class="first-section__article-details details">
                                     <li>
@@ -248,16 +364,20 @@
                             <div class="first-section__article-picture">
                                 <div class="first-section__article-image">
                                     <picture>
-                                    <source type='image/webp' srcset='img/first/article2.webp'>
-                                    <img width='188' height='146' src='img/first/article2.png' alt='Core Transformation Process – the science behind'>
+                                        <source type='image/webp' srcset='img/first/article2.webp'>
+                                        <img width='188' height='146' src='img/first/article2.png'
+                                            alt='Core Transformation Process – the science behind'>
                                     </picture>
                                 </div>
                             </div>
 
                             <div class="first-section__article-info">
-                                <span class="first-section__article-heading">Core Transformation Process – the science behind</span>
+                                <span class="first-section__article-heading">Core Transformation Process – the science
+                                    behind</span>
 
-                                <p class="first-section__article-text">As a CEO, your mindset is critical to your success. Discover how identifying and    transforming your limiting beliefs can unlock new levels of performance and innovation within your organization.</p>
+                                <p class="first-section__article-text">As a CEO, your mindset is critical to your
+                                    success. Discover how identifying and transforming your limiting beliefs can unlock
+                                    new levels of performance and innovation within your organization.</p>
 
                                 <ul class="first-section__article-details details">
                                     <li>
@@ -286,16 +406,20 @@
                             <div class="first-section__article-picture">
                                 <div class="first-section__article-image">
                                     <picture>
-                                    <source type='image/webp' srcset='img/first/article3.webp'>
-                                    <img width='188' height='146' src='img/first/article3.png' alt='Transforming Guilt into Self-Compassion'>
+                                        <source type='image/webp' srcset='img/first/article3.webp'>
+                                        <img width='188' height='146' src='img/first/article3.png'
+                                            alt='Transforming Guilt into Self-Compassion'>
                                     </picture>
                                 </div>
                             </div>
 
                             <div class="first-section__article-info">
-                                <span class="first-section__article-heading">Transforming Guilt into Self-Compassion</span>
+                                <span class="first-section__article-heading">Transforming Guilt into
+                                    Self-Compassion</span>
 
-                                <p class="first-section__article-text">As a CEO, your mindset is critical to your success. Discover how identifying and    transforming your limiting beliefs can unlock new levels of performance and innovation within your organization.</p>
+                                <p class="first-section__article-text">As a CEO, your mindset is critical to your
+                                    success. Discover how identifying and transforming your limiting beliefs can unlock
+                                    new levels of performance and innovation within your organization.</p>
 
                                 <ul class="first-section__article-details details">
                                     <li>
@@ -324,16 +448,20 @@
                             <div class="first-section__article-picture">
                                 <div class="first-section__article-image">
                                     <picture>
-                                    <source type='image/webp' srcset='img/first/article4.webp'>
-                                    <img width='188' height='146' src='img/first/article4.png' alt='ADHD & video games: Building important skills or worsening your symptoms'>
+                                        <source type='image/webp' srcset='img/first/article4.webp'>
+                                        <img width='188' height='146' src='img/first/article4.png'
+                                            alt='ADHD & video games: Building important skills or worsening your symptoms'>
                                     </picture>
                                 </div>
                             </div>
 
                             <div class="first-section__article-info">
-                                <span class="first-section__article-heading">ADHD & video games: Building important skills or worsening your symptoms</span>
+                                <span class="first-section__article-heading">ADHD & video games: Building important
+                                    skills or worsening your symptoms</span>
 
-                                <p class="first-section__article-text">As a CEO, your mindset is critical to your success. Discover how identifying and    transforming your limiting beliefs can unlock new levels of performance and innovation within your organization.</p>
+                                <p class="first-section__article-text">As a CEO, your mindset is critical to your
+                                    success. Discover how identifying and transforming your limiting beliefs can unlock
+                                    new levels of performance and innovation within your organization.</p>
 
                                 <ul class="first-section__article-details details">
                                     <li>
@@ -389,14 +517,15 @@
                                     <div class="usefull-section__material-top">
                                         <div class="usefull-section__material-image">
                                             <picture>
-                                              <source type='image/webp' srcset='img/usefull/item1.webp'>
-                                              <img width='250' height='116' src='img/usefull/item1.png' alt='item 1'>
+                                                <source type='image/webp' srcset='img/usefull/item1.webp'>
+                                                <img width='250' height='116' src='img/usefull/item1.png' alt='item 1'>
                                             </picture>
                                         </div>
                                     </div>
 
                                     <div class="usefull-section__material-info">
-                                        <span class="usefull-section__material-title">Free Resources for Transforming Limiting Beliefs</span>
+                                        <span class="usefull-section__material-title">Free Resources for Transforming
+                                            Limiting Beliefs</span>
 
                                         <div class="usefull-section__material-download">
                                             <svg width='21' height='20'>
@@ -411,14 +540,15 @@
                                     <div class="usefull-section__material-top">
                                         <div class="usefull-section__material-image">
                                             <picture>
-                                              <source type='image/webp' srcset='img/usefull/item2.webp'>
-                                              <img width='250' height='116' src='img/usefull/item2.png' alt='item 2'>
+                                                <source type='image/webp' srcset='img/usefull/item2.webp'>
+                                                <img width='250' height='116' src='img/usefull/item2.png' alt='item 2'>
                                             </picture>
                                         </div>
                                     </div>
 
                                     <div class="usefull-section__material-info">
-                                        <span class="usefull-section__material-title">ADHD & video games: Building important skills or worsening your symptoms</span>
+                                        <span class="usefull-section__material-title">ADHD & video games: Building
+                                            important skills or worsening your symptoms</span>
 
                                         <div class="usefull-section__material-download">
                                             <svg width='21' height='20'>
@@ -433,14 +563,15 @@
                                     <div class="usefull-section__material-top">
                                         <div class="usefull-section__material-image">
                                             <picture>
-                                              <source type='image/webp' srcset='img/usefull/item3.webp'>
-                                              <img width='250' height='116' src='img/usefull/item3.png' alt='item 3'>
+                                                <source type='image/webp' srcset='img/usefull/item3.webp'>
+                                                <img width='250' height='116' src='img/usefull/item3.png' alt='item 3'>
                                             </picture>
                                         </div>
                                     </div>
 
                                     <div class="usefull-section__material-info">
-                                        <span class="usefull-section__material-title">Transforming Guilt into Self-Compassion</span>
+                                        <span class="usefull-section__material-title">Transforming Guilt into
+                                            Self-Compassion</span>
 
                                         <div class="usefull-section__material-download">
                                             <svg width='21' height='20'>
@@ -455,14 +586,15 @@
                                     <div class="usefull-section__material-top">
                                         <div class="usefull-section__material-image">
                                             <picture>
-                                              <source type='image/webp' srcset='img/usefull/item4.webp'>
-                                              <img width='250' height='116' src='img/usefull/item4.png' alt='item 4'>
+                                                <source type='image/webp' srcset='img/usefull/item4.webp'>
+                                                <img width='250' height='116' src='img/usefull/item4.png' alt='item 4'>
                                             </picture>
                                         </div>
                                     </div>
 
-                                    <div class="usefull-section__material-info"> 
-                                        <span class="usefull-section__material-title">Core Transformation Process – the science behind</span>
+                                    <div class="usefull-section__material-info">
+                                        <span class="usefull-section__material-title">Core Transformation Process – the
+                                            science behind</span>
 
                                         <div class="usefull-section__material-download">
                                             <svg width='21' height='20'>
@@ -477,14 +609,15 @@
                                     <div class="usefull-section__material-top">
                                         <div class="usefull-section__material-image">
                                             <picture>
-                                              <source type='image/webp' srcset='img/usefull/item1.webp'>
-                                              <img width='250' height='116' src='img/usefull/item1.png' alt='item 1'>
+                                                <source type='image/webp' srcset='img/usefull/item1.webp'>
+                                                <img width='250' height='116' src='img/usefull/item1.png' alt='item 1'>
                                             </picture>
                                         </div>
                                     </div>
 
                                     <div class="usefull-section__material-info">
-                                        <span class="usefull-section__material-title">Free Resources for Transforming Limiting Beliefs 2</span>
+                                        <span class="usefull-section__material-title">Free Resources for Transforming
+                                            Limiting Beliefs 2</span>
 
                                         <div class="usefull-section__material-download">
                                             <svg width='21' height='20'>
@@ -499,14 +632,15 @@
                                     <div class="usefull-section__material-top">
                                         <div class="usefull-section__material-image">
                                             <picture>
-                                              <source type='image/webp' srcset='img/usefull/item2.webp'>
-                                              <img width='250' height='116' src='img/usefull/item2.png' alt='item 2'>
+                                                <source type='image/webp' srcset='img/usefull/item2.webp'>
+                                                <img width='250' height='116' src='img/usefull/item2.png' alt='item 2'>
                                             </picture>
                                         </div>
                                     </div>
 
                                     <div class="usefull-section__material-info">
-                                        <span class="usefull-section__material-title">ADHD & video games: Building important skills or worsening your symptoms 2</span>
+                                        <span class="usefull-section__material-title">ADHD & video games: Building
+                                            important skills or worsening your symptoms 2</span>
 
                                         <div class="usefull-section__material-download">
                                             <svg width='21' height='20'>
@@ -562,8 +696,9 @@
                                             <div class="articles__top">
                                                 <div class="articles__image">
                                                     <picture>
-                                                      <source type='image/webp' srcset='img/articles/article1.webp'>
-                                                      <img width='408' height='180' src='img/articles/article1.png' alt='article 1'>
+                                                        <source type='image/webp' srcset='img/articles/article1.webp'>
+                                                        <img width='408' height='180' src='img/articles/article1.png'
+                                                            alt='article 1'>
                                                     </picture>
                                                 </div>
                                                 <ul class="articles__tags">
@@ -601,8 +736,9 @@
                                             <div class="articles__top">
                                                 <div class="articles__image">
                                                     <picture>
-                                                      <source type='image/webp' srcset='img/articles/article2.webp'>
-                                                      <img width='408' height='180' src='img/articles/article2.png' alt='article 2'>
+                                                        <source type='image/webp' srcset='img/articles/article2.webp'>
+                                                        <img width='408' height='180' src='img/articles/article2.png'
+                                                            alt='article 2'>
                                                     </picture>
                                                 </div>
                                                 <ul class="articles__tags">
@@ -612,7 +748,8 @@
                                                 </ul>
                                             </div>
                                             <div class="articles__info">
-                                                <div class="articles__title">Free Resources for Transforming Your Limiting Beliefs</div>
+                                                <div class="articles__title">Free Resources for Transforming Your
+                                                    Limiting Beliefs</div>
 
                                                 <ul class="articles__details details">
                                                     <li>
@@ -640,8 +777,9 @@
                                             <div class="articles__top">
                                                 <div class="articles__image">
                                                     <picture>
-                                                      <source type='image/webp' srcset='img/articles/article3.webp'>
-                                                      <img width='408' height='180' src='img/articles/article3.png' alt='article 3'>
+                                                        <source type='image/webp' srcset='img/articles/article3.webp'>
+                                                        <img width='408' height='180' src='img/articles/article3.png'
+                                                            alt='article 3'>
                                                     </picture>
                                                 </div>
                                                 <ul class="articles__tags">
@@ -651,7 +789,8 @@
                                                 </ul>
                                             </div>
                                             <div class="articles__info">
-                                                <div class="articles__title">ADHD & video games: Building important skills or worsening your symptoms</div>
+                                                <div class="articles__title">ADHD & video games: Building important
+                                                    skills or worsening your symptoms</div>
 
                                                 <ul class="articles__details details">
                                                     <li>
@@ -679,8 +818,9 @@
                                             <div class="articles__top">
                                                 <div class="articles__image">
                                                     <picture>
-                                                      <source type='image/webp' srcset='img/articles/article1.webp'>
-                                                      <img width='408' height='180' src='img/articles/article1.png' alt='article 1'>
+                                                        <source type='image/webp' srcset='img/articles/article1.webp'>
+                                                        <img width='408' height='180' src='img/articles/article1.png'
+                                                            alt='article 1'>
                                                     </picture>
                                                 </div>
                                                 <ul class="articles__tags">
@@ -718,8 +858,9 @@
                                             <div class="articles__top">
                                                 <div class="articles__image">
                                                     <picture>
-                                                      <source type='image/webp' srcset='img/articles/article2.webp'>
-                                                      <img width='408' height='180' src='img/articles/article2.png' alt='article 2'>
+                                                        <source type='image/webp' srcset='img/articles/article2.webp'>
+                                                        <img width='408' height='180' src='img/articles/article2.png'
+                                                            alt='article 2'>
                                                     </picture>
                                                 </div>
                                                 <ul class="articles__tags">
@@ -729,7 +870,8 @@
                                                 </ul>
                                             </div>
                                             <div class="articles__info">
-                                                <div class="articles__title">Free Resources for Transforming Your Limiting Beliefs</div>
+                                                <div class="articles__title">Free Resources for Transforming Your
+                                                    Limiting Beliefs</div>
 
                                                 <ul class="articles__details details">
                                                     <li>
@@ -757,8 +899,9 @@
                                             <div class="articles__top">
                                                 <div class="articles__image">
                                                     <picture>
-                                                      <source type='image/webp' srcset='img/articles/article3.webp'>
-                                                      <img width='408' height='180' src='img/articles/article3.png' alt='article 3'>
+                                                        <source type='image/webp' srcset='img/articles/article3.webp'>
+                                                        <img width='408' height='180' src='img/articles/article3.png'
+                                                            alt='article 3'>
                                                     </picture>
                                                 </div>
                                                 <ul class="articles__tags">
@@ -768,7 +911,8 @@
                                                 </ul>
                                             </div>
                                             <div class="articles__info">
-                                                <div class="articles__title">ADHD & video games: Building important skills or worsening your symptoms</div>
+                                                <div class="articles__title">ADHD & video games: Building important
+                                                    skills or worsening your symptoms</div>
 
                                                 <ul class="articles__details details">
                                                     <li>
@@ -793,7 +937,7 @@
                                             </div>
                                         </li>
                                     </ul>
-    
+
                                     <button class="articles__more">
                                         Load more
                                         <svg width='20' height='20'>
@@ -809,8 +953,9 @@
                                             <div class="articles__top">
                                                 <div class="articles__image">
                                                     <picture>
-                                                      <source type='image/webp' srcset='img/articles/article1.webp'>
-                                                      <img width='408' height='180' src='img/articles/article1.png' alt='article 1'>
+                                                        <source type='image/webp' srcset='img/articles/article1.webp'>
+                                                        <img width='408' height='180' src='img/articles/article1.png'
+                                                            alt='article 1'>
                                                     </picture>
                                                 </div>
                                                 <ul class="articles__tags">
@@ -848,8 +993,9 @@
                                             <div class="articles__top">
                                                 <div class="articles__image">
                                                     <picture>
-                                                      <source type='image/webp' srcset='img/articles/article2.webp'>
-                                                      <img width='408' height='180' src='img/articles/article2.png' alt='article 2'>
+                                                        <source type='image/webp' srcset='img/articles/article2.webp'>
+                                                        <img width='408' height='180' src='img/articles/article2.png'
+                                                            alt='article 2'>
                                                     </picture>
                                                 </div>
                                                 <ul class="articles__tags">
@@ -859,7 +1005,8 @@
                                                 </ul>
                                             </div>
                                             <div class="articles__info">
-                                                <div class="articles__title">Free Resources for Transforming Your Limiting Beliefs</div>
+                                                <div class="articles__title">Free Resources for Transforming Your
+                                                    Limiting Beliefs</div>
 
                                                 <ul class="articles__details details">
                                                     <li>
@@ -884,7 +1031,7 @@
                                             </div>
                                         </li>
                                     </ul>
-    
+
                                     <button class="articles__more">
                                         Load more
                                         <svg width='20' height='20'>
@@ -900,8 +1047,9 @@
                                             <div class="articles__top">
                                                 <div class="articles__image">
                                                     <picture>
-                                                      <source type='image/webp' srcset='img/articles/article1.webp'>
-                                                      <img width='408' height='180' src='img/articles/article1.png' alt='article 1'>
+                                                        <source type='image/webp' srcset='img/articles/article1.webp'>
+                                                        <img width='408' height='180' src='img/articles/article1.png'
+                                                            alt='article 1'>
                                                     </picture>
                                                 </div>
                                                 <ul class="articles__tags">
@@ -939,8 +1087,9 @@
                                             <div class="articles__top">
                                                 <div class="articles__image">
                                                     <picture>
-                                                      <source type='image/webp' srcset='img/articles/article2.webp'>
-                                                      <img width='408' height='180' src='img/articles/article2.png' alt='article 2'>
+                                                        <source type='image/webp' srcset='img/articles/article2.webp'>
+                                                        <img width='408' height='180' src='img/articles/article2.png'
+                                                            alt='article 2'>
                                                     </picture>
                                                 </div>
                                                 <ul class="articles__tags">
@@ -950,7 +1099,8 @@
                                                 </ul>
                                             </div>
                                             <div class="articles__info">
-                                                <div class="articles__title">Free Resources for Transforming Your Limiting Beliefs</div>
+                                                <div class="articles__title">Free Resources for Transforming Your
+                                                    Limiting Beliefs</div>
 
                                                 <ul class="articles__details details">
                                                     <li>
@@ -978,8 +1128,9 @@
                                             <div class="articles__top">
                                                 <div class="articles__image">
                                                     <picture>
-                                                      <source type='image/webp' srcset='img/articles/article3.webp'>
-                                                      <img width='408' height='180' src='img/articles/article3.png' alt='article 3'>
+                                                        <source type='image/webp' srcset='img/articles/article3.webp'>
+                                                        <img width='408' height='180' src='img/articles/article3.png'
+                                                            alt='article 3'>
                                                     </picture>
                                                 </div>
                                                 <ul class="articles__tags">
@@ -989,7 +1140,8 @@
                                                 </ul>
                                             </div>
                                             <div class="articles__info">
-                                                <div class="articles__title">ADHD & video games: Building important skills or worsening your symptoms</div>
+                                                <div class="articles__title">ADHD & video games: Building important
+                                                    skills or worsening your symptoms</div>
 
                                                 <ul class="articles__details details">
                                                     <li>
@@ -1014,7 +1166,7 @@
                                             </div>
                                         </li>
                                     </ul>
-    
+
                                     <button class="articles__more">
                                         Load more
                                         <svg width='20' height='20'>
@@ -1030,8 +1182,9 @@
                                             <div class="articles__top">
                                                 <div class="articles__image">
                                                     <picture>
-                                                      <source type='image/webp' srcset='img/articles/article1.webp'>
-                                                      <img width='408' height='180' src='img/articles/article1.png' alt='article 1'>
+                                                        <source type='image/webp' srcset='img/articles/article1.webp'>
+                                                        <img width='408' height='180' src='img/articles/article1.png'
+                                                            alt='article 1'>
                                                     </picture>
                                                 </div>
                                                 <ul class="articles__tags">
@@ -1069,8 +1222,9 @@
                                             <div class="articles__top">
                                                 <div class="articles__image">
                                                     <picture>
-                                                      <source type='image/webp' srcset='img/articles/article2.webp'>
-                                                      <img width='408' height='180' src='img/articles/article2.png' alt='article 2'>
+                                                        <source type='image/webp' srcset='img/articles/article2.webp'>
+                                                        <img width='408' height='180' src='img/articles/article2.png'
+                                                            alt='article 2'>
                                                     </picture>
                                                 </div>
                                                 <ul class="articles__tags">
@@ -1080,7 +1234,8 @@
                                                 </ul>
                                             </div>
                                             <div class="articles__info">
-                                                <div class="articles__title">Free Resources for Transforming Your Limiting Beliefs</div>
+                                                <div class="articles__title">Free Resources for Transforming Your
+                                                    Limiting Beliefs</div>
 
                                                 <ul class="articles__details details">
                                                     <li>
@@ -1108,8 +1263,9 @@
                                             <div class="articles__top">
                                                 <div class="articles__image">
                                                     <picture>
-                                                      <source type='image/webp' srcset='img/articles/article3.webp'>
-                                                      <img width='408' height='180' src='img/articles/article3.png' alt='article 3'>
+                                                        <source type='image/webp' srcset='img/articles/article3.webp'>
+                                                        <img width='408' height='180' src='img/articles/article3.png'
+                                                            alt='article 3'>
                                                     </picture>
                                                 </div>
                                                 <ul class="articles__tags">
@@ -1119,7 +1275,8 @@
                                                 </ul>
                                             </div>
                                             <div class="articles__info">
-                                                <div class="articles__title">ADHD & video games: Building important skills or worsening your symptoms</div>
+                                                <div class="articles__title">ADHD & video games: Building important
+                                                    skills or worsening your symptoms</div>
 
                                                 <ul class="articles__details details">
                                                     <li>
@@ -1147,8 +1304,9 @@
                                             <div class="articles__top">
                                                 <div class="articles__image">
                                                     <picture>
-                                                      <source type='image/webp' srcset='img/articles/article1.webp'>
-                                                      <img width='408' height='180' src='img/articles/article1.png' alt='article 1'>
+                                                        <source type='image/webp' srcset='img/articles/article1.webp'>
+                                                        <img width='408' height='180' src='img/articles/article1.png'
+                                                            alt='article 1'>
                                                     </picture>
                                                 </div>
                                                 <ul class="articles__tags">
@@ -1183,7 +1341,7 @@
                                             </div>
                                         </li>
                                     </ul>
-    
+
                                     <button class="articles__more">
                                         Load more
                                         <svg width='20' height='20'>
@@ -1199,8 +1357,9 @@
                                             <div class="articles__top">
                                                 <div class="articles__image">
                                                     <picture>
-                                                      <source type='image/webp' srcset='img/articles/article1.webp'>
-                                                      <img width='408' height='180' src='img/articles/article1.png' alt='article 1'>
+                                                        <source type='image/webp' srcset='img/articles/article1.webp'>
+                                                        <img width='408' height='180' src='img/articles/article1.png'
+                                                            alt='article 1'>
                                                     </picture>
                                                 </div>
                                                 <ul class="articles__tags">
@@ -1238,8 +1397,9 @@
                                             <div class="articles__top">
                                                 <div class="articles__image">
                                                     <picture>
-                                                      <source type='image/webp' srcset='img/articles/article2.webp'>
-                                                      <img width='408' height='180' src='img/articles/article2.png' alt='article 2'>
+                                                        <source type='image/webp' srcset='img/articles/article2.webp'>
+                                                        <img width='408' height='180' src='img/articles/article2.png'
+                                                            alt='article 2'>
                                                     </picture>
                                                 </div>
                                                 <ul class="articles__tags">
@@ -1249,7 +1409,8 @@
                                                 </ul>
                                             </div>
                                             <div class="articles__info">
-                                                <div class="articles__title">Free Resources for Transforming Your Limiting Beliefs</div>
+                                                <div class="articles__title">Free Resources for Transforming Your
+                                                    Limiting Beliefs</div>
 
                                                 <ul class="articles__details details">
                                                     <li>
@@ -1277,8 +1438,9 @@
                                             <div class="articles__top">
                                                 <div class="articles__image">
                                                     <picture>
-                                                      <source type='image/webp' srcset='img/articles/article3.webp'>
-                                                      <img width='408' height='180' src='img/articles/article3.png' alt='article 3'>
+                                                        <source type='image/webp' srcset='img/articles/article3.webp'>
+                                                        <img width='408' height='180' src='img/articles/article3.png'
+                                                            alt='article 3'>
                                                     </picture>
                                                 </div>
                                                 <ul class="articles__tags">
@@ -1288,7 +1450,8 @@
                                                 </ul>
                                             </div>
                                             <div class="articles__info">
-                                                <div class="articles__title">ADHD & video games: Building important skills or worsening your symptoms</div>
+                                                <div class="articles__title">ADHD & video games: Building important
+                                                    skills or worsening your symptoms</div>
 
                                                 <ul class="articles__details details">
                                                     <li>
@@ -1316,8 +1479,9 @@
                                             <div class="articles__top">
                                                 <div class="articles__image">
                                                     <picture>
-                                                      <source type='image/webp' srcset='img/articles/article1.webp'>
-                                                      <img width='408' height='180' src='img/articles/article1.png' alt='article 1'>
+                                                        <source type='image/webp' srcset='img/articles/article1.webp'>
+                                                        <img width='408' height='180' src='img/articles/article1.png'
+                                                            alt='article 1'>
                                                     </picture>
                                                 </div>
                                                 <ul class="articles__tags">
@@ -1355,8 +1519,9 @@
                                             <div class="articles__top">
                                                 <div class="articles__image">
                                                     <picture>
-                                                      <source type='image/webp' srcset='img/articles/article2.webp'>
-                                                      <img width='408' height='180' src='img/articles/article2.png' alt='article 2'>
+                                                        <source type='image/webp' srcset='img/articles/article2.webp'>
+                                                        <img width='408' height='180' src='img/articles/article2.png'
+                                                            alt='article 2'>
                                                     </picture>
                                                 </div>
                                                 <ul class="articles__tags">
@@ -1366,7 +1531,8 @@
                                                 </ul>
                                             </div>
                                             <div class="articles__info">
-                                                <div class="articles__title">Free Resources for Transforming Your Limiting Beliefs</div>
+                                                <div class="articles__title">Free Resources for Transforming Your
+                                                    Limiting Beliefs</div>
 
                                                 <ul class="articles__details details">
                                                     <li>
@@ -1391,7 +1557,7 @@
                                             </div>
                                         </li>
                                     </ul>
-    
+
                                     <button class="articles__more">
                                         Load more
                                         <svg width='20' height='20'>
@@ -1407,8 +1573,9 @@
                                             <div class="articles__top">
                                                 <div class="articles__image">
                                                     <picture>
-                                                      <source type='image/webp' srcset='img/articles/article1.webp'>
-                                                      <img width='408' height='180' src='img/articles/article1.png' alt='article 1'>
+                                                        <source type='image/webp' srcset='img/articles/article1.webp'>
+                                                        <img width='408' height='180' src='img/articles/article1.png'
+                                                            alt='article 1'>
                                                     </picture>
                                                 </div>
                                                 <ul class="articles__tags">
@@ -1446,8 +1613,9 @@
                                             <div class="articles__top">
                                                 <div class="articles__image">
                                                     <picture>
-                                                      <source type='image/webp' srcset='img/articles/article2.webp'>
-                                                      <img width='408' height='180' src='img/articles/article2.png' alt='article 2'>
+                                                        <source type='image/webp' srcset='img/articles/article2.webp'>
+                                                        <img width='408' height='180' src='img/articles/article2.png'
+                                                            alt='article 2'>
                                                     </picture>
                                                 </div>
                                                 <ul class="articles__tags">
@@ -1457,7 +1625,8 @@
                                                 </ul>
                                             </div>
                                             <div class="articles__info">
-                                                <div class="articles__title">Free Resources for Transforming Your Limiting Beliefs</div>
+                                                <div class="articles__title">Free Resources for Transforming Your
+                                                    Limiting Beliefs</div>
 
                                                 <ul class="articles__details details">
                                                     <li>
@@ -1485,8 +1654,9 @@
                                             <div class="articles__top">
                                                 <div class="articles__image">
                                                     <picture>
-                                                      <source type='image/webp' srcset='img/articles/article3.webp'>
-                                                      <img width='408' height='180' src='img/articles/article3.png' alt='article 3'>
+                                                        <source type='image/webp' srcset='img/articles/article3.webp'>
+                                                        <img width='408' height='180' src='img/articles/article3.png'
+                                                            alt='article 3'>
                                                     </picture>
                                                 </div>
                                                 <ul class="articles__tags">
@@ -1496,7 +1666,8 @@
                                                 </ul>
                                             </div>
                                             <div class="articles__info">
-                                                <div class="articles__title">ADHD & video games: Building important skills or worsening your symptoms</div>
+                                                <div class="articles__title">ADHD & video games: Building important
+                                                    skills or worsening your symptoms</div>
 
                                                 <ul class="articles__details details">
                                                     <li>
@@ -1524,8 +1695,9 @@
                                             <div class="articles__top">
                                                 <div class="articles__image">
                                                     <picture>
-                                                      <source type='image/webp' srcset='img/articles/article1.webp'>
-                                                      <img width='408' height='180' src='img/articles/article1.png' alt='article 1'>
+                                                        <source type='image/webp' srcset='img/articles/article1.webp'>
+                                                        <img width='408' height='180' src='img/articles/article1.png'
+                                                            alt='article 1'>
                                                     </picture>
                                                 </div>
                                                 <ul class="articles__tags">
@@ -1563,8 +1735,9 @@
                                             <div class="articles__top">
                                                 <div class="articles__image">
                                                     <picture>
-                                                      <source type='image/webp' srcset='img/articles/article2.webp'>
-                                                      <img width='408' height='180' src='img/articles/article2.png' alt='article 2'>
+                                                        <source type='image/webp' srcset='img/articles/article2.webp'>
+                                                        <img width='408' height='180' src='img/articles/article2.png'
+                                                            alt='article 2'>
                                                     </picture>
                                                 </div>
                                                 <ul class="articles__tags">
@@ -1574,7 +1747,8 @@
                                                 </ul>
                                             </div>
                                             <div class="articles__info">
-                                                <div class="articles__title">Free Resources for Transforming Your Limiting Beliefs</div>
+                                                <div class="articles__title">Free Resources for Transforming Your
+                                                    Limiting Beliefs</div>
 
                                                 <ul class="articles__details details">
                                                     <li>
@@ -1602,8 +1776,9 @@
                                             <div class="articles__top">
                                                 <div class="articles__image">
                                                     <picture>
-                                                      <source type='image/webp' srcset='img/articles/article3.webp'>
-                                                      <img width='408' height='180' src='img/articles/article3.png' alt='article 3'>
+                                                        <source type='image/webp' srcset='img/articles/article3.webp'>
+                                                        <img width='408' height='180' src='img/articles/article3.png'
+                                                            alt='article 3'>
                                                     </picture>
                                                 </div>
                                                 <ul class="articles__tags">
@@ -1613,7 +1788,8 @@
                                                 </ul>
                                             </div>
                                             <div class="articles__info">
-                                                <div class="articles__title">ADHD & video games: Building important skills or worsening your symptoms</div>
+                                                <div class="articles__title">ADHD & video games: Building important
+                                                    skills or worsening your symptoms</div>
 
                                                 <ul class="articles__details details">
                                                     <li>
@@ -1638,7 +1814,7 @@
                                             </div>
                                         </li>
                                     </ul>
-    
+
                                     <button class="articles__more">
                                         Load more
                                         <svg width='20' height='20'>
@@ -1654,8 +1830,9 @@
                                             <div class="articles__top">
                                                 <div class="articles__image">
                                                     <picture>
-                                                      <source type='image/webp' srcset='img/articles/article1.webp'>
-                                                      <img width='408' height='180' src='img/articles/article1.png' alt='article 1'>
+                                                        <source type='image/webp' srcset='img/articles/article1.webp'>
+                                                        <img width='408' height='180' src='img/articles/article1.png'
+                                                            alt='article 1'>
                                                     </picture>
                                                 </div>
                                                 <ul class="articles__tags">
@@ -1690,7 +1867,7 @@
                                             </div>
                                         </li>
                                     </ul>
-    
+
                                     <button class="articles__more">
                                         Load more
                                         <svg width='20' height='20'>
@@ -1720,7 +1897,7 @@
                     </div>
 
                     <div class="new-section__articles">
-                        <a class="new-section__article" href="#"> 
+                        <a class="new-section__article" href="#">
                             <ul class="new-section__article-details details">
                                 <li>
                                     <svg width='18' height='20'>
@@ -1730,7 +1907,8 @@
                                 </li>
                             </ul>
 
-                            <div class="new-section__article-title">ADHD & video games: Building important skills or worsening your symptoms</div>
+                            <div class="new-section__article-title">ADHD & video games: Building important skills or
+                                worsening your symptoms</div>
 
                             <div class="new-section__article-link">
                                 Read more
@@ -1740,7 +1918,7 @@
                             </div>
                         </a>
 
-                        <a class="new-section__article" href="#"> 
+                        <a class="new-section__article" href="#">
                             <ul class="new-section__article-details details">
                                 <li>
                                     <svg width='18' height='20'>
@@ -1750,7 +1928,8 @@
                                 </li>
                             </ul>
 
-                            <div class="new-section__article-title">ZenDiver release - How to start your journey towards success</div>
+                            <div class="new-section__article-title">ZenDiver release - How to start your journey towards
+                                success</div>
 
                             <div class="new-section__article-link">
                                 Read more
@@ -1760,7 +1939,7 @@
                             </div>
                         </a>
 
-                        <a class="new-section__article" href="#"> 
+                        <a class="new-section__article" href="#">
                             <ul class="new-section__article-details details">
                                 <li>
                                     <svg width='18' height='20'>
@@ -1792,7 +1971,9 @@
                     </div>
 
                     <h2 class="quiz-section__title">Test yourself, pass QUIZ</h2>
-                    <p class="quiz-section__text">Some quiz info, i guess. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    <p class="quiz-section__text">Some quiz info, i guess. Lorem Ipsum is simply dummy text of the
+                        printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
+                        since the 1500s</p>
 
                     <ul class="quiz-section__variants">
                         <li class="quiz-section__variant">
@@ -1818,8 +1999,9 @@
                                     </div>
                                     <div class="quiz__image">
                                         <picture>
-                                          <source type='image/webp' srcset='img/quiz/quiz-1.webp'>
-                                          <img width='311' height='311' src='img/quiz/quiz-1.png' alt='How Well Do You Manage Stress? Find Out Now!'>
+                                            <source type='image/webp' srcset='img/quiz/quiz-1.webp'>
+                                            <img width='311' height='311' src='img/quiz/quiz-1.png'
+                                                alt='How Well Do You Manage Stress? Find Out Now!'>
                                         </picture>
                                     </div>
                                 </div>
@@ -1839,7 +2021,8 @@
                                             </svg>
                                             <p><span>X</span> minutes</p>
                                         </span>
-                                        <div class="quiz__title">Are You Ready for Transformation? Take the Core Transformation Quiz!
+                                        <div class="quiz__title">Are You Ready for Transformation? Take the Core
+                                            Transformation Quiz!
                                         </div>
                                         <a class="quiz__btn" href="#">
                                             Take the quiz
@@ -1850,8 +2033,9 @@
                                     </div>
                                     <div class="quiz__image">
                                         <picture>
-                                          <source type='image/webp' srcset='img/quiz/quiz-2.webp'>
-                                          <img width='311' height='311' src='img/quiz/quiz-2.png' alt='Are You Ready for Transformation? Take the Core Transformation Quiz!'>
+                                            <source type='image/webp' srcset='img/quiz/quiz-2.webp'>
+                                            <img width='311' height='311' src='img/quiz/quiz-2.png'
+                                                alt='Are You Ready for Transformation? Take the Core Transformation Quiz!'>
                                         </picture>
                                     </div>
                                 </div>
@@ -1888,7 +2072,7 @@
                                         <picture>
                                             <source type='image/webp' srcset='img/feedbacks/avatar1.webp'>
                                             <img width='73' height='67' src='img/feedbacks/avatar1.png' alt='avatar 1'>
-                                          </picture>
+                                        </picture>
                                     </div>
 
                                     <div class="feedback__author">
@@ -1897,8 +2081,10 @@
                                         <p class="feedback__author-position">Software Engineer at Google</p>
                                     </div>
                                 </div>
-                                
-                                <p class="feedback__text">As a software engineer, I was constantly stressed. ZenDiver taught me how to manage my anxieties and find balance. My work and personal life have improved significantly.</p>
+
+                                <p class="feedback__text">As a software engineer, I was constantly stressed. ZenDiver
+                                    taught me how to manage my anxieties and find balance. My work and personal life
+                                    have improved significantly.</p>
 
                                 <a class="feedback__link" href="#">
                                     Read the full story
@@ -1916,7 +2102,7 @@
                                         <picture>
                                             <source type='image/webp' srcset='img/feedbacks/avatar2.webp'>
                                             <img width='73' height='67' src='img/feedbacks/avatar2.png' alt='avatar 2'>
-                                          </picture>
+                                        </picture>
                                     </div>
 
                                     <div class="feedback__author">
@@ -1926,7 +2112,9 @@
                                     </div>
                                 </div>
 
-                                <p class="feedback__text">“ZenDiver has been a game-changer for me. It helped me overcome self-doubt and unleash my potential. I've achieved more than I ever thought possible.”</p>
+                                <p class="feedback__text">“ZenDiver has been a game-changer for me. It helped me
+                                    overcome self-doubt and unleash my potential. I've achieved more than I ever thought
+                                    possible.”</p>
 
                                 <a class="feedback__link" href="#">
                                     Read the full story
@@ -1944,7 +2132,7 @@
                                         <picture>
                                             <source type='image/webp' srcset='img/feedbacks/avatar3.webp'>
                                             <img width='73' height='67' src='img/feedbacks/avatar3.png' alt='avatar 3'>
-                                          </picture>
+                                        </picture>
                                     </div>
 
                                     <div class="feedback__author">
@@ -1953,8 +2141,10 @@
                                         <p class="feedback__author-position">Teacher at Google</p>
                                     </div>
                                 </div>
-                                
-                                <p class="feedback__text">“I never thought I could meditate, but ZenDiver made it easy. It's become a daily practice that keeps me grounded and focused. My students have noticed the positive change too!"</p>
+
+                                <p class="feedback__text">“I never thought I could meditate, but ZenDiver made it easy.
+                                    It's become a daily practice that keeps me grounded and focused. My students have
+                                    noticed the positive change too!"</p>
 
                                 <a class="feedback__link" href="#">
                                     Read the full story
@@ -1972,7 +2162,7 @@
                                         <picture>
                                             <source type='image/webp' srcset='img/feedbacks/avatar2.webp'>
                                             <img width='73' height='67' src='img/feedbacks/avatar2.png' alt='avatar 2'>
-                                          </picture>
+                                        </picture>
                                     </div>
 
                                     <div class="feedback__author">
@@ -1982,7 +2172,9 @@
                                     </div>
                                 </div>
 
-                                <p class="feedback__text">“ZenDiver has been a game-changer for me. It helped me overcome self-doubt and unleash my potential. I've achieved more than I ever thought possible.”</p>
+                                <p class="feedback__text">“ZenDiver has been a game-changer for me. It helped me
+                                    overcome self-doubt and unleash my potential. I've achieved more than I ever thought
+                                    possible.”</p>
 
                                 <a class="feedback__link" href="#">
                                     Read the full story
@@ -2000,7 +2192,7 @@
                                         <picture>
                                             <source type='image/webp' srcset='img/feedbacks/avatar1.webp'>
                                             <img width='73' height='67' src='img/feedbacks/avatar1.png' alt='avatar 1'>
-                                          </picture>
+                                        </picture>
                                     </div>
 
                                     <div class="feedback__author">
@@ -2009,8 +2201,10 @@
                                         <p class="feedback__author-position">Software Engineer at Google</p>
                                     </div>
                                 </div>
-                                
-                                <p class="feedback__text">As a software engineer, I was constantly stressed. ZenDiver taught me how to manage my anxieties and find balance. My work and personal life have improved significantly.</p>
+
+                                <p class="feedback__text">As a software engineer, I was constantly stressed. ZenDiver
+                                    taught me how to manage my anxieties and find balance. My work and personal life
+                                    have improved significantly.</p>
 
                                 <a class="feedback__link" href="#">
                                     Read the full story
@@ -2028,7 +2222,7 @@
                                         <picture>
                                             <source type='image/webp' srcset='img/feedbacks/avatar3.webp'>
                                             <img width='73' height='67' src='img/feedbacks/avatar3.png' alt='avatar 3'>
-                                          </picture>
+                                        </picture>
                                     </div>
 
                                     <div class="feedback__author">
@@ -2037,8 +2231,10 @@
                                         <p class="feedback__author-position">Teacher at Google</p>
                                     </div>
                                 </div>
-                                
-                                <p class="feedback__text">“I never thought I could meditate, but ZenDiver made it easy. It's become a daily practice that keeps me grounded and focused. My students have noticed the positive change too!"</p>
+
+                                <p class="feedback__text">“I never thought I could meditate, but ZenDiver made it easy.
+                                    It's become a daily practice that keeps me grounded and focused. My students have
+                                    noticed the positive change too!"</p>
 
                                 <a class="feedback__link" href="#">
                                     Read the full story
@@ -2067,9 +2263,11 @@
                 </div>
 
                 <div class="info-section__wrapp">
-                    <span class="info-section__heading">Initiate self-improvement with ZenDiver, and you'll begin to see results</span>
+                    <span class="info-section__heading">Initiate self-improvement with ZenDiver, and you'll begin to see
+                        results</span>
 
-                    <h2 class="info-section__title">Your accomplishments in the outside world depend not only on how hard you work but also on your mindset!</h2>
+                    <h2 class="info-section__title">Your accomplishments in the outside world depend not only on how
+                        hard you work but also on your mindset!</h2>
 
                     <button class="info-section__btn">
                         Try ZenDiver for free
@@ -2093,197 +2291,306 @@
                                 <use href='img/sprite/sprite.svg#proceed-arrow'></use>
                             </svg>
                         </a>
+
+                        <button class="filters-section__btn" data-filter-btn>
+                            Filter our articles
+                            
+                            <svg width='20' height='20'>
+                                <use href='img/sprite/sprite.svg#filter'></use>
+                            </svg>
+                        </button>
                     </div>
 
                     <div class="filters-section__box">
                         <div class="filters-section__controls">
-                            All categories
+                            <div class="filters-section__controls-box">
+                                <span class="filters-section__controls-title">I’m a(n)</span>
+                                <div class="select" data-select>
+                                    <div class="select__header">
+                                        <input type="hidden" class="select__input input-select" name="categories"
+                                            value="1">
+                                        <span class="select__current" data-id="1">
+                                            All categories
+                                        </span>
+                                        <svg class="select__current-icon" width='20' height='20'>
+                                            <use href='img/sprite/sprite.svg#arrow-d'></use>
+                                        </svg>
+                                    </div>
+                                    <div class="select__body">
+                                        <ul class="select__list">
+                                            <li class="select__option" data-id="1" data-type="option">
+                                                All categories
+                                            </li>
+                                            <li class="select__option" data-id="2" data-type="option">
+                                                I am a CEO of a company
+                                            </li>
+                                            <li class="select__option" data-id="3" data-type="option">
+                                                I am self-employed
+                                            </li>
+                                            <li class="select__option" data-id="4" data-type="option">
+                                                I work in an office
+                                            </li>
+                                            <li class="select__option" data-id="5" data-type="option">
+                                                I am into biohacking
+                                            </li>
+                                            <li class="select__option" data-id="6" data-type="option">
+                                                I am a spiritual seeker
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="filters-section__controls-box">
+                                <span class="filters-section__controls-title">I’m interested in</span>
+                                <div class="select" data-select>
+                                    <div class="select__header">
+                                        <input type="hidden" class="select__input input-select" name="interested"
+                                            value="1">
+                                        <span class="select__current" data-id="1">
+                                            Everything
+                                        </span>
+                                        <svg class="select__current-icon" width='20' height='20'>
+                                            <use href='img/sprite/sprite.svg#arrow-d'></use>
+                                        </svg>
+                                    </div>
+                                    <div class="select__body">
+                                        <ul class="select__list">
+                                            <li class="select__option" data-id="1" data-type="option">
+                                                Everything
+                                            </li>
+                                            <li class="select__option" data-id="2" data-type="option">
+                                                Stress and Burnout
+                                            </li>
+                                            <li class="select__option" data-id="3" data-type="option">
+                                                Anxiety
+                                            </li>
+                                            <li class="select__option" data-id="4" data-type="option">
+                                                Guilt
+                                            </li>
+                                            <li class="select__option" data-id="5" data-type="option">
+                                                Overweight
+                                            </li>
+                                            <li class="select__option" data-id="6" data-type="option">
+                                                Sleep Quality
+                                            </li>
+                                            <li class="select__option" data-id="7" data-type="option">
+                                                Motivation
+                                            </li>
+                                            <li class="select__option" data-id="8" data-type="option">
+                                                Goal Setting and Achievement
+                                            </li>
+                                            <li class="select__option" data-id="9" data-type="option">
+                                                Integrity
+                                            </li>
+                                            <li class="select__option" data-id="10" data-type="option">
+                                                Awareness
+                                            </li>
+                                            <li class="select__option" data-id="11" data-type="option">
+                                                Emotional Intelligence
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="search">
+                                <span class="search__title">Search by keywords</span>
+                                <input type="text" name="search_filter" id="search_filter" class="search__input"
+                                    placeholder="Type here">
+                            </div>
                         </div>
 
-                        <ul class="filters-section__items">
-                            <li class="filters-section__item"> 
+                        <div class="filters-section__items">
+                            <a class="filters-section__item" href="#">
                                 <div class="filters-section__head">
                                     <div class="filters-section__item-image">
                                         <picture>
-                                          <source type='image/webp' srcset='img/usefull/item1.webp'>
-                                          <img width='250' height='116' src='img/usefull/item1.png' alt='item 1'>
+                                            <source type='image/webp' srcset='img/usefull/item1.webp'>
+                                            <img width='250' height='116' src='img/usefull/item1.png' alt='item 1'>
                                         </picture>
                                     </div>
                                 </div>
 
                                 <div class="filters-section__info">
-                                    <span class="filters-section__item-title">Free Resources for Transforming Limiting Beliefs</span>
+                                    <span class="filters-section__item-title">Free Resources for Transforming Limiting
+                                        Beliefs</span>
 
-                                    <a class="filters-section__item-link" href="#">
+                                    <div class="filters-section__item-link">
                                         Read the article
-    
+
                                         <svg width='21' height='20'>
                                             <use href='img/sprite/sprite.svg#proceed-arrow'></use>
                                         </svg>
-                                    </a>
+                                    </div>
                                 </div>
 
                                 <div class="filters-section__bottom"></div>
-                            </li>
-    
-                            <li class="filters-section__item"> 
+                            </a>
+
+                            <a class="filters-section__item" href="#">
                                 <div class="filters-section__head">
                                     <div class="filters-section__item-image">
                                         <picture>
-                                          <source type='image/webp' srcset='img/usefull/item2.webp'>
-                                          <img width='250' height='116' src='img/usefull/item2.png' alt='item 2'>
+                                            <source type='image/webp' srcset='img/usefull/item2.webp'>
+                                            <img width='250' height='116' src='img/usefull/item2.png' alt='item 2'>
                                         </picture>
                                     </div>
                                 </div>
 
                                 <div class="filters-section__info">
-                                    <span class="filters-section__item-title">ADHD & video games: Building important skills or worsening your symptoms</span>
+                                    <span class="filters-section__item-title">ADHD & video games: Building important
+                                        skills or worsening your symptoms</span>
 
-                                    <a class="filters-section__item-link" href="#">
+                                    <div class="filters-section__item-link">
                                         Read the article
-    
+
                                         <svg width='21' height='20'>
                                             <use href='img/sprite/sprite.svg#proceed-arrow'></use>
                                         </svg>
-                                    </a>
+                                    </div>
                                 </div>
 
                                 <div class="filters-section__bottom"></div>
-                            </li>
-    
-                            <li class="filters-section__item"> 
+                            </a>
+
+                            <a class="filters-section__item" href="#">
                                 <div class="filters-section__head">
                                     <div class="filters-section__item-image">
                                         <picture>
-                                          <source type='image/webp' srcset='img/usefull/item3.webp'>
-                                          <img width='250' height='116' src='img/usefull/item3.png' alt='item 3'>
+                                            <source type='image/webp' srcset='img/usefull/item3.webp'>
+                                            <img width='250' height='116' src='img/usefull/item3.png' alt='item 3'>
                                         </picture>
                                     </div>
                                 </div>
-                                
-                                <div class="filters-section__info">
-                                    <span class="filters-section__item-title">Transforming Guilt into Self-Compassion</span>
 
-                                    <a class="filters-section__item-link" href="#">
+                                <div class="filters-section__info">
+                                    <span class="filters-section__item-title">Transforming Guilt into
+                                        Self-Compassion</span>
+
+                                    <div class="filters-section__item-link">
                                         Read the article
-    
+
                                         <svg width='21' height='20'>
                                             <use href='img/sprite/sprite.svg#proceed-arrow'></use>
                                         </svg>
-                                    </a>
+                                    </div>
                                 </div>
 
                                 <div class="filters-section__bottom"></div>
-                            </li>
+                            </a>
 
-                            <li class="filters-section__item"> 
+                            <a class="filters-section__item" href="#">
                                 <div class="filters-section__head">
                                     <div class="filters-section__item-image">
                                         <picture>
                                             <source type='image/webp' srcset='img/usefull/item4.webp'>
                                             <img width='250' height='116' src='img/usefull/item4.png' alt='item 4'>
-                                          </picture>
-                                    </div>
-                                </div>
-
-                                <div class="filters-section__info">
-                                    <span class="filters-section__item-title">Free Resources for Transforming Limiting Beliefs</span>
-
-                                    <a class="filters-section__item-link" href="#">
-                                        Read the article
-    
-                                        <svg width='21' height='20'>
-                                            <use href='img/sprite/sprite.svg#proceed-arrow'></use>
-                                        </svg>
-                                    </a>
-                                </div>
-
-                                <div class="filters-section__bottom"></div>
-                            </li>
-
-                            <li class="filters-section__item"> 
-                                <div class="filters-section__head">
-                                    <div class="filters-section__item-image">
-                                        <picture>
-                                          <source type='image/webp' srcset='img/usefull/item3.webp'>
-                                          <img width='250' height='116' src='img/usefull/item3.png' alt='item 3'>
                                         </picture>
                                     </div>
                                 </div>
 
                                 <div class="filters-section__info">
-                                    <span class="filters-section__item-title">Transforming Guilt into Self-Compassion</span>
+                                    <span class="filters-section__item-title">Free Resources for Transforming Limiting
+                                        Beliefs</span>
 
-                                    <a class="filters-section__item-link" href="#">
+                                    <div class="filters-section__item-link">
                                         Read the article
-    
+
                                         <svg width='21' height='20'>
                                             <use href='img/sprite/sprite.svg#proceed-arrow'></use>
                                         </svg>
-                                    </a>
+                                    </div>
                                 </div>
 
                                 <div class="filters-section__bottom"></div>
-                            </li>
+                            </a>
 
-                            <li class="filters-section__item"> 
+                            <a class="filters-section__item" href="#">
                                 <div class="filters-section__head">
                                     <div class="filters-section__item-image">
                                         <picture>
-                                          <source type='image/webp' srcset='img/usefull/item2.webp'>
-                                          <img width='250' height='116' src='img/usefull/item2.png' alt='item 2'>
+                                            <source type='image/webp' srcset='img/usefull/item3.webp'>
+                                            <img width='250' height='116' src='img/usefull/item3.png' alt='item 3'>
                                         </picture>
                                     </div>
                                 </div>
 
                                 <div class="filters-section__info">
-                                    <span class="filters-section__item-title">ADHD & video games: Building important skills or worsening your symptoms</span>
+                                    <span class="filters-section__item-title">Transforming Guilt into
+                                        Self-Compassion</span>
 
-                                    <a class="filters-section__item-link" href="#">
+                                    <div class="filters-section__item-link">
                                         Read the article
-    
+
                                         <svg width='21' height='20'>
                                             <use href='img/sprite/sprite.svg#proceed-arrow'></use>
                                         </svg>
-                                    </a>
+                                    </div>
                                 </div>
 
                                 <div class="filters-section__bottom"></div>
-                            </li>
-                        </ul>
-                        
+                            </a>
+
+                            <a class="filters-section__item" href="#">
+                                <div class="filters-section__head">
+                                    <div class="filters-section__item-image">
+                                        <picture>
+                                            <source type='image/webp' srcset='img/usefull/item2.webp'>
+                                            <img width='250' height='116' src='img/usefull/item2.png' alt='item 2'>
+                                        </picture>
+                                    </div>
+                                </div>
+
+                                <div class="filters-section__info">
+                                    <span class="filters-section__item-title">ADHD & video games: Building important
+                                        skills or worsening your symptoms</span>
+
+                                    <div class="filters-section__item-link">
+                                        Read the article
+
+                                        <svg width='21' height='20'>
+                                            <use href='img/sprite/sprite.svg#proceed-arrow'></use>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div class="filters-section__bottom"></div>
+                            </a>
+                        </div>
+
                         <div class="filters-section__pagination pagination">
                             <a class="pagination__nav pagination__nav--prev inactive" href="#">
-                              <svg width='24' height='24'>
-                                <use href='img/sprite/sprite.svg#arrow-right'></use>
-                              </svg>
+                                <svg width='24' height='24'>
+                                    <use href='img/sprite/sprite.svg#arrow-right'></use>
+                                </svg>
                             </a>
-      
+
                             <ul class="pagination__list">
-                              <li class="pagination__list-item">
-                                <a class="pagination__list-link active" href="#">1</a>
-                              </li>
-                              <li class="pagination__list-item">
-                                <a class="pagination__list-link" href="#">2</a>
-                              </li>
-                              <li class="pagination__list-item">
-                                <a class="pagination__list-link" href="#">3</a>
-                              </li>
-                              <li class="pagination__list-item">
-                                <a class="pagination__list-link" href="#">4</a>
-                              </li>
-                              <li class="pagination__list-item">
-                                <span>...</span>
-                              </li>
-                              <li class="pagination__list-item">
-                                <a class="pagination__list-link" href="#">7</a>
-                              </li>
+                                <li class="pagination__list-item">
+                                    <a class="pagination__list-link active" href="#">1</a>
+                                </li>
+                                <li class="pagination__list-item">
+                                    <a class="pagination__list-link" href="#">2</a>
+                                </li>
+                                <li class="pagination__list-item">
+                                    <a class="pagination__list-link" href="#">3</a>
+                                </li>
+                                <li class="pagination__list-item">
+                                    <a class="pagination__list-link" href="#">4</a>
+                                </li>
+                                <li class="pagination__list-item">
+                                    <span>...</span>
+                                </li>
+                                <li class="pagination__list-item">
+                                    <a class="pagination__list-link" href="#">7</a>
+                                </li>
                             </ul>
-                            
+
                             <a class="pagination__nav pagination__nav--next" href="#">
-                              <svg width='24' height='24'>
-                                <use href='img/sprite/sprite.svg#arrow-right'></use>
-                              </svg>
+                                <svg width='24' height='24'>
+                                    <use href='img/sprite/sprite.svg#arrow-right'></use>
+                                </svg>
                             </a>
                         </div>
                     </div>
@@ -2296,14 +2603,15 @@
                 <div class="subscribe-section__wrapp">
                     <div class="subscribe-section__image">
                         <picture>
-                          <source type='image/webp' srcset='img/subscribe/image-1.webp'>
-                          <img width='454' height='490' src='img/subscribe/image-1.png' alt='image 1'>
+                            <source type='image/webp' srcset='img/subscribe/image-1.webp'>
+                            <img width='454' height='490' src='img/subscribe/image-1.png' alt='image 1'>
                         </picture>
                     </div>
                     <div class="subscribe-section__info">
                         <h2 class="subscribe-section__title">Don’t miss a thing</h2>
 
-                        <div class="subscribe-section__heading">Subscribe for the latest insights from the team at <span class="brown">Zen</span><span class="green">Diver</span>:</div>
+                        <div class="subscribe-section__heading">Subscribe for the latest insights from the team at <span
+                                class="brown">Zen</span><span class="green">Diver</span>:</div>
 
                         <form class="subscribe-section__form">
                             <label>
@@ -2317,7 +2625,12 @@
                             </label>
                         </form>
 
-                        <p class="subscribe-section__text">By submitting this form, you agree that we may use the data you provide to contact you with information related to your request/submission and ZenDiver’s products and services. If you have already opted-in, you can control the messages you receive from ZenDiver in the subscription management center. You can unsubscribe from marketing email at any time by clicking the unsubscribe link in the email. Your data will be used subject to ZenDiver’s <a href="#">privacy policy</a>.</p>
+                        <p class="subscribe-section__text">By submitting this form, you agree that we may use the data
+                            you provide to contact you with information related to your request/submission and
+                            ZenDiver’s products and services. If you have already opted-in, you can control the messages
+                            you receive from ZenDiver in the subscription management center. You can unsubscribe from
+                            marketing email at any time by clicking the unsubscribe link in the email. Your data will be
+                            used subject to ZenDiver’s <a href="#">privacy policy</a>.</p>
                     </div>
                 </div>
             </div>

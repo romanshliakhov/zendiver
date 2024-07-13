@@ -3,9 +3,12 @@ import { enableScroll } from '../functions/enable-scroll';
 import vars from '../_vars';
 
 import {toggleCustomClass, removeCustomClass, addCustomClass, removeClassInArray} from '../functions/customFunctions';
-const {overlay, burger, mobileMenu, cookies, asideMenu} = vars;
+const {overlay, burger, mobileMenu} = vars;
 
 const menuLinks = mobileMenu.querySelectorAll('.main-nav__link');
+
+const filterMenu = document.querySelector('.filter-menu');
+const filterMenuBtn = document.querySelector('[data-filter-btn]');
 
 menuLinks.forEach(function(link){
   link.addEventListener('click', function(e){
@@ -36,40 +39,28 @@ if (mobileMenu) {
   });
 }
 
-if(asideMenu){
-  const btn = asideMenu.querySelector('.aside-menu__btn');
-  const wrapp = asideMenu.querySelector('.aside-menu__list');
 
-  function asideHandler(asideMenu, btn,wrapp){
-    btn.addEventListener('click', function(e){
-      e.preventDefault();
-      toggleCustomClass(asideMenu, 'active');
-      toggleCustomClass(btn, 'active');
-      toggleCustomClass(wrapp, 'active');
-  
-      btn.classList.contains('active') ? document.addEventListener('click', outsideClickHandler) : '';
-    })
-  }
-  
-  function closeAsideHandler(asideMenu,btn, wrapp){
-    removeCustomClass(asideMenu, 'active')
-    removeCustomClass(btn, 'active');
-    removeCustomClass(wrapp, 'active');
-  }
-  
-  function outsideClickHandler(e) {
-    if (!asideMenu.contains(e.target)) {
-      closeAsideHandler(btn, wrapp);
-    }
-  }
+if(filterMenu && filterMenuBtn){
 
-  asideHandler(asideMenu, btn, wrapp);
+  const closeBtn = filterMenu.querySelector('.filter-menu__close');
+  const clearBtn = filterMenu.querySelector('.filter-menu__clear');
+
+  filterMenuBtn.addEventListener('click', function(e){
+    e.preventDefault();
+    addCustomClass(filterMenu, 'active');
+    disableScroll();
+  })
+
+  closeBtn && closeBtn.addEventListener('click', function(e){
+    e.preventDefault();
+    removeCustomClass(filterMenu, 'active');
+    enableScroll();
+  })
+
+
+  clearBtn && clearBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    const checkboxes = filterMenu.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => checkbox.checked = false);
+  });
 }
-
-if(cookies){
-  setTimeout(function(){
-    addCustomClass(cookies, 'active');
-  }, 5000)
-}
-
-

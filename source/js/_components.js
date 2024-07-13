@@ -6,6 +6,7 @@ import './components/tabs';
 // import './components/replaceEl';
 // import './components/modals';
 import './components/aos';
+import './components/select';
 // import './components/counter.js';
 // import './components/inputMask.js';
 // import './components/form';
