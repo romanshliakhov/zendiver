@@ -19,7 +19,7 @@ footer{
   @include small-tablet { 
     padding-top: 256px;
     margin-top: -150px;
-    
+
     &::before {
       background-image: var(--footer-top-mob-frame);
     }
@@ -110,11 +110,9 @@ footer{
 
   &__lang {
     margin-top: clamp(32px, 5.469vw, 105px);
-
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 125%;
-    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    gap: 12px;
   }
  
   &__bottom{

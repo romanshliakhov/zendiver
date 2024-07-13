@@ -50,19 +50,6 @@ if (select.length) {
 
       items.forEach(function (item) {item.style.display = "flex"});
       currentItem.style.display = "none";
-    
-    //   if(currentItem.getAttribute('data-id') === '1'){
-    //     currentItem.nextElementSibling.style.paddingTop = '0';
-    //   }
-    //   if(currentItem.getAttribute('data-id') !== '1'){
-    //     items.forEach(function (item) {
-    //       if (item.getAttribute('data-id') === '1') {
-    //         item.style.paddingTop = '0px';
-    //       } else {
-    //         item.style.paddingTop = '10px';
-    //       } 
-    //     }
-    // )}
 
       if (isSelectOpen) {
         closeSelect(selectBody, item);
