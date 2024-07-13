@@ -19,6 +19,10 @@
         display: grid;
         grid-template-columns: 1fr 218px;
         background-color: white;
+
+        @include small-tablet {
+            grid-template-columns: 100%;
+        }
     }
 
     &__info {
