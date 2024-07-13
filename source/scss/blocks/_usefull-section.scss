@@ -37,15 +37,25 @@
 
         svg {
             stroke: currentColor;
+            transition: all 0.4s ease;
         }
 
-        &.slide-prev {
-            transform: scale(-1);
+        &:hover {
+            background-color: #EFE7DD;
+            transform: scale(1.15);
+            color:  #006354;
+        }
+
+        &:active {
+            background-color: rgba(var(#efe7dd), 0.75);
+            transform: scale(1.15);
+            color:  #006354;
         }
 
         &:disabled {
             color: rgba(var(--bg-c), 0.5);
             border: 2px solid rgba(var(--bg-c), 0.5);
+            pointer-events: none;
         }
     }
 
@@ -59,6 +69,7 @@
         position: relative;
         transition: all 0.4s ease;
         display: block;
+        transition: all 0.4s ease;
 
         &-top {
             clip-path: polygon( 100% 31.909%,100% 100%,0% 100%,0% 23.16%,0% 23.16%,0.091% 19.441%,0.356% 15.92%,0.778% 12.646%,1.344% 9.667%,2.038% 7.032%,2.845% 4.789%,3.752% 2.986%,4.742% 1.671%,5.801% 0.892%,6.914% 0.699%,93.491% 9.447%,93.491% 9.447%,94.554% 9.837%,95.56% 10.758%,96.496% 12.165%,97.349% 14.014%,98.105% 16.26%,98.753% 18.86%,99.279% 21.77%,99.671% 24.944%,99.916% 28.338%,100% 31.909% );
@@ -68,6 +79,8 @@
 
         &-image {
             display: flex;
+            border-radius: 8px;
+            overflow: hidden;
 
             picture,
             img {
@@ -75,6 +88,8 @@
                 height: 100%;
                 object-fit: cover;
                 border-radius: 8px;
+                transition: all 0.3s ease;
+                transition-duration: 1s;
             }
         }
 
@@ -97,11 +112,38 @@
         &-download {
             width: 40px;
             height: 40px;
+            border-radius: 100px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-left: auto;
             transition: all 0.4s ease;
+            
+            svg {
+                transition: all 0.4s ease;
+                stroke: rgba(var(--cl-d),1.0);
+            }
+        }
+
+        &:hover {
+            transition: all 0.4s ease;
+
+            span {
+                color: rgba(var(--cl-d),1.0);
+            }
+
+            picture,
+            img {
+                transform: scale(1.05);
+            }
+
+            .usefull-section__material-download {
+                background-color: rgba(var(--bg-d),1.0);
+
+                svg {
+                    stroke: #fff;
+                }
+            }
         }
     }
 
