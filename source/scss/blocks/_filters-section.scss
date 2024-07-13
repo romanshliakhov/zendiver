@@ -2,6 +2,11 @@
     position: relative;
     padding: 60px 0;
 
+    @include small-tablet {
+        order: -1;
+        padding: 30px 0 60px;
+    }
+
     &__wrapp {
         display: flex;
         flex-direction: column;

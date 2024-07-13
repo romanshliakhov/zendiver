@@ -28,6 +28,8 @@ main {
   padding-top: var(--header-height);
   min-width: 0 !important;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 
   &::before {
     content: '';

@@ -1,6 +1,6 @@
 .feedbacks-section {
     position: relative;
-    padding: 60px 0;
+    padding: clamp(30px, 4.839vw, 60px) 0;
     overflow: hidden;
 
     &::before {
@@ -18,7 +18,7 @@
     }
 
     &__top {
-        margin-bottom: 60px;
+        margin-bottom: clamp(24px, 4.839vw, 60px);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -30,7 +30,7 @@
     }
 
     &__progressbar {
-        margin: 60px auto 0;
+        margin: clamp(32px, 4.839vw, 60px) auto 0;
         max-width: 490px;
         width: 100%;
         height: 32px;

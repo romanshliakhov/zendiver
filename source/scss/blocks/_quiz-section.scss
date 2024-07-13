@@ -1,5 +1,5 @@
 .quiz-section {
-    padding: 180px 0 60px;
+    padding: clamp(125px, 17.578vw, 180px) 0 clamp(30px, 5.859vw, 60px);
 
     &__wrapp {
         position: relative;
@@ -66,6 +66,8 @@
     }
 
     &__more {
+        position: relative;
+        z-index: 5;
         margin: 0 auto;
         padding: 14px 56px;
         display: flex;
@@ -78,9 +80,14 @@
         color: rgba(var(--cl-e),1.0);
         background: linear-gradient(180deg, #fff 0%, #fafafa 100%);
         border-radius: 100px;
+        transition: all 0.4s ease;
 
         svg {
             stroke: currentColor;
+        }
+
+        &:hover {
+            padding: 14px 66px;
         }
     }
 }

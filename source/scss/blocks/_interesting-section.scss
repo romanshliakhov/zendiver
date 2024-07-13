@@ -7,6 +7,9 @@
     border-radius: clamp(32px, 4.444vw, 64px);
     box-shadow: 16px 30px 76px 0 rgba(0, 0, 0, 0.05), 64px 122px 137px 0 rgba(0, 0, 0, 0.04), 144px 274px 186px 0 rgba(0, 0, 0, 0.03), 256px 486px 220px 0 rgba(0, 0, 0, 0.01), 400px 760px 240px 0 rgba(0, 0, 0, 0);
 
+    @include small-tablet { 
+        display: none;
+    }
 
     &::before {
         content: '';

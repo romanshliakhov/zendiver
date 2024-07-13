@@ -2,6 +2,7 @@
     position: relative;
     padding: clamp(30px, 5.859vw, 60px) 0;
     z-index: 2;
+    order: -1;
 
     &__wrapp {
         display: flex;
