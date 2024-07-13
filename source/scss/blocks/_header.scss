@@ -95,7 +95,7 @@ header {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 14px 20px;
+    padding: 12px 20px;
     border: 2px solid rgba(var(--cl-f),1.0);
     background: transparent;
     border-radius: 100px;
@@ -133,7 +133,6 @@ header {
 
     &:hover {
       color: rgba(var(--cl-a),1.0);
-      border: 2px solid rgba(var(--cl-a),1.0);
 
       &::before {
         opacity: 1;
@@ -142,7 +141,6 @@ header {
 
     &:active {
       color: rgba(var(--cl-a),1.0);
-      border: 2px solid #bf582c;
 
       &::after {
         opacity: 1;
@@ -162,6 +160,11 @@ header {
     line-height: 125%;
     font-weight: 500;
     color: rgba(var(--cl-a),1.0);
+
+    span {
+      position: relative;
+      z-index: 5;
+    }
 
     &::before {
       content: '';
@@ -187,10 +190,12 @@ header {
 
     &:hover::before {
       opacity: 1;
+      z-index: 0;
     }
 
     &:active::after {
       opacity: 1;
+      z-index: 1;
     }
   }
 
