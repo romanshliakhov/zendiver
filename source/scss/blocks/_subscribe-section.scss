@@ -1,6 +1,7 @@
 .subscribe-section {
     position: relative;
     padding: clamp(30px, 4.839vw, 60px) 0;
+    z-index: 5;
 
     &__wrapp {
         width: 100%;
