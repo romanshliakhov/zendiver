@@ -75,8 +75,38 @@
             stroke: currentColor;
         }
 
-        @include small-tablet {
-            display: none;
+        &:hover {
+            color: rgba(var(--cl-g),1.0);
+
+            svg  {
+                transform: translateX(5px);
+            }
+        }
+
+        &:active {
+            color: rgba(var(--cl-d),1.0);
+
+            svg  {
+                transform: translateX(5px);
+            }
+        }
+    }
+
+    @include tablet {
+        margin-left: -40px;
+
+        &__info,
+        &__text {
+            padding-left: 40px;
+        }
+    }
+
+    @include small-tablet {
+        margin-left: -30px;
+
+        &__info,
+        &__text {
+            padding-left: 30px;
         }
     }
 }
