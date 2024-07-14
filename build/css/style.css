@@ -4131,7 +4131,7 @@ footer {
   background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(50%, #fff), to(#f1f1f1));
   background: linear-gradient(180deg, #fff 0%, #fff 50%, #f1f1f1 100%);
   margin-top: clamp(-50px, -5.208vw, -100px);
-  padding-top: clamp(150px, 19.479vw, 374px);
+  padding-top: clamp(120px, 19.479vw, 374px);
   overflow: hidden;
 }
 footer::before {
@@ -4156,8 +4156,16 @@ footer::after {
   height: 100%;
 }
 @media (max-width: 767px) {
+  footer {
+    padding-top: initial;
+    margin-top: initial;
+  }
   footer::before {
     background-image: var(--footer-top-mob-frame);
+    top: -150px;
+    height: 324px;
+    width: 100%;
+    background-size: cover;
   }
 }
 footer .container {
@@ -4174,6 +4182,11 @@ footer .container {
   flex-direction: column;
   grid-gap: clamp(32px, 3.229vw, 62px);
   position: relative;
+}
+@media (max-width: 1024px) {
+  .footer {
+    padding-top: 120px;
+  }
 }
 .footer__top {
   padding-left: clamp(20px, 3.698vw, 71px);

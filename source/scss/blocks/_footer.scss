@@ -2,7 +2,7 @@ footer{
   position: relative;
   background: linear-gradient(180deg, #fff 0%, #fff 50%, #f1f1f1 100%);
   margin-top: clamp(-50px, -5.208vw, -100px);
-  padding-top: clamp(150px, 19.479vw, 374px);
+  padding-top: clamp(120px, 19.479vw, 374px);
   overflow: hidden;
 
   &::before {
@@ -26,16 +26,18 @@ footer{
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-    // z-index: -1;
   }
 
   @include small-tablet { 
-    // padding-top: initial;
-    // margin-top: initial;
+    padding-top: initial;
+    margin-top: initial;
 
     &::before {
       background-image: var(--footer-top-mob-frame);
-      // top: 0;
+      top: -150px;
+      height: 324px;
+      width: 100%;
+      background-size: cover;
     }
   }
 
@@ -49,6 +51,10 @@ footer{
   flex-direction: column;
   grid-gap: clamp(32px, 3.229vw, 62px);
   position: relative;
+
+  @include tablet { 
+    padding-top: 120px;
+  }
 
   &__top {
     padding-left: clamp(20px, 3.698vw, 71px);
