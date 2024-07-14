@@ -14,6 +14,19 @@ footer{
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
+    z-index: 1;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    background-image: var(--footer-lines-frame);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    // z-index: -1;
   }
 
   @include small-tablet { 
@@ -23,6 +36,10 @@ footer{
     &::before {
       background-image: var(--footer-top-mob-frame);
     }
+  }
+
+  .container {
+    z-index: 3;
   }
 }
 

@@ -1,5 +1,5 @@
 .main-button {
-  padding: clamp(15px, 1.736vw, 25px) 0;
+  padding: clamp(15px, 1.389vw, 20px) 0;
   background-color: rgba(var(--bg-a),1.0);
   border: 1px solid rgba(var(--cl-f), 1);
   border-radius: 100px;
@@ -23,6 +23,7 @@
   }
 
   &--green{
+    padding: clamp(15px, 1.736vw, 25px) 0;
     font-family: var(--second-family);
     font-weight: 500;
     font-size: 18px;

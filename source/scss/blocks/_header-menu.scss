@@ -18,22 +18,24 @@
         height: calc(100vh - 100px);
     }
     
-   &__box{
-        grid-gap: 15px;
-        display: grid;
-        grid-template-columns: 1fr 45%;
-        height: 100%;
+    &__box{
+            grid-gap: 15px;
+            display: grid;
+            grid-template-columns: 1fr 45%;
+            // height: 100%;
 
-        @include tablet{
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        @include small-tablet{
-            .main-form{
-                display: none;
+            @include tablet{
+                grid-template-columns: repeat(2, 1fr);
             }
-        }
-   } 
+
+            @include small-tablet{
+                grid-template-columns: 1fr;
+
+                .main-form{
+                    display: none;
+                }
+            }
+    } 
 
     &__inner{
         display: flex;
@@ -73,5 +75,12 @@
    
     &.active {
         transform: translateY(100%) scale(1);
+    }
+
+    .apps__link {
+        svg {
+            width: 200px;
+            height: 70px;
+        }
     }
 }
