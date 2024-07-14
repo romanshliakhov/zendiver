@@ -352,14 +352,14 @@ if (usefullSlider) {
 }
 if (feedbacksSlider) {
   const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](feedbacksSlider, {
-    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Autoplay, swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Navigation],
+    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Autoplay, swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Scrollbar],
     observer: true,
     observeParents: true,
     slidesPerView: 'auto',
     spaceBetween: 55,
     pagination: {
-      el: ".feedbacks-section__pagination",
-      type: "progressbar"
+      clickable: true,
+      el: ".feedbacks-section__pagination"
     },
     breakpoints: {
       320: {
@@ -378,6 +378,11 @@ if (feedbacksSlider) {
         slidesPerView: 2.25,
         spaceBetween: 55
       }
+    },
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true,
+      clickable: true
     }
   });
 }

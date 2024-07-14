@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
 import vars from "../_vars";
-import { Pagination, Autoplay, Navigation } from "swiper/modules";
+import { Pagination, Autoplay, Navigation, Scrollbar } from "swiper/modules";
 
 const { usefullSlider, feedbacksSlider } = vars;
 
@@ -36,14 +36,14 @@ if(usefullSlider) {
 
 if(feedbacksSlider) {
   const swiper = new Swiper(feedbacksSlider, {
-    modules: [Autoplay, Pagination, Navigation],
+    modules: [Autoplay, Pagination, Navigation, Scrollbar],
     observer: true,
     observeParents: true,
     slidesPerView: 'auto',
     spaceBetween: 55,
     pagination: {
+      clickable: true,
       el: ".feedbacks-section__pagination",
-      type: "progressbar",
     },
     breakpoints:{
       320:{
@@ -63,6 +63,11 @@ if(feedbacksSlider) {
         spaceBetween: 55,
       },
     },
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true,
+      clickable: true,
+    }
   });  
 }
 
