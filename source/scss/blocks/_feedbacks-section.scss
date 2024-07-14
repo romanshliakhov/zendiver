@@ -45,12 +45,14 @@
         position: relative;
         padding: 8px;
         border-radius: 20px;
+        overflow: hidden;
         background-color: #dbd3c9;
 
         .swiper-pagination-progressbar-fill {
             height: 16px;
             border-radius: 50px;
             background-color: #fff;
+            overflow: hidden;
         }
     }
 }

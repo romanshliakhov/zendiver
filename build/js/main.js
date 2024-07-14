@@ -354,7 +354,6 @@ if (feedbacksSlider) {
     observeParents: true,
     slidesPerView: 'auto',
     spaceBetween: 55,
-    loop: true,
     pagination: {
       el: ".feedbacks-section__pagination",
       type: "progressbar"
