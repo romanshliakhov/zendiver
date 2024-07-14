@@ -71,10 +71,18 @@
         }
     }
 
-    &__image {
+    &__picture {
         position: relative;
+    }
+
+    &__image {
+        position: absolute;
         display: flex;
-        display: none;
+        width: 311px;
+        height: 311px;
+        z-index: 2;
+        left: -50px;
+        top: -100px;
     }
 
     &:hover {

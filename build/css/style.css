@@ -3382,12 +3382,19 @@ h2,
 .quiz__btn svg {
   stroke: currentColor;
 }
-.quiz__image {
+.quiz__picture {
   position: relative;
+}
+.quiz__image {
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  display: none;
+  width: 311px;
+  height: 311px;
+  z-index: 2;
+  left: -50px;
+  top: -100px;
 }
 .quiz:hover .quiz__title {
   color: rgba(var(--cl-d), 1);
@@ -5354,6 +5361,11 @@ footer .container {
   bottom: 0;
   border-bottom-left-radius: 64px;
   border-bottom-right-radius: 64px;
+}
+@media (max-width: 767px) {
+  .quiz-section__wrapp {
+    gap: 96px;
+  }
 }
 .quiz-section__frame {
   position: absolute;

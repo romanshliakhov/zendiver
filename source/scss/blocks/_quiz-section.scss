@@ -42,6 +42,10 @@
             border-bottom-left-radius: 64px;
             border-bottom-right-radius: 64px;
         }
+
+        @include small-tablet {
+            gap: 96px;
+        }
     }
 
     &__frame {
