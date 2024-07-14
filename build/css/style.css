@@ -2669,6 +2669,9 @@ body {
   letter-spacing: -0.02em;
   color: rgba(var(--cl-c), 1);
 }
+body.active {
+  overflow: hidden;
+}
 
 main {
   margin: 0 auto;

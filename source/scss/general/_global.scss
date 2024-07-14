@@ -19,6 +19,10 @@ body {
   font-weight: 400;
   letter-spacing: -0.02em;
   color:  rgba(var(--cl-c),1.0);
+
+  &.active {
+    overflow: hidden;
+  }
 }
 
 main {

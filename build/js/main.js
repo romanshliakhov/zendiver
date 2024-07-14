@@ -138,16 +138,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const {
-  overlay,
   burger,
-  mobileMenu
+  mobileMenu,
+  bodyEl
 } = _vars__WEBPACK_IMPORTED_MODULE_2__["default"];
 const menuLinks = mobileMenu.querySelectorAll('.main-nav__link');
 const filterMenu = document.querySelector('.filter-menu');
 const filterMenuBtn = document.querySelector('[data-filter-btn]');
 menuLinks.forEach(function (link) {
   link.addEventListener('click', function (e) {
-    hideMenuHandler(mobileMenu, burger);
+    hideMenuHandler(mobileMenu, burger, bodyEl);
   });
 });
 const mobileMenuHandler = function (mobileMenu, burger) {
@@ -155,18 +155,20 @@ const mobileMenuHandler = function (mobileMenu, burger) {
     e.preventDefault();
     (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.toggleCustomClass)(mobileMenu);
     (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.toggleCustomClass)(burger);
+    (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.toggleCustomClass)(bodyEl);
   });
 };
 const hideMenuHandler = function (mobileMenu, burger) {
   (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(mobileMenu);
   (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(burger);
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_3__.removeCustomClass)(bodyEl);
 };
 if (mobileMenu) {
-  mobileMenuHandler(mobileMenu, burger);
+  mobileMenuHandler(mobileMenu, burger, bodyEl);
   document.addEventListener("click", function (event) {
     const e = mobileMenu;
     if (!mobileMenu.contains(event.target) && !burger.contains(event.target)) {
-      hideMenuHandler(mobileMenu, burger);
+      hideMenuHandler(mobileMenu, burger, bodyEl);
     }
   });
 }
