@@ -12,5 +12,20 @@
 
     .select {
         width: fit-content;
+        height: 40px;
+        border: none;
+        background: transparent;
+    }
+    .select__header {
+        padding: 10px 12px;
+        gap: 0;
+    }
+
+    .select__header > svg {
+        width: 20px;
+    }
+
+    .select__body {
+        // height: max-content !important;
     }
 }

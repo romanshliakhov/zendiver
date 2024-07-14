@@ -246,7 +246,8 @@ const closeSelect = function (selectBody, select) {
 };
 const openSelect = function (selectBody, select) {
   let className = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : "active";
-  selectBody.style.height = "clamp(192px, 15vw, 198px)";
+  // selectBody.style.height = "clamp(192px, 15vw, 198px)";
+  selectBody.style.height = "fit-content";
   (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.addCustomClass)(select, className);
 };
 const checkIsSelectOpen = function (select) {

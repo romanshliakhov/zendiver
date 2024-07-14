@@ -6,7 +6,8 @@ const closeSelect = function (selectBody, select , className = "active") {
 };
 
 const openSelect = function (selectBody, select , className = "active") {
-  selectBody.style.height = "clamp(192px, 15vw, 198px)";
+  // selectBody.style.height = "clamp(192px, 15vw, 198px)";
+  selectBody.style.height = "fit-content";
   addCustomClass(select, className);
 };
 

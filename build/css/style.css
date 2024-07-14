@@ -3675,8 +3675,17 @@ h2,
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  height: 40px;
+  border: none;
+  background: transparent;
 }
-
+.language .select__header {
+  padding: 10px 12px;
+  gap: 0;
+}
+.language .select__header > svg {
+  width: 20px;
+}
 .main-form {
   border: 1px solid rgba(var(--bg-b), 0.1);
   border-radius: 10px;
