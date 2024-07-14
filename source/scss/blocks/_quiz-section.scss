@@ -3,7 +3,7 @@
 
     &__wrapp {
         position: relative;
-        padding: clamp(80px, 9.375vw, 96px) clamp(40px, 5.729vw, 110px) clamp(112px, 14.063vw, 144px);
+        padding: clamp(80px, 9.375vw, 96px) clamp(40px, 5.729vw, 110px) clamp(80px, 14.063vw, 144px);
         display: flex;
         flex-direction: column;
         gap: 32px;
@@ -44,7 +44,7 @@
         }
 
         @include small-tablet {
-            gap: 96px;
+            // gap: 96px;
         }
     }
 

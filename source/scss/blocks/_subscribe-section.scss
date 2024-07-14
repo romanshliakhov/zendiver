@@ -41,6 +41,7 @@
         }
 
         @include small-tablet {
+            max-width: 100%;
             position: absolute;
             inset: 0;
             clip-path: none;

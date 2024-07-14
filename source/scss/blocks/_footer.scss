@@ -30,11 +30,12 @@ footer{
   }
 
   @include small-tablet { 
-    padding-top: 256px;
-    margin-top: -150px;
+    // padding-top: initial;
+    // margin-top: initial;
 
     &::before {
       background-image: var(--footer-top-mob-frame);
+      // top: 0;
     }
   }
 
