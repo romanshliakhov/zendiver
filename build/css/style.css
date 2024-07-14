@@ -4150,7 +4150,7 @@ footer::after {
   position: absolute;
   bottom: 0;
   background-image: var(--footer-lines-frame);
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
@@ -4192,6 +4192,14 @@ footer .container {
   .footer__box {
     grid-template-columns: 100%;
   }
+}
+.footer__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .footer__info {
   display: -webkit-box;
