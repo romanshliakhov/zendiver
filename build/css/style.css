@@ -4471,9 +4471,20 @@ footer .container {
   -ms-transform: translateY(100%) scale(1);
   transform: translateY(100%) scale(1);
 }
-.header-menu .apps__link svg {
+.header-menu .apps__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 200px;
-  height: 70px;
+  height: 60px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.header-menu .apps__link img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .first-section {

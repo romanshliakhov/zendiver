@@ -78,9 +78,16 @@
     }
 
     .apps__link {
-        svg {
-            width: 200px;
-            height: 70px;
+        display: flex;
+        width: 200px;
+        height: 60px;
+        border-radius: 16px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
 }
