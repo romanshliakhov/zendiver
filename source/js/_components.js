@@ -9,6 +9,7 @@ import './components/aos';
 import './components/select';
 // import './components/counter.js';
 import './components/inputMask.js';
+import './components/hiddenCards';
 // import './components/form';
 
 

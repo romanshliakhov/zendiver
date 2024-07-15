@@ -27,6 +27,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_aos__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/aos */ "./source/js/components/aos.js");
 /* harmony import */ var _components_select__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/select */ "./source/js/components/select.js");
 /* harmony import */ var _components_inputMask_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/inputMask.js */ "./source/js/components/inputMask.js");
+/* harmony import */ var _components_hiddenCards__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/hiddenCards */ "./source/js/components/hiddenCards.js");
 
 
 
@@ -37,6 +38,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // import './components/counter.js';
+
 
 // import './components/form';
 
@@ -229,6 +231,110 @@ function stickyHeaderFunction(breakpoint) {
 }
 (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__.elementHeight)(header, "header-height");
 stickyHeaderFunction(320);
+
+/***/ }),
+
+/***/ "./source/js/components/hiddenCards.js":
+/*!*********************************************!*\
+  !*** ./source/js/components/hiddenCards.js ***!
+  \*********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../functions/customFunctions */ "./source/js/functions/customFunctions.js");
+
+const parents = document.querySelectorAll('[data-hidden-parent]');
+if (parents) {
+  parents.forEach(function (parent) {
+    const items = parent.querySelectorAll(":scope > li");
+    const showBtns = parent.parentNode.querySelectorAll("[data-more]");
+    const baseItemsToShow = parseInt(parent.getAttribute('data-hidden-parent')) || 2;
+    let flag = false;
+    let shownCount = 0;
+    let resizeTimeout;
+    const setupItems = function () {
+      let animate = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+      let itemsToShow;
+      if (baseItemsToShow === 3) {
+        if (window.innerWidth <= 1024) {
+          itemsToShow = 2;
+        } else if (window.innerWidth <= 767) {
+          itemsToShow = 1;
+        } else {
+          itemsToShow = baseItemsToShow;
+        }
+      } else {
+        itemsToShow = window.innerWidth <= 767 ? baseItemsToShow === 3 ? 2 : 1 : baseItemsToShow;
+      }
+      let currentShownCount = 0;
+      items.forEach((item, index) => {
+        if (index < shownCount || index < itemsToShow) {
+          if (animate) {
+            (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.fadeIn)(item, 0, "block");
+          } else {
+            item.style.display = "block";
+            item.style.opacity = "1";
+          }
+          currentShownCount++;
+        } else {
+          (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.fadeOut)(item, 0);
+        }
+      });
+      shownCount = currentShownCount;
+      if (shownCount >= items.length) {
+        showBtns.forEach(function (btn) {
+          btn.style.display = 'none';
+        });
+      } else {
+        showBtns.forEach(function (btn) {
+          btn.style.display = 'flex';
+        });
+      }
+    };
+    setupItems();
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        setupItems(false);
+      }, 100);
+    });
+    showBtns.forEach(function (showBtn) {
+      showBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        if (!flag) {
+          let itemsToShowOnClick;
+          if (baseItemsToShow === 3) {
+            if (window.innerWidth <= 1024) {
+              itemsToShowOnClick = 2;
+            } else {
+              itemsToShowOnClick = 3;
+            }
+          } else {
+            itemsToShowOnClick = window.innerWidth <= 767 ? 2 : baseItemsToShow;
+          }
+          let newlyShownCount = 0;
+          items.forEach((item, index) => {
+            if (index >= shownCount && newlyShownCount < itemsToShowOnClick) {
+              (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.fadeIn)(item, 200, "block");
+              newlyShownCount++;
+            }
+          });
+          shownCount += newlyShownCount;
+          if (shownCount >= items.length) {
+            showBtns.forEach(function (btn) {
+              btn.style.display = 'none';
+            });
+          }
+          flag = true;
+          setTimeout(function () {
+            flag = false;
+          }, 1000);
+        }
+      });
+    });
+  });
+}
 
 /***/ }),
 
@@ -459,6 +565,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   addClassInArray: function() { return /* binding */ addClassInArray; },
 /* harmony export */   addCustomClass: function() { return /* binding */ addCustomClass; },
 /* harmony export */   elementHeight: function() { return /* binding */ elementHeight; },
+/* harmony export */   fadeIn: function() { return /* binding */ fadeIn; },
+/* harmony export */   fadeOut: function() { return /* binding */ fadeOut; },
 /* harmony export */   removeClassInArray: function() { return /* binding */ removeClassInArray; },
 /* harmony export */   removeCustomClass: function() { return /* binding */ removeCustomClass; },
 /* harmony export */   toggleClassInArray: function() { return /* binding */ toggleClassInArray; },
@@ -511,6 +619,26 @@ const elementHeight = (el, variableName) => {
     window.addEventListener('DOMContentLoaded', initListener);
     window.addEventListener('resize', initListener);
   }
+};
+
+// ----------------------------------------------------
+
+const fadeIn = (el, timeout, display) => {
+  el.style.opacity = 0;
+  el.style.display = display || 'block';
+  el.style.transition = `all ${timeout}ms`;
+  setTimeout(() => {
+    el.style.opacity = 1;
+  }, 10);
+};
+// ----------------------------------------------------
+const fadeOut = (el, timeout) => {
+  el.style.opacity = 1;
+  el.style.transition = `all ${timeout}ms ease`;
+  el.style.opacity = 0;
+  setTimeout(() => {
+    el.style.display = 'none';
+  }, timeout);
 };
 
 /***/ }),

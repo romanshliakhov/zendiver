@@ -257,5 +257,9 @@
 
     &__pagination {
         margin-top: 32px;
+
+        @include small-tablet { 
+            display: none;
+        }
     }
 }

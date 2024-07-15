@@ -5443,11 +5443,6 @@ footer .container {
     grid-template-columns: 100%;
   }
 }
-@media (max-width: 767px) {
-  .quiz-section__variants li:not(:first-child) {
-    display: none;
-  }
-}
 .quiz-section__more {
   position: relative;
   z-index: 5;
@@ -5479,11 +5474,13 @@ footer .container {
 }
 @media (max-width: 767px) {
   .quiz-section__more {
-    display: none;
+    display: none !important;
   }
 }
-.quiz-section__load {
-  display: none;
+@media (min-width: 768px) {
+  .quiz-section__load {
+    display: none !important;
+  }
 }
 @media (max-width: 767px) {
   .quiz-section__load {
@@ -5971,6 +5968,11 @@ footer .container {
 }
 .filters-section__pagination {
   margin-top: 32px;
+}
+@media (max-width: 767px) {
+  .filters-section__pagination {
+    display: none;
+  }
 }
 
 .filter-menu {

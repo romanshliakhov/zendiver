@@ -92,11 +92,11 @@
             grid-template-columns: 100%;
         }
 
-        @include small-tablet {
-            li:not(:first-child) {
-                display: none;
-            }
-        }
+        // @include small-tablet {
+        //     li:not(:first-child) {
+        //         display: none;
+        //     }
+        // }
     }
 
     &__more {
@@ -125,12 +125,16 @@
         }
 
         @include small-tablet {
-            display: none;
+            display: none !important;
         }
     }
 
     &__load {
-        display: none;
+       
+
+        @include for-small-tablet{
+            display: none !important;
+        }
 
         @include small-tablet {
             position: relative;

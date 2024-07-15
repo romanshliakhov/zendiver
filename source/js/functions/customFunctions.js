@@ -41,3 +41,24 @@ export const elementHeight = (el, variableName) => {
     window.addEventListener('resize', initListener)
   }
 }
+
+// ----------------------------------------------------
+
+export const fadeIn = (el, timeout, display) => {
+	el.style.opacity = 0;
+	el.style.display = display || 'block';
+	el.style.transition = `all ${timeout}ms`;
+	setTimeout(() => {
+		el.style.opacity = 1;
+	}, 10);
+};
+// ----------------------------------------------------
+export const fadeOut = (el, timeout) => {
+	el.style.opacity = 1;
+	el.style.transition = `all ${timeout}ms ease`;
+	el.style.opacity = 0;
+
+	setTimeout(() => {
+		el.style.display = 'none';
+	}, timeout);
+};
