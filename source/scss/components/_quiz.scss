@@ -16,6 +16,7 @@
 
     &__content {
         margin: -2px 0;
+        padding: 4px 0;
         position: relative;
         display: grid;
         grid-template-columns: 1fr clamp(200px, 15.139vw, 218px);

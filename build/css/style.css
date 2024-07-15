@@ -3316,6 +3316,7 @@ h2,
 }
 .quiz__content {
   margin: -2px 0;
+  padding: 4px 0;
   position: relative;
   display: grid;
   grid-template-columns: 1fr clamp(200px, 15.139vw, 218px);
@@ -4137,7 +4138,7 @@ footer {
 footer::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -10px;
   background-image: var(--footer-frame);
   background-size: 100%;
   background-repeat: no-repeat;
@@ -4150,10 +4151,15 @@ footer::after {
   position: absolute;
   bottom: 0;
   background-image: var(--footer-lines-frame);
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
+}
+@media (max-width: 1240px) {
+  footer::after {
+    background-size: cover;
+  }
 }
 @media (max-width: 767px) {
   footer {
