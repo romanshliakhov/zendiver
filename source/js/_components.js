@@ -1,7 +1,8 @@
 import './components/sliders';
 import './components/burger';
 import './components/getDinamicHeight';
-import './components/tabs';
+import './components/filters';
+// import './components/tabs';
 // import './components/accordions';
 // import './components/replaceEl';
 // import './components/modals';

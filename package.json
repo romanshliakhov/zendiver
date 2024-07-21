@@ -41,6 +41,7 @@
     "gulp-webp": "^4.0.1",
     "gulp-zip": "^5.1.0",
     "lottie-web-webpack-loader": "0.0.5",
+    "mixitup": "^3.3.1",
     "node-w3c-validator": "^2.0.1",
     "path-browserify": "^1.0.1",
     "postcss": "^8.4.28",

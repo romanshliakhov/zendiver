@@ -3870,6 +3870,7 @@ footer .container {
 .interesting-section {
   position: relative;
   max-width: 1488px;
+  width: 100%;
   margin: 0 auto;
   padding: clamp(40px, 4.167vw, 60px) 0;
   background: #fafafa;
@@ -3908,7 +3909,7 @@ footer .container {
   flex-direction: column;
   gap: 32px;
 }
-.interesting-section__tabs {
+.interesting-section__box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3918,7 +3919,7 @@ footer .container {
   flex-direction: column;
   gap: 32px;
 }
-.interesting-section__tabs-controls {
+.interesting-section__controls {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3930,24 +3931,8 @@ footer .container {
   gap: 24px;
   gap: clamp(8px, 1.667vw, 24px);
 }
-.interesting-section__tab {
+.interesting-section__controls button {
   position: relative;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  cursor: pointer;
-}
-.interesting-section__tab::before {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  height: 4px;
-  width: 100%;
-  border-radius: 6px;
-  background-color: currentColor;
-  -webkit-transition: 0.2s ease;
-  transition: 0.2s ease;
-}
-.interesting-section__tab button {
   font-family: var(--font-primary);
   font-size: 18px;
   line-height: 167%;
@@ -3955,18 +3940,34 @@ footer .container {
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: currentColor;
-  -webkit-transition: 0.2s ease;
-  transition: 0.2s ease;
-  pointer-events: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-.interesting-section__tab:hover, .interesting-section__tab.active {
+.interesting-section__controls button::before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  height: 4px;
+  width: 100%;
+  border-radius: 6px;
+  background-color: transparent;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.interesting-section__controls button:hover::before {
+  background-color: rgba(var(--bg-c), 0.2);
+}
+.interesting-section__controls button.mixitup-control-active {
   color: rgba(var(--cl-d), 1);
 }
+.interesting-section__controls button.mixitup-control-active::before {
+  background-color: rgba(var(--bg-d), 1);
+}
 @media (max-width: 1024px) {
-  .interesting-section__tab:before {
+  .interesting-section__controls button:before {
     display: none;
   }
-  .interesting-section__tab button {
+  .interesting-section__controls button button {
     background: rgba(var(--cl-b), 0.4);
     border-radius: clamp(4px, 0.781vw, 8px);
     padding: clamp(2px, 1.302vw, 10px) clamp(6px, 1.302vw, 10px) clamp(4px, 1.302vw, 10px);
@@ -3975,10 +3976,14 @@ footer .container {
     text-transform: initial;
     color: rgba(var(--cl-a), 1);
   }
-  .interesting-section__tab:hover, .interesting-section__tab.active {
+  .interesting-section__controls button:hover, .interesting-section__controls button.active {
     border-radius: clamp(4px, 0.781vw, 8px);
     background: rgba(var(--bg-d), 1);
   }
+}
+.interesting-section__articles {
+  position: relative;
+  overflow: hidden;
 }
 
 .new-section {

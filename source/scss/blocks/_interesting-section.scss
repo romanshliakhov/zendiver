@@ -1,6 +1,7 @@
 .interesting-section {
     position: relative;
     max-width: 1488px;
+    width: 100%;
     margin: 0 auto;
     padding: clamp(40px, 4.167vw, 60px) 0;
     background: #fafafa;
@@ -32,37 +33,21 @@
         gap: 32px;
     }
 
-    &__tabs {
+    &__box {
         display: flex;
         flex-direction: column;
         gap: 32px;
-
-        &-controls {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 24px;
-            gap: clamp(8px, 1.667vw, 24px);
-        }
     }
 
-    &__tab {
-        position: relative;
-        transition: all 0.2s ease;
-        cursor: pointer;
-
-        &::before {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            height: 4px;
-            width: 100%;
-            border-radius: 6px;
-            background-color: currentColor;
-            transition: 0.2s ease;
-        }
+    &__controls {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 24px;
+        gap: clamp(8px, 1.667vw, 24px);
 
         button {
+            position: relative;
             font-family: var(--font-primary);
             font-size: 18px;
             line-height: 167%;
@@ -70,35 +55,59 @@
             letter-spacing: -0.02em;
             text-transform: uppercase;
             color: currentColor;
-            transition: 0.2s ease;
-            pointer-events: none;
-        }
+            transition: all 0.3s ease-in-out;
 
-        &:hover,
-        &.active {
-            color: rgba(var(--cl-d),1.0);
-        }
-
-        @include tablet {
-            &:before {
-                display: none;
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -8px;
+                height: 4px;
+                width: 100%;
+                border-radius: 6px;
+                background-color: transparent;
+                transition: all 0.3s ease-in-out;
             }
 
-            button {
-                background: rgba(var(--cl-b), 0.4);
-                border-radius: clamp(4px, 0.781vw, 8px);
-                padding: clamp(2px, 1.302vw, 10px) clamp(6px, 1.302vw, 10px) clamp(4px, 1.302vw, 10px);
-                font-size: clamp(16px, 1.953vw, 20px);
-                line-height: 114%;
-                text-transform: initial;
-                color: rgba(var(--cl-a),1.0);
+            &:hover {
+                &::before {
+                    background-color: rgba(var(--bg-c), 0.2);
+                }
             }
 
-            &:hover,
-            &.active {
-                border-radius: clamp(4px, 0.781vw, 8px);
-                background: rgba(var(--bg-d),1.0);
+            &.mixitup-control-active {
+                color: rgba(var(--cl-d),1.0);
+
+                &::before {
+                    background-color: rgba(var(--bg-d),1.0);
+                }
+            }
+
+            @include tablet {
+                &:before {
+                    display: none;
+                }
+    
+                button {
+                    background: rgba(var(--cl-b), 0.4);
+                    border-radius: clamp(4px, 0.781vw, 8px);
+                    padding: clamp(2px, 1.302vw, 10px) clamp(6px, 1.302vw, 10px) clamp(4px, 1.302vw, 10px);
+                    font-size: clamp(16px, 1.953vw, 20px);
+                    line-height: 114%;
+                    text-transform: initial;
+                    color: rgba(var(--cl-a),1.0);
+                }
+    
+                &:hover,
+                &.active {
+                    border-radius: clamp(4px, 0.781vw, 8px);
+                    background: rgba(var(--bg-d),1.0);
+                }
             }
         }
+    }
+
+    &__articles {
+        position: relative;
+        overflow: hidden;
     }
 }
