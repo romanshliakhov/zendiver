@@ -2,7 +2,7 @@ import { disableScroll } from '../functions/disable-scroll';
 import { enableScroll } from '../functions/enable-scroll';
 import vars from '../_vars';
 
-import {toggleCustomClass, removeCustomClass, addCustomClass } from '../functions/customFunctions';
+import {toggleClassInArray, toggleCustomClass, removeCustomClass, removeClassInArray} from '../functions/customFunctions';
 const { burger, mobileMenu, bodyEl} = vars;
 
 const menuLinks = mobileMenu.querySelectorAll('.main-nav__link');
@@ -16,27 +16,33 @@ menuLinks.forEach(function(link){
   })
 })
 
-const mobileMenuHandler = function(mobileMenu, burger) {
-    burger.addEventListener('click', function(e){
+const mobileMenuHandler = function(mobileMenu, burger, bodyEl) {
+  burger.forEach((btn) => {
+    btn.addEventListener('click', function(e){
       e.preventDefault();
       toggleCustomClass(mobileMenu);
-      toggleCustomClass(burger);
+      toggleClassInArray(burger);
       toggleCustomClass(bodyEl);
+      btn.classList.contains('active') ? disableScroll() : enableScroll()
     })
+  })
 }
 
-const hideMenuHandler = function(mobileMenu, burger) {
-    removeCustomClass(mobileMenu);
-    removeCustomClass(burger);
-    removeCustomClass(bodyEl);
+const hideMenuHandler = function(mobileMenu, burger, bodyEl) {
+  removeCustomClass(mobileMenu);
+  removeClassInArray(burger);
+  removeCustomClass(bodyEl);
+  enableScroll()
 }
 
 if (mobileMenu) {
   mobileMenuHandler(mobileMenu,burger, bodyEl);
   document.addEventListener("click", function (event) {
     const e = mobileMenu;
-    if (!mobileMenu.contains(event.target) && !burger.contains(event.target)) {
-      hideMenuHandler(mobileMenu, burger, bodyEl);
+    if (burger[0].classList.contains('active')) {
+      if (!mobileMenu.contains(event.target) && !burger[0].contains(event.target)) {
+        hideMenuHandler(mobileMenu, burger, bodyEl) 
+      }
     }
   });
 }
@@ -65,3 +71,8 @@ if(filterMenu && filterMenuBtn){
     checkboxes.forEach(checkbox => checkbox.checked = false);
   });
 }
+
+
+
+
+

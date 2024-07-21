@@ -23,14 +23,17 @@
         grid-template-columns: 1fr 41%;
         align-items: start;
         grid-gap: 40px clamp(40px, 5.729vw, 110px);
+        grid-template-rows: auto auto 1fr;
 
         @include tablet {
             grid-template-columns: repeat(2, 1fr);
             align-items: stretch;
+            grid-template-rows: initial;
         }
 
         @include small-tablet {
             grid-template-columns: 100%;
+            grid-gap: 60px;
         }
     }
 
@@ -39,7 +42,7 @@
         display: grid;
         grid-template-columns: 1fr 188px;
         align-items: stretch;
-        transition: all 0.4s ease;
+        transition: all 0.25s ease-in-out;
 
         &-picture {
             order: 1;
@@ -57,8 +60,7 @@
                 object-fit: cover;
                 border-radius: 18px;
                 box-shadow: 0 24px 48px 0 rgba(50, 50, 71, 0.06), 0 12px 24px 0 rgba(50, 50, 71, 0.04);
-                transition: all 0.3s ease;
-                transition-duration: 1s;
+                transition: all 0.25s ease-in-out;
             }
         }
 
@@ -68,8 +70,7 @@
             display: flex;
             align-items: center;
             background-color: white;
-            transition: all 0.3s ease;
-            transition-duration: 1s;
+            transition: all 0.25s ease-in-out;
         }
 
         &-heading {
@@ -94,6 +95,8 @@
         }
 
         &:hover {
+            transition: all 0.25s ease-in-out;
+
             .first-section__article-heading {
                 color: rgba(var(--cl-d),1.0);
             }
@@ -132,8 +135,7 @@
                     background-color: rgba(var(--cl-d),1.0);
                     width: 80%;
                     height: 80%;
-                    transition: all 0.4s ease;
-                    transition-duration: 1s;
+                    transition: all 0.25s ease-in-out;
                 }
             }
 
@@ -198,8 +200,7 @@
                     background-color: rgba(var(--bg-f),1.0);
                     width: 198px;
                     height: 137px;
-                    transition: all 0.4s ease;
-                    transition-duration: 1s;
+                    transition: all 0.25s ease-in-out;
                 }
             }
 
@@ -237,8 +238,7 @@
                     background-color: #2bb3ff;
                     width: 183px;
                     height: 156px;
-                    transition: all 0.4s ease;
-                    transition-duration: 1s;
+                    transition: all 0.25s ease-in-out;
                 }
             }
 
@@ -276,8 +276,7 @@
                     background-color: #29A590;
                     width: 168px;
                     height: 137px;
-                    transition: all 0.4s ease;
-                    transition-duration: 1s;
+                    transition: all 0.25s ease-in-out;
                 }
             }
 
@@ -311,6 +310,10 @@
 
                 .first-section__article-picture {
                     display: flex;
+
+                    &::before {
+                        top: -15px;
+                    }
                 }
 
                 .first-section__article-image {
@@ -319,8 +322,8 @@
     
                     picture,
                     img {
-                        box-shadow: 0 32px 64px 0 rgba(50, 50, 71, 0.04), 0 16px 32px 0 rgba(50, 50, 71, 0.04);
-                        border-radius: 61px;
+                        box-shadow: 0 17px 33px 0 rgba(50, 50, 71, 0.04), 0 8px 17px 0 rgba(50, 50, 71, 0.04);
+                        border-radius: 32px;
                     }
                 }
             }
@@ -335,7 +338,7 @@
                     &::before {
                         content: '';
                         position: absolute;
-                        top: -30px;
+                        top: -15px;
                         right: 35px;
                         left: initial;
                         clip-path: polygon( 0.267% 15.349%,0.267% 15.349%,0.299% 14.156%,0.477% 13.013%,0.79% 11.938%,1.226% 10.944%,1.776% 10.048%,2.426% 9.266%,3.167% 8.612%,3.988% 8.103%,4.876% 7.753%,5.822% 7.579%,83.893% 1.023%,83.893% 1.023%,85.876% 1.057%,87.777% 1.479%,89.569% 2.257%,91.225% 3.364%,92.718% 4.768%,94.023% 6.442%,95.11% 8.354%,95.955% 10.476%,96.529% 12.778%,96.807% 15.231%,100% 82.194%,100% 82.194%,99.953% 84.725%,99.584% 87.143%,98.919% 89.413%,97.983% 91.501%,96.802% 93.371%,95.403% 94.988%,93.811% 96.318%,92.051% 97.325%,90.151% 97.975%,88.135% 98.233%,15.183% 100%,15.183% 100%,13.249% 99.856%,11.405% 99.346%,9.676% 98.499%,8.086% 97.345%,6.66% 95.911%,5.421% 94.226%,4.396% 92.319%,3.607% 90.219%,3.08% 87.954%,2.838% 85.553%,0.267% 15.349% );
@@ -353,8 +356,8 @@
     
                     picture,
                     img {
-                        box-shadow: 0 32px 64px 0 rgba(50, 50, 71, 0.04), 0 16px 32px 0 rgba(50, 50, 71, 0.04);
-                        border-radius: 61px;
+                        box-shadow: 0 17px 33px 0 rgba(50, 50, 71, 0.04), 0 8px 17px 0 rgba(50, 50, 71, 0.04);
+                        border-radius: 32px;
                     }
                 }
     

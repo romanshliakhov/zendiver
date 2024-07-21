@@ -20,7 +20,7 @@
 
 
 <body>
-    <header>
+    <header class="fixed-block">
     <div class="container">
         <div class="header">
             <button class="burger">
@@ -136,15 +136,9 @@
 
                     <div class="apps">
                         <a class="apps__link" href="#">
-                            <!-- <svg width='200' height='70'>
-                                <use href='img/sprite/sprite.svg#google-app'></use>
-                            </svg>  -->
                             <img width='200' height='70' src='img/google.svg' alt='google app'>
                         </a>
                         <a class="apps__link" href="#">
-                            <!-- <svg width='200' height='70'>
-                                <use href='img/sprite/sprite.svg#ios-app'></use>
-                            </svg> -->
                             <img width='200' height='70' src='img/app-store.svg' alt='ios app'>
                         </a>
                     </div>
@@ -498,146 +492,181 @@
                     </div>
 
                     <div class="usefull-section__slider">
-                        <div class="swiper-wrapper">
-                            <div class="usefull-section__slide swiper-slide">
-                                <a class="usefull-section__material" href="#">
-                                    <div class="usefull-section__material-top">
-                                        <div class="usefull-section__material-image">
+                        <ul class="swiper-wrapper">
+                            <li class="usefull-section__slide swiper-slide">
+                                <div class="usefull-section__card">
+                                    <a class="usefull-section__card-info" href="#">
+                                        <div class="usefull-section__card-bg">
+                                            <picture>
+                                              <source type='image/webp' srcset='img/usefull-card-frame.webp'>
+                                              <img width='298' height='332' src='img/usefull-card-frame.png' alt='bg'>
+                                            </picture>
+                                        </div>
+
+                                        <div class="usefull-section__card-image">
                                             <picture>
                                                 <source type='image/webp' srcset='img/usefull/item1.webp'>
                                                 <img width='250' height='116' src='img/usefull/item1.png' alt='item 1'>
                                             </picture>
                                         </div>
-                                    </div>
 
-                                    <div class="usefull-section__material-info">
-                                        <span class="usefull-section__material-title">Free Resources for Transforming
+                                        <span class="usefull-section__card-title">Free Resources for Transforming
                                             Limiting Beliefs</span>
+                                    </a>
+                                    
+                                    <a class="usefull-section__card-download" href="" download>
+                                        <svg width='21' height='20'>
+                                            <use href='img/sprite/sprite.svg#download'></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </li>
 
-                                        <div class="usefull-section__material-download">
-                                            <svg width='21' height='20'>
-                                                <use href='img/sprite/sprite.svg#download'></use>
-                                            </svg>
+                            <li class="usefull-section__slide swiper-slide">
+                                <div class="usefull-section__card">
+                                    <a class="usefull-section__card-info" href="#">
+                                        <div class="usefull-section__card-bg">
+                                            <picture>
+                                              <source type='image/webp' srcset='img/usefull-card-frame.webp'>
+                                              <img width='298' height='332' src='img/usefull-card-frame.png' alt='bg'>
+                                            </picture>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="usefull-section__slide swiper-slide">
-                                <a class="usefull-section__material" href="#">
-                                    <div class="usefull-section__material-top">
-                                        <div class="usefull-section__material-image">
+
+                                        <div class="usefull-section__card-image">
                                             <picture>
                                                 <source type='image/webp' srcset='img/usefull/item2.webp'>
                                                 <img width='250' height='116' src='img/usefull/item2.png' alt='item 2'>
                                             </picture>
                                         </div>
-                                    </div>
 
-                                    <div class="usefull-section__material-info">
-                                        <span class="usefull-section__material-title">ADHD & video games: Building
+                                        <span class="usefull-section__card-title">ADHD & video games: Building
                                             important skills or worsening your symptoms</span>
+                                    </a>
+                                    
+                                    <a class="usefull-section__card-download" href="" download>
+                                        <svg width='21' height='20'>
+                                            <use href='img/sprite/sprite.svg#download'></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </li>
 
-                                        <div class="usefull-section__material-download">
-                                            <svg width='21' height='20'>
-                                                <use href='img/sprite/sprite.svg#download'></use>
-                                            </svg>
+                            <li class="usefull-section__slide swiper-slide">
+                                <div class="usefull-section__card">
+                                    <a class="usefull-section__card-info" href="#">
+                                        <div class="usefull-section__card-bg">
+                                            <picture>
+                                              <source type='image/webp' srcset='img/usefull-card-frame.webp'>
+                                              <img width='298' height='332' src='img/usefull-card-frame.png' alt='bg'>
+                                            </picture>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="usefull-section__slide swiper-slide">
-                                <a class="usefull-section__material" href="#">
-                                    <div class="usefull-section__material-top">
-                                        <div class="usefull-section__material-image">
+
+                                        <div class="usefull-section__card-image">
                                             <picture>
                                                 <source type='image/webp' srcset='img/usefull/item3.webp'>
                                                 <img width='250' height='116' src='img/usefull/item3.png' alt='item 3'>
                                             </picture>
                                         </div>
-                                    </div>
 
-                                    <div class="usefull-section__material-info">
-                                        <span class="usefull-section__material-title">Transforming Guilt into
+                                        <span class="usefull-section__card-title">Transforming Guilt into
                                             Self-Compassion</span>
+                                    </a>
+                                    
+                                    <a class="usefull-section__card-download" href="" download>
+                                        <svg width='21' height='20'>
+                                            <use href='img/sprite/sprite.svg#download'></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </li>
 
-                                        <div class="usefull-section__material-download">
-                                            <svg width='21' height='20'>
-                                                <use href='img/sprite/sprite.svg#download'></use>
-                                            </svg>
+                            <li class="usefull-section__slide swiper-slide">
+                                <div class="usefull-section__card">
+                                    <a class="usefull-section__card-info" href="#">
+                                        <div class="usefull-section__card-bg">
+                                            <picture>
+                                              <source type='image/webp' srcset='img/usefull-card-frame.webp'>
+                                              <img width='298' height='332' src='img/usefull-card-frame.png' alt='bg'>
+                                            </picture>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="usefull-section__slide swiper-slide">
-                                <a class="usefull-section__material" href="#">
-                                    <div class="usefull-section__material-top">
-                                        <div class="usefull-section__material-image">
+
+                                        <div class="usefull-section__card-image">
                                             <picture>
                                                 <source type='image/webp' srcset='img/usefull/item4.webp'>
                                                 <img width='250' height='116' src='img/usefull/item4.png' alt='item 4'>
                                             </picture>
                                         </div>
-                                    </div>
 
-                                    <div class="usefull-section__material-info">
-                                        <span class="usefull-section__material-title">Core Transformation Process – the
+                                        <span class="usefull-section__card-title">Core Transformation Process – the
                                             science behind</span>
+                                    </a>
+                                    
+                                    <a class="usefull-section__card-download" href="" download>
+                                        <svg width='21' height='20'>
+                                            <use href='img/sprite/sprite.svg#download'></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </li>
 
-                                        <div class="usefull-section__material-download">
-                                            <svg width='21' height='20'>
-                                                <use href='img/sprite/sprite.svg#download'></use>
-                                            </svg>
+                            <li class="usefull-section__slide swiper-slide">
+                                <div class="usefull-section__card">
+                                    <a class="usefull-section__card-info" href="#">
+                                        <div class="usefull-section__card-bg">
+                                            <picture>
+                                              <source type='image/webp' srcset='img/usefull-card-frame.webp'>
+                                              <img width='298' height='332' src='img/usefull-card-frame.png' alt='bg'>
+                                            </picture>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="usefull-section__slide swiper-slide">
-                                <a class="usefull-section__material" href="#">
-                                    <div class="usefull-section__material-top">
-                                        <div class="usefull-section__material-image">
+
+                                        <div class="usefull-section__card-image">
                                             <picture>
                                                 <source type='image/webp' srcset='img/usefull/item1.webp'>
                                                 <img width='250' height='116' src='img/usefull/item1.png' alt='item 1'>
                                             </picture>
                                         </div>
-                                    </div>
 
-                                    <div class="usefull-section__material-info">
-                                        <span class="usefull-section__material-title">Free Resources for Transforming
-                                            Limiting Beliefs 2</span>
+                                        <span class="usefull-section__card-title">Free Resources for Transforming
+                                            Limiting Beliefs</span>
+                                    </a>
+                                    
+                                    <a class="usefull-section__card-download" href="" download>
+                                        <svg width='21' height='20'>
+                                            <use href='img/sprite/sprite.svg#download'></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </li>
 
-                                        <div class="usefull-section__material-download">
-                                            <svg width='21' height='20'>
-                                                <use href='img/sprite/sprite.svg#download'></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="usefull-section__slide swiper-slide">
-                                <a class="usefull-section__material" href="">
-                                    <div class="usefull-section__material-top">
-                                        <div class="usefull-section__material-image">
+                            <li class="usefull-section__slide swiper-slide">
+                                <div class="usefull-section__card">
+                                    <a class="usefull-section__card-info" href="#">
+                                        <div class="usefull-section__card-bg">
                                             <picture>
-                                                <source type='image/webp' srcset='img/usefull/item2.webp'>
-                                                <img width='250' height='116' src='img/usefull/item2.png' alt='item 2'>
+                                              <source type='image/webp' srcset='img/usefull-card-frame.webp'>
+                                              <img width='298' height='332' src='img/usefull-card-frame.png' alt='bg'>
                                             </picture>
                                         </div>
-                                    </div>
 
-                                    <div class="usefull-section__material-info">
-                                        <span class="usefull-section__material-title">ADHD & video games: Building
-                                            important skills or worsening your symptoms 2</span>
-
-                                        <div class="usefull-section__material-download">
-                                            <svg width='21' height='20'>
-                                                <use href='img/sprite/sprite.svg#download'></use>
-                                            </svg>
+                                        <div class="usefull-section__card-image">
+                                            <picture>
+                                                <source type='image/webp' srcset='img/usefull/item3.webp'>
+                                                <img width='250' height='116' src='img/usefull/item3.png' alt='item 3'>
+                                            </picture>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+
+                                        <span class="usefull-section__card-title">Transforming Guilt into
+                                            Self-Compassion</span>
+                                    </a>
+                                    
+                                    <a class="usefull-section__card-download" href="" download>
+                                        <svg width='21' height='20'>
+                                            <use href='img/sprite/sprite.svg#download'></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
 
                         <div class="usefull-section__pagination swiper-pagination"></div>
                     </div>
@@ -3887,7 +3916,7 @@
 
                         <form class="subscribe-section__form">
                             <label>
-                                <input type="email" name="email" placeholder="Leave your email address">
+                                <input type="email" name="email" placeholder="Leave your email address" required> 
                                 <button>
                                     Subscribe
                                     <svg width='20' height='20'>

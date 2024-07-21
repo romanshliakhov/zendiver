@@ -2,6 +2,7 @@
 @function HexToRGB($hex) {
   @return red($hex), green($hex), blue($hex);
 }
+
 :root {
 // --------------- default global variable ---------------
   --body-bg: #f9f1e7;
@@ -29,7 +30,7 @@
   // --scrollbar-thumb: #FFCD07;
   // --scrollbar-track:  #e4e4e4;
   // --scrollbar-track-hover: #ffffff;
-  --overlay-bg: rgba(39, 39, 39, 0.3);
+  // --overlay-bg: rgba(39, 39, 39, 0.3);
 
 // --------------- default font-family variable ---------------
   --font-primary: "Dosis" , sans-serif; // var(--font-primary);
@@ -58,10 +59,9 @@
 
 
 // --------------- default border color variable ---------------
-  --br-a: #ebebeb; // var(--br-a);
-  --br-b: #e3e3e3; // var(--br-b);
-  --br-c: #777777; // var(--br-c);
-  // --br-b: #ffcd07; // var(--br-b);
+  --br-a: #{HexToRGB(#ebebeb)}; // rgba(var(--br-a),1.0);
+  --br-b: #{HexToRGB(#e3e3e3)}; // rgba(var(--br-b),1.0);
+  --br-c: #{HexToRGB(#777777)}; // rgba(var(--br-c),1.0);
 // -------------
 }
 

@@ -7,13 +7,10 @@ export const disableScroll = () => {
   const paddingOffset = `${(window.innerWidth - vars.bodyEl.offsetWidth)}px`;
 
 
-
   htmlEl.style.scrollBehavior = 'none';
   fixBlocks.forEach(el => { el.style.paddingRight = paddingOffset; });
   bodyEl.style.paddingRight = paddingOffset;
   bodyEl.classList.add('dis-scroll');
   bodyEl.dataset.position = pagePosition;
   bodyEl.style.top = `-${pagePosition}px`;
-
-  // console.log(paddingOffset)
 }

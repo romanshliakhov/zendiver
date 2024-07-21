@@ -15,7 +15,7 @@
     @include mobile{
         left: 6px;
         width: calc(100% - (var(--container-offset) * 2) + 20px);
-        height: calc(100vh - 100px);
+        height: calc(100vh - 70px);
     }
     
     &__box{

@@ -7,15 +7,23 @@
         display: flex;
         align-items: center;
         gap: 5px;
+        color: rgba(var(--cl-c), 0.6);
 
         p {
             font-size: 14px;
             line-height: 129%;
-            color: rgba(var(--cl-c), 0.5);;
+            color: rgba(var(--cl-c), 0.6);
+        }
+
+        &:first-child {
+            svg {
+                fill: currentColor;
+                stroke: transparent;
+            }
         }
 
         svg {
-            fill: transparent;
+            stroke: currentColor;
         }
     }
 }

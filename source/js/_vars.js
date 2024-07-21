@@ -1,4 +1,5 @@
 export default {
+  activeMode: 'active-mode',
   activeClass: "active",
   windowEl: window,
   documentEl: document,
@@ -8,35 +9,9 @@ export default {
   footer: document.querySelector('footer'),
   overlay: document.querySelector('[data-overlay]'),
   mobileMenu: document.querySelector('.header-menu'),
-  burger: document.querySelector('.burger'),
-
-
-  // accParrent: [...document.querySelectorAll('[data-accordion-init]')],
+  burger: document.querySelectorAll('.burger'),
   usefullSlider: document.querySelector('.usefull-section__slider'),
   feedbacksSlider: document.querySelector('.feedbacks-section__slider'),
-
-  // blogSlider: document.querySelector('.blog-slider'),
-  // rewiewsSlider: document.querySelector('.rewiews-slider'),
-  // brandsSlider: document.querySelector('.brands-slider'),
-  // worksSlider: document.querySelector('.works-slider'),
-  // cookies: document.querySelector('.cookies-inner'),
-  // faqAcc: document.querySelector('.faq-acc'),
-  // faqAccParent: document.querySelector('.faq-section__box'),
-  // faqAccParentMob: document.querySelector('.faq-section__inner'),
-  // forms: document.querySelectorAll('.main-form'),
-  // social: document.querySelector('.footer__social'),
-  // socialParent: document.querySelector('.footer__wrapp'),
-  // asideMenu: document.querySelector('.aside-menu'),
-  // socialParentMob: document.querySelector('.footer__box').firstElementChild,
-
-  // modals: [...document.querySelectorAll('[data-popup]')],
-  // modalsButton: [...document.querySelectorAll("[data-btn-modal]")],
-
-  // activeMode: 'active-mode',
-  // innerButtonModal: [...document.querySelectorAll('[data-btn-inner]')],
-
-
-
 
 }
 

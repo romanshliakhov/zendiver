@@ -71,6 +71,26 @@
     }
   }
 
+
+  // &.active {
+  //   &::before {
+  //     top: 50%;
+  //     transform: rotate(45deg) translate(-50%, -50%);
+  //     transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  //   }
+
+  //   &::after {
+  //     top: 50%;
+  //     transform: rotate(-45deg) translate(-50%, -50%);
+  //     transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  //   }
+
+  //   .burger__line {
+  //     transform: scale(0);
+  //     transition: transform 0.3s ease-in-out;
+  //   }
+  // }
+
   @include tablet {
     background: transparent;
     width: 62px;

@@ -19,10 +19,6 @@ body {
   font-weight: 400;
   letter-spacing: -0.02em;
   color:  rgba(var(--cl-c),1.0);
-
-  &.active {
-    overflow: hidden;
-  }
 }
 
 main {
@@ -237,38 +233,6 @@ input[type="number"] {
   scroll-behavior: none !important;
 }
 
-// * {
-//   &::-webkit-scrollbar {
-//     width: 8px;
-//     height: 7px;
-//     // display: none;
-
-//     cursor: pointer;
-
-//     @include small-tablet {
-//       display: none;
-//     }
-//   }
-
-//   &::-webkit-scrollbar-thumb {
-//     background-color: var(--scrollbar-thumb);
-//     cursor: pointer;
-
-//     transition: all 0.2s;
-//   }
-
-//   &::-webkit-scrollbar-track {
-//     background-color: var(--scrollbar-track);
-//   }
-
-//   &::-webkit-scrollbar-button {
-//     display: none;
-
-//     background-color: transparent;
-//     box-shadow: none;
-//   }
-// }
-
 fieldset {
   margin: 0;
   padding: 0;
@@ -276,37 +240,4 @@ fieldset {
   border: none;
 }
 
-.modal {
-  margin: auto;
-  transform: scale(.8);
-  display: none;
-  
-  &.active {
-    transform: scale(1);
-  }
 
-  &__close {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    z-index: 20;
-
-    @include mobile{
-      right: 12px;
-      top: 12px;
-    }
-    svg{
-      transition: all .4s;
-      stroke: var(--svg-color-k);
-    }
-    &:hover{
-      svg{
-        stroke:rgba(var(--bg-c),1.0);
-      }
-    }
-  }
-
-  .close svg {
-    pointer-events: none;
-  }
-}

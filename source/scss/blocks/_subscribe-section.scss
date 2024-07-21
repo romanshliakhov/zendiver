@@ -136,11 +136,16 @@
             top: 50%;
             right: 4px;
             transform: translateY(-50%);
+            font-family: var(--font-second);
+            font-size: 18px;
+            line-height: 167%;
+            font-weight: 500;
+            letter-spacing: -0.02em;
             padding: 10px 16px;
             display: flex;
             align-items: center;
             gap: 10px;
-            background: linear-gradient(180deg, #a5a5a5 0%, #707070 100%);
+            background: linear-gradient(180deg, #e594aa 0, #c069d8 100%), linear-gradient(180deg, #5caced 0, #2f50b0 100%);
             border-radius: 100px;
             color: rgba(var(--cl-a),1.0);
             transition: all 0.4s ease;
@@ -149,7 +154,7 @@
                 content: '';
                 position: absolute;
                 inset: 0;
-                background: linear-gradient(180deg, #e594aa 0%, #c069d8 100%);
+                background: #dd8bb4;
                 opacity: 0;
                 border-radius: 100px;
                 z-index: -1;
@@ -160,7 +165,7 @@
                 content: '';
                 position: absolute;
                 inset: 0;
-                background: rgba(var(--bg-c),1.0);
+                background: #c56fd3;
                 opacity: 0;
                 border-radius: 100px;
                 z-index: -1;
@@ -171,13 +176,17 @@
                 opacity: 1;
             }
 
+            &:active::before {
+                opacity: 0;
+            }
+
             &:active::after {
                 opacity: 1;
             }
 
-            @include small-tablet {
-                background: linear-gradient(180deg, #e594aa 0%, #c069d8 100%);
-            }
+            // @include small-tablet {
+            //     background: linear-gradient(180deg, #e594aa 0%, #c069d8 100%);
+            // }
         }
 
         @include small-tablet {
@@ -208,6 +217,19 @@
                 line-height: 167%;
                 letter-spacing: -0.02em;
             }
+        }
+    }
+
+    form:invalid button {
+        cursor: not-allowed;
+        background: linear-gradient(180deg, #a5a5a5 0, #707070 100%), linear-gradient(180deg, #5caced 0, #2f50b0 100%);
+
+        &:hover::before {
+            opacity: 0;
+        }
+
+        &:active::after {
+            opacity: 0;
         }
     }
 }

@@ -25,14 +25,19 @@
             color: rgba(var(--cl-e),1.0);
         }
 
-        svg {
+        svg:first-child {
+            transition: all 0.4s ease;
+            fill: currentColor;
+        }
+
+        svg:last-child {
             transition: all 0.4s ease;
             stroke: currentColor;
         }
 
         &:hover {
             svg:last-child {
-                transform: translateX(-5px);
+                transform: translateX(5px);
             }
         }
     }

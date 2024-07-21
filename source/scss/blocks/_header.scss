@@ -112,7 +112,10 @@ header {
     &::before {
       content: '';
       position: absolute;
-      inset: 0;
+      top: -2px;
+      left: -2px;
+      bottom: -2px;
+      right: -2px;
       background: linear-gradient(225deg, #d36c40 0%, #bf582c 100%);
       border-radius: 100px;
       opacity: 0;
@@ -123,7 +126,10 @@ header {
     &::after {
       content: '';
       position: absolute;
-      inset: 0;
+      top: -2px;
+      left: -2px;
+      bottom: -2px;
+      right: -2px;
       background: linear-gradient(225deg, #bf582c 0%, #bf582c 100%);
       border-radius: 100px;
       opacity: 0;
