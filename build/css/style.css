@@ -1849,6 +1849,9 @@ h2,
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: clamp(16px, 3.125vw, 32px);
+  overflow: hidden;
+  padding: 16px;
+  margin: -16px;
 }
 @media (max-width: 1024px) {
   .articles__items {
@@ -3874,7 +3877,7 @@ footer .container {
   flex-direction: column;
   gap: 32px;
 }
-.interesting-section__box {
+.interesting-section__tabs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3884,7 +3887,7 @@ footer .container {
   flex-direction: column;
   gap: 32px;
 }
-.interesting-section__controls {
+.interesting-section__tabs-controls {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3893,22 +3896,13 @@ footer .container {
   align-items: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: 24px;
   gap: clamp(8px, 1.667vw, 24px);
 }
-.interesting-section__controls button {
+.interesting-section__tab {
   position: relative;
-  font-family: var(--font-primary);
-  font-size: 18px;
-  line-height: 167%;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-  color: currentColor;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
-.interesting-section__controls button::before {
+.interesting-section__tab::before {
   content: "";
   position: absolute;
   bottom: -8px;
@@ -3919,20 +3913,33 @@ footer .container {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.interesting-section__controls button:hover::before {
-  background-color: rgba(var(--bg-c), 0.2);
+.interesting-section__tab button {
+  position: relative;
+  font-family: var(--font-primary);
+  font-size: 18px;
+  line-height: 167%;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: currentColor;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  pointer-events: none;
 }
-.interesting-section__controls button.mixitup-control-active {
+.interesting-section__tab:hover::before {
+  background-color: rgba(var(--cl-b), 0.4);
+}
+.interesting-section__tab.active {
   color: rgba(var(--cl-d), 1);
 }
-.interesting-section__controls button.mixitup-control-active::before {
+.interesting-section__tab.active::before {
   background-color: rgba(var(--bg-d), 1);
 }
 @media (max-width: 1024px) {
-  .interesting-section__controls button:before {
+  .interesting-section__tab:before {
     display: none;
   }
-  .interesting-section__controls button button {
+  .interesting-section__tab button {
     background: rgba(var(--cl-b), 0.4);
     border-radius: clamp(4px, 0.781vw, 8px);
     padding: clamp(2px, 1.302vw, 10px) clamp(6px, 1.302vw, 10px) clamp(4px, 1.302vw, 10px);
@@ -3941,14 +3948,10 @@ footer .container {
     text-transform: initial;
     color: rgba(var(--cl-a), 1);
   }
-  .interesting-section__controls button:hover, .interesting-section__controls button.active {
+  .interesting-section__tab:hover, .interesting-section__tab.active {
     border-radius: clamp(4px, 0.781vw, 8px);
     background: rgba(var(--bg-d), 1);
   }
-}
-.interesting-section__articles {
-  position: relative;
-  overflow: hidden;
 }
 
 .new-section {

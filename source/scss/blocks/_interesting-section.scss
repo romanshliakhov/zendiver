@@ -33,18 +33,33 @@
         gap: 32px;
     }
 
-    &__box {
+    &__tabs {
         display: flex;
         flex-direction: column;
         gap: 32px;
+
+        &-controls {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: clamp(8px, 1.667vw, 24px);
+        }
     }
 
-    &__controls {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 24px;
-        gap: clamp(8px, 1.667vw, 24px);
+    &__tab {
+        position: relative;
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            height: 4px;
+            width: 100%;
+            border-radius: 6px;
+            background-color: transparent;
+            transition: all 0.3s ease-in-out;
+        }
 
         button {
             position: relative;
@@ -55,59 +70,42 @@
             letter-spacing: -0.02em;
             text-transform: uppercase;
             color: currentColor;
-            transition: all 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+            pointer-events: none;
+        }
+
+        &:hover::before {
+            background-color: rgba(var(--cl-b), 0.4);
+        }
+
+        &.active {
+            color: rgba(var(--cl-d),1.0);
 
             &::before {
-                content: '';
-                position: absolute;
-                bottom: -8px;
-                height: 4px;
-                width: 100%;
-                border-radius: 6px;
-                background-color: transparent;
-                transition: all 0.3s ease-in-out;
-            }
-
-            &:hover {
-                &::before {
-                    background-color: rgba(var(--bg-c), 0.2);
-                }
-            }
-
-            &.mixitup-control-active {
-                color: rgba(var(--cl-d),1.0);
-
-                &::before {
-                    background-color: rgba(var(--bg-d),1.0);
-                }
-            }
-
-            @include tablet {
-                &:before {
-                    display: none;
-                }
-    
-                button {
-                    background: rgba(var(--cl-b), 0.4);
-                    border-radius: clamp(4px, 0.781vw, 8px);
-                    padding: clamp(2px, 1.302vw, 10px) clamp(6px, 1.302vw, 10px) clamp(4px, 1.302vw, 10px);
-                    font-size: clamp(16px, 1.953vw, 20px);
-                    line-height: 114%;
-                    text-transform: initial;
-                    color: rgba(var(--cl-a),1.0);
-                }
-    
-                &:hover,
-                &.active {
-                    border-radius: clamp(4px, 0.781vw, 8px);
-                    background: rgba(var(--bg-d),1.0);
-                }
+                background-color: rgba(var(--bg-d),1.0);
             }
         }
-    }
 
-    &__articles {
-        position: relative;
-        overflow: hidden;
+        @include tablet {
+            &:before {
+                display: none;
+            }
+
+            button {
+                background: rgba(var(--cl-b), 0.4);
+                border-radius: clamp(4px, 0.781vw, 8px);
+                padding: clamp(2px, 1.302vw, 10px) clamp(6px, 1.302vw, 10px) clamp(4px, 1.302vw, 10px);
+                font-size: clamp(16px, 1.953vw, 20px);
+                line-height: 114%;
+                text-transform: initial;
+                color: rgba(var(--cl-a),1.0);
+            }
+            
+            &:hover,
+            &.active {
+                border-radius: clamp(4px, 0.781vw, 8px);
+                background: rgba(var(--bg-d),1.0);
+            }
+        }
     }
 }
