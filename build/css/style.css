@@ -41,104 +41,69 @@
   src: url("../fonts/Dosis-Bold.woff2") format("woff2"), url("../fonts/Dosis-Bold.woff") format("woff");
 }
 /* stylelint-disable */
-/* stylelint-disable */
 .burger {
-  --burger-width: 48px;
-  --burger-height: 48px;
-  --burger-line-height: 1.5px;
-  --border-radius: 100px;
   position: relative;
-  padding: 0;
-  width: var(--burger-width);
-  height: var(--burger-height);
+  padding: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 3px;
+  width: 48px;
+  height: 48px;
   background: -webkit-gradient(linear, left top, left bottom, from(#eaeaea), to(#cbcbcb));
   background: linear-gradient(180deg, #eaeaea 0%, #cbcbcb 100%);
-  border-radius: var(--border-radius);
+  border-radius: 100px;
   color: rgba(var(--cl-c), 1);
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  z-index: 91;
+  z-index: 90;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-.burger::before, .burger::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  width: calc(var(--burger-width) - 31px);
-  height: var(--burger-line-height);
-  background-color: currentColor;
-  -webkit-transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  border-radius: var(--border-radius);
+.burger:hover {
+  gap: 5px;
 }
-.burger::before {
-  top: calc(var(--burger-height) - 31px);
+.burger span {
+  width: 100%;
+  border: 1.5px solid rgba(var(--cl-c), 1);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-.burger::after {
-  bottom: calc(var(--burger-height) - 31px);
+.burger.active:hover {
+  gap: 3px;
 }
-.burger__line {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: calc(var(--burger-width) - 31px);
-  height: var(--burger-line-height);
-  background-color: currentColor;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  border-radius: var(--border-radius);
+.burger.active span:nth-child(1) {
+  -webkit-transform: rotate(45deg) translate(4px, 4px);
+  -ms-transform: rotate(45deg) translate(4px, 4px);
+  transform: rotate(45deg) translate(4px, 4px);
 }
-.burger.active::before {
-  top: 60%;
-  left: 45%;
-  -webkit-transform: rotate(45deg) translateX(-45%) translateY(-60%);
-  -ms-transform: rotate(45deg) translateX(-45%) translateY(-60%);
-  transform: rotate(45deg) translateX(-45%) translateY(-60%);
-  -webkit-transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+.burger.active span:nth-child(2) {
+  opacity: 0;
 }
-.burger.active::after {
-  bottom: 60%;
-  left: 45%;
-  -webkit-transform: rotate(-45deg) translateX(-45%);
-  -ms-transform: rotate(-45deg) translateX(-45%);
-  transform: rotate(-45deg) translateX(-45%);
-  -webkit-transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-}
-.burger.active .burger__line {
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+.burger.active span:nth-child(3) {
+  -webkit-transform: rotate(-45deg) translate(4px, -4px);
+  -ms-transform: rotate(-45deg) translate(4px, -4px);
+  transform: rotate(-45deg) translate(4px, -4px);
 }
 @media (max-width: 1024px) {
   .burger {
     background: transparent;
     width: 62px;
+    height: 62px;
+    padding: 19px;
   }
 }
 
@@ -2704,8 +2669,8 @@ header {
     content: "";
     position: absolute;
     clip-path: polygon(35.135% 36.307%, 35.135% 36.307%, 35.418% 31.619%, 36.233% 27.223%, 37.527% 23.186%, 39.248% 19.572%, 41.345% 16.448%, 43.765% 13.878%, 46.457% 11.93%, 49.367% 10.667%, 52.444% 10.157%, 55.637% 10.463%, 94.355% 19.297%, 94.355% 19.297%, 95.303% 19.618%, 96.19% 20.125%, 97.007% 20.803%, 97.746% 21.636%, 98.396% 22.607%, 98.949% 23.701%, 99.395% 24.902%, 99.725% 26.194%, 99.93% 27.562%, 100% 28.988%, 100% 100%, 35.135% 100%, 35.135% 36.307%);
-    width: 150%;
-    height: 150%;
+    width: 160%;
+    height: 160%;
     background-color: white;
     left: 0;
     -webkit-transform: rotate(228deg);
