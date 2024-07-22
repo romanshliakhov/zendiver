@@ -1,5 +1,5 @@
 .quiz-section {
-    padding: clamp(125px, 17.578vw, 180px) 0 clamp(30px, 5.859vw, 60px);
+    padding: clamp(80px, 17.578vw, 180px) 0 clamp(30px, 5.859vw, 60px);
 
     &__wrapp {
         position: relative;
@@ -50,23 +50,24 @@
 
     &__frame {
         position: absolute;
-        top: -15%;
+        top: -140px;
         right: clamp(40px, 5.365vw, 103px);
         display: flex;
 
-        img {
-            width: clamp(320px, 20.625vw, 396px);
-            height: clamp(220px, 14.219vw, 273px);
-            object-fit: cover;
-        }
+        // img {
+        //     width: clamp(320px, 20.625vw, 396px);
+        //     height: clamp(220px, 14.219vw, 273px);
+        //     object-fit: cover;
+        // }
 
         @include small-tablet {
             right: initial;
-            left: 28px;
+            left: 30px;
+            top: -65px;
 
             img {
-                width: clamp(198px, 41.667vw, 320px);
-                height: clamp(136px, 28.646vw, 220px);
+                width: clamp(245px, 41.667vw, 320px);
+                height: clamp(200px, 28.646vw, 220px);
             }
         }
     }
@@ -129,8 +130,6 @@
     }
 
     &__load {
-       
-
         @include for-small-tablet{
             display: none !important;
         }
