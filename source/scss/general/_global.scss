@@ -197,15 +197,15 @@ input[type="number"] {
   }
 }
 
-.panel,
-[data-content] {
-  z-index: 20;
+// .panel,
+// [data-content] {
+//   z-index: 20;
 
-  max-height: 0;
-  overflow: hidden;
+//   max-height: 0;
+//   overflow: hidden;
 
-  transition: max-height 0.2s;
-}
+//   transition: max-height 0.2s;
+// }
 
 .main-inner{
   padding:clamp(50px, 4.6154vw, 60px) 0;

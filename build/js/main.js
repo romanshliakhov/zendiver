@@ -12,15 +12,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_sliders__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/sliders */ "./source/js/components/sliders.js");
 /* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/burger */ "./source/js/components/burger.js");
 /* harmony import */ var _components_getDinamicHeight__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/getDinamicHeight */ "./source/js/components/getDinamicHeight.js");
-/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/tabs */ "./source/js/components/tabs.js");
-/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_tabs__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_select__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/select */ "./source/js/components/select.js");
-/* harmony import */ var _components_inputMask_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/inputMask.js */ "./source/js/components/inputMask.js");
-/* harmony import */ var _components_hiddenCards__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/hiddenCards */ "./source/js/components/hiddenCards.js");
+/* harmony import */ var _components_filters__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/filters */ "./source/js/components/filters.js");
+/* harmony import */ var _components_filters__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_filters__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/tabs */ "./source/js/components/tabs.js");
+/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_tabs__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_select__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/select */ "./source/js/components/select.js");
+/* harmony import */ var _components_inputMask_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/inputMask.js */ "./source/js/components/inputMask.js");
+/* harmony import */ var _components_hiddenCards__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/hiddenCards */ "./source/js/components/hiddenCards.js");
 
 
 
-// import './components/filters';
+
 
 // import './components/accordions';
 // import './components/replaceEl';
@@ -153,6 +155,98 @@ if (filterMenu && filterMenuBtn) {
     checkboxes.forEach(checkbox => checkbox.checked = false);
   });
 }
+
+/***/ }),
+
+/***/ "./source/js/components/filters.js":
+/*!*****************************************!*\
+  !*** ./source/js/components/filters.js ***!
+  \*****************************************/
+/***/ (function() {
+
+document.addEventListener('DOMContentLoaded', function () {
+  const categories = document.querySelector('.categories');
+  if (categories) {
+    const categoriesTrigger = categories.querySelector('.categories__head');
+    const categoriesList = categories.querySelector('.categories__body');
+    const tagsHead = document.querySelector('.categories__head-current');
+    function categoriesActiveClass(toggleElement, targetElement) {
+      let activeClass = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'active';
+      document.addEventListener("click", function (event) {
+        if (!targetElement.contains(event.target) && event.target !== toggleElement) {
+          targetElement.classList.remove(activeClass);
+        } else if (event.target === toggleElement) {
+          targetElement.classList.toggle(activeClass);
+        }
+      });
+    }
+    categoriesActiveClass(categoriesTrigger, categoriesList);
+    const categoryCheckbox = categories.querySelectorAll('.categories__checkbox');
+    const inputData = [];
+
+    // Выбор первого input по умолчанию
+    categoryCheckbox[0].checked = true;
+    inputData.push({
+      value: categoryCheckbox[0].value,
+      name: categoryCheckbox[0].getAttribute('data-name')
+    });
+
+    // Обновление плейсхолдера
+    selectPlaceholder(inputData, tagsHead);
+    categoryCheckbox.forEach(function (item) {
+      item.addEventListener('click', function (e) {
+        checkedHandler(this);
+      });
+    });
+    function checkedHandler(input) {
+      const inputValue = input.value;
+      const inputName = input.getAttribute('data-name');
+      const inputIndex = inputData.findIndex(obj => obj.value === inputValue);
+
+      // Если первый input выбран
+      if (input === categoryCheckbox[0] && input.checked) {
+        // Убираем checked со всех остальных
+        categoryCheckbox.forEach(function (item, index) {
+          if (index !== 0) {
+            item.checked = false;
+            const itemIndex = inputData.findIndex(obj => obj.value === item.value);
+            if (itemIndex !== -1) {
+              inputData.splice(itemIndex, 1);
+            }
+          }
+        });
+      } else if (input !== categoryCheckbox[0] && input.checked) {
+        // Убираем checked с первого input, если выбран любой другой
+        categoryCheckbox[0].checked = false;
+        const firstInputIndex = inputData.findIndex(obj => obj.value === categoryCheckbox[0].value);
+        if (firstInputIndex !== -1) {
+          inputData.splice(firstInputIndex, 1);
+        }
+      }
+      if (inputIndex !== -1) {
+        inputData.splice(inputIndex, 1);
+      } else {
+        inputData.push({
+          value: inputValue,
+          name: inputName
+        });
+      }
+      selectPlaceholder(inputData, tagsHead);
+    }
+    function selectPlaceholder(arr, currentBox) {
+      const dataContent = currentBox.getAttribute('data-content');
+      const tagCounter = arr.length;
+      const currentBoxText = currentBox.getAttribute('data-placeholder');
+      if (categoryCheckbox[0].checked) {
+        currentBox.innerText = categoryCheckbox[0].value;
+      } else if (Array.from(categoryCheckbox).slice(1).every(checkbox => checkbox.checked)) {
+        currentBox.innerText = "All selected";
+      } else {
+        tagCounter > 0 ? currentBox.innerText = `${tagCounter} ${dataContent}` : currentBox.innerHTML = currentBoxText;
+      }
+    }
+  }
+});
 
 /***/ }),
 
