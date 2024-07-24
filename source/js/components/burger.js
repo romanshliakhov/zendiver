@@ -2,13 +2,10 @@ import { disableScroll } from '../functions/disable-scroll';
 import { enableScroll } from '../functions/enable-scroll';
 import vars from '../_vars';
 
-import {toggleClassInArray, toggleCustomClass, removeCustomClass, removeClassInArray} from '../functions/customFunctions';
+import {addCustomClass, toggleClassInArray, toggleCustomClass, removeCustomClass, removeClassInArray} from '../functions/customFunctions';
 const { burger, mobileMenu, bodyEl} = vars;
 
 const menuLinks = mobileMenu.querySelectorAll('.main-nav__link');
-
-const filterMenu = document.querySelector('.filter-menu');
-const filterMenuBtn = document.querySelector('[data-filter-btn]');
 
 menuLinks.forEach(function(link){
   link.addEventListener('click', function(e){
@@ -47,6 +44,9 @@ if (mobileMenu) {
   });
 }
 
+
+const filterMenu = document.querySelector('.filter-menu');
+const filterMenuBtn = document.querySelector('[data-filter-btn]');
 
 if(filterMenu && filterMenuBtn){
   const closeBtn = filterMenu.querySelector('.filter-menu__close');
