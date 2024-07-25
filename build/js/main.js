@@ -125,7 +125,7 @@ const hideMenuHandler = function (mobileMenu, burger, bodyEl) {
 };
 if (mobileMenu) {
   mobileMenuHandler(mobileMenu, burger, bodyEl);
-  document.addEventListener("click", function (event) {
+  document.addEventListener('click', function (event) {
     const e = mobileMenu;
     if (burger[0].classList.contains('active')) {
       if (!mobileMenu.contains(event.target) && !burger[0].contains(event.target)) {
@@ -153,7 +153,33 @@ if (filterMenu && filterMenuBtn) {
     e.preventDefault();
     const checkboxes = filterMenu.querySelectorAll('input[type="checkbox"]');
     checkboxes.forEach(checkbox => checkbox.checked = false);
+    checkboxes[0].checked = true; // Устанавливаем первый чекбокс в checked
+    updateClearBtnVisibility(); // Обновляем видимость кнопки
   });
+  const checkboxes = filterMenu.querySelectorAll('input[type="checkbox"]');
+  checkboxes[0].checked = true; // Устанавливаем первый чекбокс в checked по умолчанию
+
+  checkboxes.forEach(function (checkbox, index) {
+    checkbox.addEventListener('click', function (e) {
+      if (index === 0 && checkbox.checked) {
+        checkboxes.forEach((cb, idx) => {
+          if (idx !== 0) cb.checked = false; // Убираем checked со всех остальных
+        });
+      } else if (checkbox.checked) {
+        checkboxes[0].checked = false; // Убираем checked с первого input, если выбран любой другой
+      }
+      updateClearBtnVisibility(); // Обновляем видимость кнопки
+    });
+  });
+  function updateClearBtnVisibility() {
+    const allExceptFirstChecked = Array.from(checkboxes).slice(1).every(cb => cb.checked);
+    if (allExceptFirstChecked || checkboxes[0].checked) {
+      clearBtn.style.display = 'none'; // Прячем кнопку
+    } else {
+      clearBtn.style.display = 'block'; // Показываем кнопку
+    }
+  }
+  updateClearBtnVisibility(); // Обновляем видимость кнопки при загрузке
 }
 
 /***/ }),
@@ -175,8 +201,10 @@ document.addEventListener('DOMContentLoaded', function () {
       document.addEventListener("click", function (event) {
         if (!targetElement.contains(event.target) && event.target !== toggleElement) {
           targetElement.classList.remove(activeClass);
+          toggleElement.classList.remove(activeClass);
         } else if (event.target === toggleElement) {
           targetElement.classList.toggle(activeClass);
+          toggleElement.classList.toggle(activeClass);
         }
       });
     }

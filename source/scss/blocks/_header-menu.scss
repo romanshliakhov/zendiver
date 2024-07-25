@@ -15,26 +15,25 @@
     @include mobile{
         left: 6px;
         width: calc(100% - (var(--container-offset) * 2) + 20px);
-        height: calc(100vh - 70px);
+        height: calc(100vh - 80px);
     }
     
     &__box{
-            grid-gap: 15px;
-            display: grid;
-            grid-template-columns: 1fr 45%;
-            // height: 100%;
+        grid-gap: 15px;
+        display: grid;
+        grid-template-columns: 1fr 45%;
 
-            @include tablet{
-                grid-template-columns: repeat(2, 1fr);
+        @include tablet{
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include small-tablet{
+            grid-template-columns: 1fr;
+
+            .main-form{
+                display: none;
             }
-
-            @include small-tablet{
-                grid-template-columns: 1fr;
-
-                .main-form{
-                    display: none;
-                }
-            }
+        }
     } 
 
     &__inner{
