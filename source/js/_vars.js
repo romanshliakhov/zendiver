@@ -12,7 +12,7 @@ export default {
   burger: document.querySelectorAll('.burger'),
   usefullSlider: document.querySelector('.usefull-section__slider'),
   feedbacksSlider: document.querySelector('.feedbacks-section__slider'),
-
+  relatedSlider: document.querySelector('.related__slider'),
 }
 
 

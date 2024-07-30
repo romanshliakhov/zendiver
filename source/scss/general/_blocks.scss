@@ -2,6 +2,8 @@
 @import "blocks/footer.scss";
 
 @import "blocks/header-menu.scss";
+@import "blocks/breadcrumbs.scss";
+@import "blocks/share.scss";
 
 // Main page
 @import "blocks/first-section.scss";
@@ -14,6 +16,16 @@
 @import "blocks/filters-section.scss";
 @import "blocks/filter-menu.scss";
 @import "blocks/subscribe-section.scss";
+
+// Article page
+@import "blocks/article.scss";
+
+// Extra
+@import "blocks/middle-block.scss";
+@import "blocks/related.scss";
+@import "blocks/downloading.scss";
+
+
 
 
 

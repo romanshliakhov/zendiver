@@ -1,8 +1,8 @@
 import Swiper from 'swiper';
 import vars from "../_vars";
-import { Pagination, Autoplay, Navigation, Scrollbar } from "swiper/modules";
+import { Pagination, Autoplay, Navigation, Scrollbar, Grid } from "swiper/modules";
 
-const { usefullSlider, feedbacksSlider } = vars;
+const { usefullSlider, feedbacksSlider, relatedSlider } = vars;
 
 if(usefullSlider) {
   const swiper = new Swiper(usefullSlider, {
@@ -69,6 +69,90 @@ if(feedbacksSlider) {
       clickable: true,
     }
   });  
+}
+
+// if(relatedSlider) {
+//   const swiper = new Swiper(relatedSlider, {
+//     modules: [Autoplay, Navigation, Grid],
+//     observer: true,
+//     observeParents: true,
+//     navigation: {
+//       nextEl: ".slide-next",
+//       prevEl: ".slide-prev",
+//     },
+//     breakpoints:{
+//       576:{
+//         slidesPerView: 2,
+//         spaceBetween: 32,
+
+//         grid: {
+//           fill: 'row',
+//           rows: 2,
+//         },
+//       },
+//       1241:{
+//         slidesPerView: 3,
+//         spaceBetween: 32,
+//         grid: {
+//           fill: 'row',
+//           rows: 2,
+//         },
+//       },
+//     },
+//   });  
+// }
+
+if (relatedSlider) {
+  (function () {
+    "use strict";
+
+    const breakpoint = window.matchMedia("(max-width:767px)");
+    let slider;
+
+    const enableSwiper = function () {
+      slider = new Swiper(relatedSlider, {
+        modules: [Autoplay, Navigation, Grid],
+        observer: true,
+        observeParents: true,
+        navigation: {
+          nextEl: ".slide-next",
+          prevEl: ".slide-prev",
+        },
+        breakpoints:{
+          576:{
+            slidesPerView: 2,
+            spaceBetween: 32,
+    
+            grid: {
+              fill: 'row',
+              rows: 2,
+            },
+          },
+          1241:{
+            slidesPerView: 3,
+            spaceBetween: 32,
+            grid: {
+              fill: 'row',
+              rows: 2,
+            },
+          },
+        },
+      });
+    };
+
+    const breakpointChecker = function () {
+      if (breakpoint.matches === true) {
+        if (slider !== undefined) slider.destroy(true, true);
+
+        return;
+      } else if (breakpoint.matches === false) {
+        return enableSwiper();
+      }
+    };
+
+    breakpoint.addListener(breakpointChecker);
+    breakpointChecker();
+  })();
 }
 
 

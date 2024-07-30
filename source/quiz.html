@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+    @include('partials/header.html')
+
+    <main class="post">
+        <section class="article">
+            <div class="container">
+                <div class="article__wrapp"> 
+                    <div class="article__inner">
+                        <div class="breadcrumbs">
+                            <a class="breadcrumbs__prev" href="/">Blog</a>
+                            <a class="breadcrumbs__prev" href="#">Quizzes</a>
+                            <span class="breadcrumbs__current">What are your current state? Take the quiz!</span>
+                        </div>
+    
+                        <div class="article__top">
+                            <div class="article__info">
+                                <h1 class="article__title">What are your current state? Take the quiz!</h1>
+    
+                                <p class="article__excerpt">Quiz subtitle here</p>
+                                
+                                <ul class="article__details details">
+                                    <li>
+                                        <svg width='12' height='16'>
+                                            <use href='img/sprite/sprite.svg#watch'></use>
+                                        </svg>
+                                        <p class="author">3 minutes</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="article__quiz-picture">
+                                <picture>
+                                  <source type='image/webp' srcset='img/quiz/quiz-1.webp'>
+                                  <img width='338' height='338' src='img/quiz/quiz-1.png' alt='What are your current state? Take the quiz!'>
+                                </picture>
+                            </div>
+                        </div>
+
+                        <div class="article__box quiz-box">
+                            <div class="article__aside">
+                                 <div class="article__aside-heading">We're launched!</div>
+ 
+                                 <p class="article__aside-descr">Get your <span>80% off</span> <br> for yearly subscription!</p>
+ 
+                                 <a class="article__aside-link" href="#">
+                                    Try ZenDiver
+                                    <svg width='20' height='20'>
+                                        <use href='img/sprite/sprite.svg#transformation-green'></use>
+                                    </svg>
+                                </a>
+ 
+                                 <span class="article__aside-ps">*Only for 100 first users</span>
+                            </div>
+
+                            <div class="article__share-mob share">
+                                <span>Share:</span>
+                        
+                                <ul class="share__socials">
+                                    <li>
+                                        <a href="#">
+                                            <svg width='20' height='20'>
+                                                <use href='img/sprite/sprite.svg#twitter'></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <svg width='20' height='20'>
+                                                <use href='img/sprite/sprite.svg#linkedin'></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <svg width='20' height='20'>
+                                                <use href='img/sprite/sprite.svg#facebook'></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <svg width='20' height='20'>
+                                                <use href='img/sprite/sprite.svg#mail'></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <svg width='20' height='20'>
+                                                <use href='img/sprite/sprite.svg#link'></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="article__content">
+                                Rate your resistance to starting transformational work right now.
+                            </div>
+                         </div>
+                    </div>
+
+                    <div class="article__right-sticky">
+                        <div class="share">
+                            <span>Share:</span>
+                
+                            <ul class="share__socials">
+                                <li>
+                                    <a href="#">
+                                        <svg width='20' height='20'>
+                                            <use href='img/sprite/sprite.svg#twitter'></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <svg width='20' height='20'>
+                                            <use href='img/sprite/sprite.svg#linkedin'></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <svg width='20' height='20'>
+                                            <use href='img/sprite/sprite.svg#facebook'></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <svg width='20' height='20'>
+                                            <use href='img/sprite/sprite.svg#mail'></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <svg width='20' height='20'>
+                                            <use href='img/sprite/sprite.svg#link'></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    @include('partials/footer.html')
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -128,12 +128,19 @@
             display: flex;
             flex-direction: column;
             grid-gap: 4px;
-
-         
         }
 
         @include tablet{
             display: none;
+        }
+
+        &.category-page {
+            .search {
+                @include for-tablet{
+                    grid-column: 4/5;
+                    justify-self: end;
+                }
+            }
         }
     }
 
@@ -172,6 +179,42 @@
                 border-radius: 8px;
                 transition: all 0.4s ease;
             }
+        }
+
+        &-tags {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 4px;
+        
+            a {
+                padding: 2px 6px 4px 6px;
+                background: rgba(var(--bg-b),0.4);
+                border-radius: 4px;
+                font-family: var(--font-primary);
+                font-size: 14px;
+                line-height: 114%;
+                font-weight: 700;
+                letter-spacing: -0.02em;
+                color: rgba(var(--cl-a),1.0);
+                transition: all 0.4s ease;
+        
+                &:hover,
+                &:active {
+                    background: rgba(var(--bg-b), 1);
+                }
+            }
+
+            @include small-tablet {
+                display: none;
+            }
+        }
+
+        &-details {
+            margin-bottom: 8px;
         }
 
         &-title {
@@ -236,6 +279,7 @@
     }
 
     &__head {
+        position: relative;
         clip-path: polygon(100% 31.909%, 100% 100%, 0% 100%, 0% 23.16%, 0% 23.16%, 0.091% 19.441%, 0.356% 15.92%, 0.778% 12.646%, 1.344% 9.667%, 2.038% 7.032%, 2.845% 4.789%, 3.752% 2.986%, 4.742% 1.671%, 5.801% 0.892%, 6.914% 0.699%, 93.491% 9.447%, 93.491% 9.447%, 94.554% 9.837%, 95.56% 10.758%, 96.496% 12.165%, 97.349% 14.014%, 98.105% 16.26%, 98.753% 18.86%, 99.279% 21.77%, 99.671% 24.944%, 99.916% 28.338%, 100% 31.909%);
         background-color: white;
         padding: 24px 24px 0;
@@ -246,6 +290,8 @@
         z-index: 1;
         padding: 24px 24px 0;
         background-color: #fff;
+        display: flex;
+        flex-direction: column;
     }
 
     &__bottom {
@@ -260,6 +306,36 @@
 
         @include small-tablet { 
             display: none;
+        }
+    }
+
+    &__more {
+        margin: clamp(24px, 5.469vw, 56px) auto 0;
+        padding: 14px 56px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: var(--font-second);
+        font-size: 18px;
+        line-height: 167%;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        color: rgba(var(--cl-d),1.0);
+        background: transparent;
+        border: 2px solid rgba(var(--cl-d),1.0);
+        border-radius: 100px;
+        transition: all 0.4s ease;
+
+        svg {
+            stroke: currentColor;
+        }
+
+        &:hover {
+            padding: 14px 66px;
+        }
+
+        &:active {
+            background-color: rgba(var(--bg-g),1.0);
         }
     }
 }

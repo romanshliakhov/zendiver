@@ -57,7 +57,8 @@ __webpack_require__.r(__webpack_exports__);
   mobileMenu: document.querySelector('.header-menu'),
   burger: document.querySelectorAll('.burger'),
   usefullSlider: document.querySelector('.usefull-section__slider'),
-  feedbacksSlider: document.querySelector('.feedbacks-section__slider')
+  feedbacksSlider: document.querySelector('.feedbacks-section__slider'),
+  relatedSlider: document.querySelector('.related__slider')
 });
 
 /***/ }),
@@ -526,7 +527,8 @@ __webpack_require__.r(__webpack_exports__);
 
 const {
   usefullSlider,
-  feedbacksSlider
+  feedbacksSlider,
+  relatedSlider
 } = _vars__WEBPACK_IMPORTED_MODULE_1__["default"];
 if (usefullSlider) {
   const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](usefullSlider, {
@@ -592,6 +594,85 @@ if (feedbacksSlider) {
       clickable: true
     }
   });
+}
+
+// if(relatedSlider) {
+//   const swiper = new Swiper(relatedSlider, {
+//     modules: [Autoplay, Navigation, Grid],
+//     observer: true,
+//     observeParents: true,
+//     navigation: {
+//       nextEl: ".slide-next",
+//       prevEl: ".slide-prev",
+//     },
+//     breakpoints:{
+//       576:{
+//         slidesPerView: 2,
+//         spaceBetween: 32,
+
+//         grid: {
+//           fill: 'row',
+//           rows: 2,
+//         },
+//       },
+//       1241:{
+//         slidesPerView: 3,
+//         spaceBetween: 32,
+//         grid: {
+//           fill: 'row',
+//           rows: 2,
+//         },
+//       },
+//     },
+//   });  
+// }
+
+if (relatedSlider) {
+  (function () {
+    "use strict";
+
+    const breakpoint = window.matchMedia("(max-width:767px)");
+    let slider;
+    const enableSwiper = function () {
+      slider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](relatedSlider, {
+        modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Autoplay, swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Grid],
+        observer: true,
+        observeParents: true,
+        navigation: {
+          nextEl: ".slide-next",
+          prevEl: ".slide-prev"
+        },
+        breakpoints: {
+          576: {
+            slidesPerView: 2,
+            spaceBetween: 32,
+            grid: {
+              fill: 'row',
+              rows: 2
+            }
+          },
+          1241: {
+            slidesPerView: 3,
+            spaceBetween: 32,
+            grid: {
+              fill: 'row',
+              rows: 2
+            }
+          }
+        }
+      });
+    };
+    const breakpointChecker = function () {
+      if (breakpoint.matches === true) {
+        if (slider !== undefined) slider.destroy(true, true);
+        return;
+      } else if (breakpoint.matches === false) {
+        return enableSwiper();
+      }
+    };
+    breakpoint.addListener(breakpointChecker);
+    breakpointChecker();
+  })();
 }
 
 /***/ }),

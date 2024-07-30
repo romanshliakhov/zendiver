@@ -8,7 +8,7 @@ html {
 body {
   background: var(--body-bg);  
   position: relative;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   width: 100%;
   min-height: -webkit-fill-available;
   margin: 0 auto;
@@ -27,34 +27,10 @@ main {
   z-index: 1;
   padding-top: var(--header-height);
   min-width: 0 !important;
-  overflow: hidden;
+  // overflow: hidden;
   display: flex;
   flex-direction: column;
   z-index: 5;
-
-  &::before {
-    content: '';
-    position: absolute;
-    background-image: var(--main-bg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    right: 0;
-    top: 0;
-    width: 1168px;
-    height: 392px;
-
-    @include tablet {
-      width: 100%;
-    }
-  }
-
-  &::after {
-    position: absolute;
-    content: var(--main-right-frame);
-    right: 0;
-    top: 0;
-    z-index: -1;
-  }
 }
 
 *,
@@ -117,7 +93,7 @@ p {
 
 p {
   font-size: 15px;
-  // font-family: var(--font-family);
+  font-family: var(--font-family);
   font-weight: 400;
   color: rgba(var(--cl-b),1.0);
   font-style: normal;
@@ -197,16 +173,6 @@ input[type="number"] {
   }
 }
 
-// .panel,
-// [data-content] {
-//   z-index: 20;
-
-//   max-height: 0;
-//   overflow: hidden;
-
-//   transition: max-height 0.2s;
-// }
-
 .main-inner{
   padding:clamp(50px, 4.6154vw, 60px) 0;
 
@@ -240,4 +206,32 @@ fieldset {
   border: none;
 }
 
+.blog {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: var(--main-bg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    right: 0;
+    top: 0;
+    width: 1168px;
+    height: 392px;
+    z-index: -1;
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: var(--main-right-frame);
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+}
 
