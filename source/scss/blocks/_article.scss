@@ -179,6 +179,10 @@
         &.quiz-box {
             margin-top: clamp(40px, 4.688vw, 48px);
 
+            .article__content {
+                padding: 0 clamp(12px, 3.229vw, 62px);
+            }
+
             .share {
                 margin-top: 0;
             }

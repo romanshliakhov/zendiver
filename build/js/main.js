@@ -17,22 +17,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/tabs */ "./source/js/components/tabs.js");
 /* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_tabs__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _components_select__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/select */ "./source/js/components/select.js");
-/* harmony import */ var _components_inputMask_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/inputMask.js */ "./source/js/components/inputMask.js");
+/* harmony import */ var _components_inputMask__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/inputMask */ "./source/js/components/inputMask.js");
 /* harmony import */ var _components_hiddenCards__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/hiddenCards */ "./source/js/components/hiddenCards.js");
+/* harmony import */ var _components_quiz__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/quiz */ "./source/js/components/quiz.js");
 
 
 
 
 
 // import './components/accordions';
-// import './components/replaceEl';
-// import './components/modals';
-// import './components/aos';
-
-// import './components/counter.js';
 
 
-// import './components/form';
+
+
 
 /***/ }),
 
@@ -439,6 +436,119 @@ im.mask(selector);
 
 /***/ }),
 
+/***/ "./source/js/components/quiz.js":
+/*!**************************************!*\
+  !*** ./source/js/components/quiz.js ***!
+  \**************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../functions/customFunctions */ "./source/js/functions/customFunctions.js");
+
+const sectionParents = document.querySelectorAll("[data-quiz]");
+const btnClass = "form-quiz__btn--disable";
+sectionParents.forEach(function (section) {
+  const quizSlides = section.querySelectorAll(".form-quiz__list");
+  const quizSlidesLength = quizSlides.length;
+  const btnNext = section.querySelector("[data-next]");
+  const btnPrev = section.querySelector("[data-prev]");
+  const currentNumber = section.querySelector(".form-quiz__current");
+  const allNumber = section.querySelector(".form-quiz__all");
+  const sendBtn = section.querySelector('.form-quiz__btn.hide');
+  btnNext.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (!quizSlides[quizSlidesLength - 1].classList.contains("active")) {
+      showNextSlide(btnNext);
+      (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.removeCustomClass)(btnPrev, btnClass);
+    }
+    if (quizSlides[quizSlidesLength - 1].classList.contains("active")) {
+      (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.fadeOut)(btnNext, 0);
+      (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.fadeIn)(sendBtn, 0);
+    } else {
+      (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.fadeIn)(btnNext, 0);
+      (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.fadeOut)(sendBtn, 0);
+    }
+  });
+  btnPrev.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (!quizSlides[0].classList.contains("active")) {
+      showPrevSlide(btnPrev, btnNext);
+    }
+    if (quizSlides[0].classList.contains("active")) {
+      (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.addCustomClass)(btnPrev, btnClass);
+    }
+    if (quizSlides[quizSlidesLength - 1].classList.contains("active")) {
+      (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.fadeOut)(btnNext, 0);
+      (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.fadeIn)(sendBtn, 0);
+    } else {
+      (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.fadeIn)(btnNext, 0);
+      (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.fadeOut)(sendBtn, 0);
+    }
+  });
+  document.addEventListener("DOMContentLoaded", function () {
+    (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.addClassInArray)([btnNext, btnPrev], btnClass);
+  });
+  document.body.addEventListener('click', function (e) {
+    if (e.target.type === 'radio' || e.target.type === 'checkbox') {
+      checkState(btnNext);
+    }
+  });
+});
+function checkCheckboxes(selector) {
+  const checkboxes = selector.querySelectorAll("input");
+  for (let checkbox of checkboxes) {
+    if (checkbox.checked) {
+      return true;
+    }
+  }
+  return false;
+}
+function checkState(btn) {
+  const activeSlide = document.querySelector(".form-quiz__list.active");
+  const checkboxes = activeSlide.querySelectorAll("input");
+  checkboxes.forEach(function (checkbox) {
+    if (checkCheckboxes(activeSlide)) {
+      (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.removeCustomClass)(btn, btnClass);
+    }
+    if (!checkCheckboxes(activeSlide)) {
+      (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.addCustomClass)(btn, btnClass);
+    }
+  });
+}
+function showNextSlide(btn, number) {
+  const activeSlide = document.querySelector(".form-quiz__list.active");
+  const nextSlide = activeSlide.nextElementSibling;
+  if (checkCheckboxes(activeSlide)) {
+    (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.fadeOut)(activeSlide, 0);
+    (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.removeCustomClass)(activeSlide);
+    (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.fadeIn)(nextSlide, 600, "flex");
+    (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.addCustomClass)(nextSlide);
+  }
+  if (!checkCheckboxes(nextSlide)) {
+    (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.addCustomClass)(btn, btnClass);
+  }
+}
+function showPrevSlide(btn, nextBtn, number) {
+  const activeSlide = document.querySelector(".form-quiz__list.active");
+  const prevSlide = activeSlide.previousElementSibling;
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.fadeOut)(activeSlide, 0);
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.removeCustomClass)(activeSlide);
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.fadeIn)(prevSlide, 600, "flex");
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.addCustomClass)(prevSlide);
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.removeCustomClass)(btn, btnClass);
+  if (checkCheckboxes(prevSlide)) {
+    (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.removeCustomClass)(nextBtn, btnClass);
+  }
+  const position = document.querySelector(".quiz-section__box").offsetTop - document.querySelector("header").offsetHeight;
+  window.scrollTo({
+    top: position,
+    behavior: "smooth"
+  });
+}
+
+/***/ }),
+
 /***/ "./source/js/components/select.js":
 /*!****************************************!*\
   !*** ./source/js/components/select.js ***!
@@ -787,7 +897,7 @@ const elementHeight = (el, variableName) => {
 
 const fadeIn = (el, timeout, display) => {
   el.style.opacity = 0;
-  el.style.display = display || 'block';
+  el.style.display = display || 'flex';
   el.style.transition = `all ${timeout}ms`;
   setTimeout(() => {
     el.style.opacity = 1;

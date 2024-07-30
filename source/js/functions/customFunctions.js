@@ -46,7 +46,7 @@ export const elementHeight = (el, variableName) => {
 
 export const fadeIn = (el, timeout, display) => {
 	el.style.opacity = 0;
-	el.style.display = display || 'block';
+	el.style.display = display || 'flex';
 	el.style.transition = `all ${timeout}ms`;
 	setTimeout(() => {
 		el.style.opacity = 1;

@@ -20,7 +20,7 @@ footer{
   &::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     background-image: var(--footer-lines-frame);
     background-size: 100%;
     background-repeat: no-repeat;
