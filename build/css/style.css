@@ -1771,6 +1771,18 @@ h2,
 .details li svg {
   stroke: currentColor;
 }
+.details li.author svg {
+  fill: transparent;
+  stroke: currentColor;
+}
+.details li.readtime svg {
+  fill: transparent;
+  stroke: currentColor;
+}
+.details li.pubtime svg {
+  fill: currentColor;
+  stroke: transparent;
+}
 
 .articles {
   width: 100%;

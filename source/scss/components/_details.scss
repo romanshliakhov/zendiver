@@ -25,5 +25,26 @@
         svg {
             stroke: currentColor;
         }
+
+        &.author {
+            svg {
+                fill: transparent;
+                stroke: currentColor;
+            }
+        }
+
+        &.readtime {
+            svg {
+                fill: transparent;
+                stroke: currentColor;
+            }
+        }
+
+        &.pubtime {
+            svg {
+                fill: currentColor;
+                stroke: transparent;
+            }
+        }
     }
 }
