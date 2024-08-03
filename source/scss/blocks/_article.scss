@@ -34,6 +34,54 @@
         @include tablet {
             grid-template-columns: 100%;
         }
+
+        &.changelog-article {
+            grid-template-columns: 100%;
+        }
+
+        &.case-study-article {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 24px 32px;
+
+            .article__picture {
+                flex-shrink: 0;
+                width: 188px;
+            }
+
+            .article__image  {
+                box-shadow: none;
+                clip-path: polygon( 6.505% 6.754%,6.505% 6.754%,6.628% 5.881%,6.865% 5.058%,7.207% 4.294%,7.644% 3.599%,8.168% 2.982%,8.768% 2.453%,9.435% 2.022%,10.159% 1.698%,10.932% 1.49%,11.744% 1.41%,89.731% 0.087%,89.731% 0.087%,90.572% 0.144%,91.375% 0.337%,92.128% 0.656%,92.821% 1.09%,93.444% 1.628%,93.987% 2.261%,94.439% 2.977%,94.789% 3.767%,95.027% 4.619%,95.143% 5.523%,100% 93.876%,100% 93.876%,99.978% 94.855%,99.811% 95.789%,99.51% 96.664%,99.088% 97.467%,98.557% 98.184%,97.927% 98.801%,97.213% 99.305%,96.424% 99.682%,95.573% 99.918%,94.673% 100%,5.756% 100%,5.756% 100%,4.845% 99.917%,3.987% 99.676%,3.192% 99.291%,2.473% 98.778%,1.842% 98.15%,1.311% 97.421%,0.893% 96.606%,0.599% 95.719%,0.442% 94.774%,0.434% 93.784%,6.505% 6.754% );
+                border-radius: 10px;
+
+                picture, 
+                img {
+                    border-radius: 10px;
+                }
+            }
+
+            .article__info {
+                max-width: 738px;
+
+                h1 {
+                    font-family: var(--font-primary);
+                    font-size: clamp(32px, 4.688vw, 36px);
+                    line-height: 133%;
+                    font-weight: 600;
+                    letter-spacing: -0.02em;
+                }
+            }
+
+            @include small-tablet {
+                flex-direction: column-reverse;
+
+                .article__picture {
+                    width: 100%;
+                }
+            }
+        }
     }
 
     &__picture {

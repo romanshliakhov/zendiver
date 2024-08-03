@@ -5,6 +5,13 @@
         display: flex;
         flex-direction: column;
         gap: 32px;
+
+        &.changelog-block {
+            padding: clamp(32px, 4.167vw, 80px) clamp(24px, 6.51vw, 125px);
+            background-color: #fafafa;
+            border-radius: clamp(32px, 5.208vw, 40px);
+            box-shadow: 16px 30px 76px 0 rgba(0, 0, 0, 0.05), 64px 122px 137px 0 rgba(0, 0, 0, 0.04), 144px 274px 186px 0 rgba(0, 0, 0, 0.03), 256px 486px 220px 0 rgba(0, 0, 0, 0.01), 400px 760px 240px 0 rgba(0, 0, 0, 0);
+        }
     }
 
     &__top {
@@ -56,6 +63,7 @@
     }
 
     &__article {
+        width: fit-content;
         display: flex;
         flex-direction: column;
         gap: 8px;
