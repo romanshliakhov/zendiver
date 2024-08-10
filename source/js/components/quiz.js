@@ -10,13 +10,13 @@ import {
   const btnClass = "form-quiz__btn--disable";
   
   sectionParents.forEach(function (section) {
-    const quizSlides = section.querySelectorAll(".form-quiz__list");
+    const quizSlides = section.querySelectorAll(".form-quiz__list:not(.skip-item)");
     const quizSlidesLength = quizSlides.length;
     const btnNext = section.querySelector("[data-next]");
     const btnPrev = section.querySelector("[data-prev]");
-    const currentNumber = section.querySelector(".form-quiz__current");
-    const allNumber = section.querySelector(".form-quiz__all");
     const sendBtn = section.querySelector('.form-quiz__btn.hide');
+    const resultSendBtn = section.querySelector('.form-quiz__results button');
+    console.log(resultSendBtn);
   
     btnNext.addEventListener("click", function (e) {
       e.preventDefault();
@@ -53,16 +53,39 @@ import {
           fadeOut(sendBtn, 0);
         }
     });
+
+    sendBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      fadeOut(section.querySelector('.form-quiz__heading'), 0);
+      fadeOut(section.querySelector('.form-quiz__controls'), 0);
+      showNextSlide(this);
+    })
   
     document.addEventListener("DOMContentLoaded", function () {
       addClassInArray([btnNext, btnPrev], btnClass);
     });
   
-      document.body.addEventListener('click', function(e){
-        if(e.target.type === 'radio' || e.target.type === 'checkbox'){
-          checkState(btnNext);
-        }
-      })
+    document.body.addEventListener('click', function(e){
+      if(e.target.type === 'radio' || e.target.type === 'checkbox'){
+        checkState(btnNext);
+      }
+    })
+
+
+    resultSendBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      fadeOut(section.querySelector('.result'));
+      fadeIn(section.querySelector('.send'));
+    })
+
+    // var wpcf7Elm = document.querySelector( '.wpcf7' );
+  
+    // wpcf7Elm.addEventListener( 'wpcf7submit', function( event ) {
+    //   fadeOut(section.querySelector('.result'));
+    //   fadeIn(section.querySelector('.send'));
+    // }, false );
   });
   
   function checkCheckboxes(selector) {
@@ -79,6 +102,7 @@ import {
   function checkState(btn) {
     const activeSlide = document.querySelector(".form-quiz__list.active");
     const checkboxes = activeSlide.querySelectorAll("input");
+    
     checkboxes.forEach(function (checkbox) {
       if (checkCheckboxes(activeSlide)) {
         removeCustomClass(btn, btnClass);
@@ -89,7 +113,7 @@ import {
     });
   }
   
-  function showNextSlide(btn, number) {
+  function showNextSlide(btn) {
     const activeSlide = document.querySelector(".form-quiz__list.active");
     const nextSlide = activeSlide.nextElementSibling;
   

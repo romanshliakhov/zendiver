@@ -109,48 +109,12 @@ header {
       stroke: currentColor;
     }
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: -2px;
-      left: -2px;
-      bottom: -2px;
-      right: -2px;
-      background: linear-gradient(225deg, #d36c40 0%, #bf582c 100%);
-      border-radius: 100px;
-      opacity: 0;
-      transition: all 0.4s ease;
-      z-index: -1;
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: -2px;
-      left: -2px;
-      bottom: -2px;
-      right: -2px;
-      background: linear-gradient(225deg, #bf582c 0%, #bf582c 100%);
-      border-radius: 100px;
-      opacity: 0;
-      transition: all 0.4s ease;
-      z-index: -1;
-    }
-
     &:hover {
-      color: rgba(var(--cl-a),1.0);
-
-      &::before {
-        opacity: 1;
-      }
+      background: #f5f5f5;
     }
 
     &:active {
-      color: rgba(var(--cl-a),1.0);
-
-      &::after {
-        opacity: 1;
-      }
+      background: #ebebeb;
     }
   }
 

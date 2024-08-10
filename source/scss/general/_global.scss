@@ -8,7 +8,6 @@ html {
 body {
   background: var(--body-bg);  
   position: relative;
-  // overflow-x: hidden;
   width: 100%;
   min-height: -webkit-fill-available;
   margin: 0 auto;
@@ -19,6 +18,17 @@ body {
   font-weight: 400;
   letter-spacing: -0.02em;
   color:  rgba(var(--cl-c),1.0);
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease-in-out;
+    z-index: 10;
+  }
 }
 
 main {
@@ -120,6 +130,8 @@ label {
 
 input {
   width: 100%;
+  padding: 0;
+  margin: 0;
 
   background-color: transparent;
   border: none;
@@ -191,12 +203,16 @@ input[type="number"] {
   position: fixed;
   top: 0;
   left: 0;
-
   width: 100%;
   overflow: hidden;
 
   overscroll-behavior: none !important;
   scroll-behavior: none !important;
+
+  &::before {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 fieldset {

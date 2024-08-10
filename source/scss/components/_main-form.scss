@@ -1,11 +1,8 @@
 .main-form{
-    border: 1px solid rgba(var(--bg-b), 0.1);
-    border-radius: 10px;
-    background: rgba(var(--bg-g),1.0);
-    display: flex;
-    align-items: center;
-    grid-gap: clamp(9px, 5.7692vw, 75px);
-    padding: clamp(32px, 2.6154vw, 34px);
+    padding: 32px;
+    background: rgba(var(--bg-a),1.0);
+    border: 1px solid rgba(var(--bg-c), 0.24);
+    border-radius: 32px;
 
     @include mobile{
         flex-direction: column;
@@ -13,88 +10,172 @@
         grid-gap: 9px;
     }
 
-    &__box { 
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        grid-gap: 20px;
-        text-align: center;
+    &__title {
+        margin-bottom: 16px;
+        font-family: var(--font-primary);
+        font-size: 24px;
+        line-height: 133%;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        color: rgba(var(--cl-d),1.0);
     }
 
-    &__inner{
+    &__labels {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: clamp(14px, 1.5385vw, 20px);
-
-        @include tablet{
-            grid-template-columns: 1fr;
-        }
-    }
-
-    &__label{
-        width: 100%;
-        position: relative;
-    }
-
-    &__input{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        padding: 15px;
-        border: 1px solid rgba(var(--cl-f), 0.4);
-        background: rgba(var(--bg-a),1.0);
-        border-radius: 10px;
-        font-family: var(--font-second);
-        font-size: 15px;
-        line-height: 130%;
-        color: rgba(var(--cl-c),1.0);
-
-        &::placeholder{
-            color: rgba(var(--cl-c), 0.5);
-        }
-    }
-
-    .subtitle{
-        text-transform: uppercase;
-    }
-
-    &__list{
-        display: flex;
-        flex-direction: column;
         grid-gap: 16px;
     }
 
-    &__row{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: clamp(10px, 1.5385vw, 20px);
+    label {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
 
-        &--mode{
-            grid-template-columns: 1fr;
+        p {
+            font-size: 14px;
+            line-height: 129%;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: rgba(var(--cl-c),1.0);
         }
 
-        @include tablet{
-            grid-template-columns: 1fr;
+        input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid rgba(var(--bg-c), 0.24);
+            background: rgba(var(--bg-c), 0.04);
+            border-radius: 8px;
+            font-family: var(--font-second);
+            font-size: 17px;
+            line-height: 118%;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            color: rgba(var(--cl-c),1.0);
+            transition: all 0.2s ease-in-out;
+    
+            &::placeholder{
+                color: rgba(var(--cl-c), 0.75);
+            }
+
+            &:focus,
+            &:valid {
+                background-color: rgba(var(--bg-a),1.0);
+            }
         }
+
+        textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid rgba(var(--bg-c), 0.24);
+            background: rgba(var(--bg-c), 0.04);
+            border-radius: 8px;
+            font-family: var(--font-second);
+            font-size: 17px;
+            line-height: 118%;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            color: rgba(var(--cl-c),1.0);
+            min-height: 128px;
+            transition: all 0.2s ease-in-out;
+    
+            &::placeholder{
+                color: rgba(var(--cl-c), 0.75);
+            }
+
+            &:focus,
+            &:valid {
+                background-color: rgba(var(--bg-a),1.0);
+            }
+        }
+
+        &.topic,
+        &.message {
+            grid-column: span 2;
+        }
+
     }
 
-    &__area{
-        width: 100%;
+    button {
+        margin-top: 16px;
+        margin-left: auto;
+        position: relative;
+        padding: 14px 16px;
+        font-family: var(--font-second);
+        font-size: 16px;
+        line-height: 125%;
+        font-weight: 500;
+        letter-spacing: -0.02em;
         display: flex;
         align-items: center;
-        padding: 15px;
-        border: 1px solid rgba(var(--cl-f), 0.4);
-        background: rgba(var(--bg-a),1.0);
-        border-radius: 10px;
-        font-family: var(--font-second);
-        font-size: 15px;
-        line-height: 130%;
-        color: rgba(var(--cl-c),1.0);
-        min-height: clamp(120px, 11.0769vw, 144px);
+        gap: 10px;
+        background: linear-gradient(180deg, #e594aa 0, #c069d8 100%), linear-gradient(180deg, #5caced 0, #2f50b0 100%);
+        border-radius: 100px;
+        color: rgba(var(--cl-a),1.0);
+        transition: all 0.2s ease;
 
-        &::placeholder{
-            color: rgba(var(--cl-c), 0.5);
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: #dd8bb4;
+            opacity: 0;
+            border-radius: 100px;
+            z-index: -1;
+            transition: all 0.4s ease;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: #c56fd3;
+            opacity: 0;
+            border-radius: 100px;
+            z-index: -1;
+            transition: all 0.4s ease;
+        }
+
+        &:hover::before {
+            opacity: 1;
+        }
+
+        &:active::before {
+            opacity: 0;
+        }
+
+        &:active::after {
+            opacity: 1;
         }
     }
+
+    &:invalid button {
+        cursor: not-allowed;
+        background: #fff;
+        color: #111;
+        border: 2px solid rgba(17, 17, 17, 0.25);
+        opacity: 0.5;
+
+        svg {
+            stroke: currentColor;
+        }
+
+        &:hover::before {
+            opacity: 0;
+        }
+
+        &:active::after {
+            opacity: 0;
+        }
+    }
+
+    // &__inner{
+    //     display: grid;
+    //     grid-template-columns: repeat(2, 1fr);
+    //     grid-gap: clamp(14px, 1.5385vw, 20px);
+
+    //     @include tablet{
+    //         grid-template-columns: 1fr;
+    //     }
+    // }
 }
 

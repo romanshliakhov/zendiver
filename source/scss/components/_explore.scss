@@ -17,6 +17,8 @@
         display: flex;
         align-items: center;
         gap: 8px;
+        word-break: break-all;
+        font-size: clamp(15px, 4vw, 16px);
 
         &.personal {
             color: rgba(var(--cl-d),1.0);

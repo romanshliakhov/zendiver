@@ -54,12 +54,6 @@
         right: clamp(40px, 5.365vw, 103px);
         display: flex;
 
-        // img {
-        //     width: clamp(320px, 20.625vw, 396px);
-        //     height: clamp(220px, 14.219vw, 273px);
-        //     object-fit: cover;
-        // }
-
         @include small-tablet {
             right: initial;
             left: 30px;

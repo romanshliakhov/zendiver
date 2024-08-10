@@ -163,13 +163,23 @@
         height: fit-content;
         display: flex;
         flex-direction: column;
+        padding: 24px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: white;
+            z-index: -1;
+            transform: skewY(2deg);
+            border-radius: 24px;
+        }
 
         &-image {
             display: flex;
-            padding-top: clamp(12px, 2.344vw, 24px);
             border-radius: 8px;
             overflow: hidden;
-            transition: all 0.4s ease;
+            transition: all 0.3s ease;
 
             picture,
             img {
@@ -177,13 +187,13 @@
                 height: 100%;
                 object-fit: cover;
                 border-radius: 8px;
-                transition: all 0.4s ease;
+                transition: all 0.3s ease;
             }
         }
 
         &-tags {
             position: absolute;
-            // left: 10px;
+            left: 10px;
             bottom: 10px;
             display: flex;
             align-items: center;
@@ -200,7 +210,7 @@
                 font-weight: 700;
                 letter-spacing: -0.02em;
                 color: rgba(var(--cl-a),1.0);
-                transition: all 0.4s ease;
+                transition: all 0.15s ease;
         
                 &:hover,
                 &:active {
@@ -224,7 +234,7 @@
             font-size: clamp(20px, 1.667vw, 24px);
             line-height: 133%;
             font-weight: 700;
-            transition: all 0.4s ease;
+            transition: all 0.15s ease;
         }
 
         &-link {
@@ -235,10 +245,10 @@
             gap: 10px;
             margin-left: auto;
             color: rgba(var(--cl-d),1.0);
-            transition: all 0.4s ease;
+            transition: all 0.15s ease;
 
             svg {
-                transition: all 0.4s ease;
+                transition: all 0.15s ease;
                 stroke: currentColor;
             }
         }
@@ -280,25 +290,7 @@
 
     &__head {
         position: relative;
-        clip-path: polygon(100% 31.909%, 100% 100%, 0% 100%, 0% 23.16%, 0% 23.16%, 0.091% 19.441%, 0.356% 15.92%, 0.778% 12.646%, 1.344% 9.667%, 2.038% 7.032%, 2.845% 4.789%, 3.752% 2.986%, 4.742% 1.671%, 5.801% 0.892%, 6.914% 0.699%, 93.491% 9.447%, 93.491% 9.447%, 94.554% 9.837%, 95.56% 10.758%, 96.496% 12.165%, 97.349% 14.014%, 98.105% 16.26%, 98.753% 18.86%, 99.279% 21.77%, 99.671% 24.944%, 99.916% 28.338%, 100% 31.909%);
-        background-color: white;
-        padding: 24px 24px 0;
-    }
-
-    &__info {
-        position: relative;
-        z-index: 1;
-        padding: 24px 24px 0;
-        background-color: #fff;
-        display: flex;
-        flex-direction: column;
-    }
-
-    &__bottom {
-        margin-top: -24px;
-        padding: 24px;
-        clip-path: polygon( 0% 44.976%,0% 44.976%,0.061% 49.892%,0.237% 54.57%,0.519% 58.948%,0.898% 62.966%,1.364% 66.564%,1.91% 69.681%,2.525% 72.257%,3.201% 74.232%,3.929% 75.544%,4.698% 76.134%,94.894% 100%,94.894% 100%,95.714% 99.785%,96.495% 98.745%,97.225% 96.946%,97.895% 94.457%,98.491% 91.347%,99.005% 87.682%,99.424% 83.531%,99.736% 78.962%,99.932% 74.043%,100% 68.842%,100% 0%,0% 0%,0% 44.976% );
-        background-color: #fff;
+        margin-bottom: 24px;
     }
 
     &__pagination {

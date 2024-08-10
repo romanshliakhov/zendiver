@@ -449,13 +449,13 @@ __webpack_require__.r(__webpack_exports__);
 const sectionParents = document.querySelectorAll("[data-quiz]");
 const btnClass = "form-quiz__btn--disable";
 sectionParents.forEach(function (section) {
-  const quizSlides = section.querySelectorAll(".form-quiz__list");
+  const quizSlides = section.querySelectorAll(".form-quiz__list:not(.skip-item)");
   const quizSlidesLength = quizSlides.length;
   const btnNext = section.querySelector("[data-next]");
   const btnPrev = section.querySelector("[data-prev]");
-  const currentNumber = section.querySelector(".form-quiz__current");
-  const allNumber = section.querySelector(".form-quiz__all");
   const sendBtn = section.querySelector('.form-quiz__btn.hide');
+  const resultSendBtn = section.querySelector('.form-quiz__results button');
+  console.log(resultSendBtn);
   btnNext.addEventListener("click", function (e) {
     e.preventDefault();
     if (!quizSlides[quizSlidesLength - 1].classList.contains("active")) {
@@ -486,6 +486,12 @@ sectionParents.forEach(function (section) {
       (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.fadeOut)(sendBtn, 0);
     }
   });
+  sendBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.fadeOut)(section.querySelector('.form-quiz__heading'), 0);
+    (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.fadeOut)(section.querySelector('.form-quiz__controls'), 0);
+    showNextSlide(this);
+  });
   document.addEventListener("DOMContentLoaded", function () {
     (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.addClassInArray)([btnNext, btnPrev], btnClass);
   });
@@ -494,6 +500,18 @@ sectionParents.forEach(function (section) {
       checkState(btnNext);
     }
   });
+  resultSendBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.fadeOut)(section.querySelector('.result'));
+    (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.fadeIn)(section.querySelector('.send'));
+  });
+
+  // var wpcf7Elm = document.querySelector( '.wpcf7' );
+
+  // wpcf7Elm.addEventListener( 'wpcf7submit', function( event ) {
+  //   fadeOut(section.querySelector('.result'));
+  //   fadeIn(section.querySelector('.send'));
+  // }, false );
 });
 function checkCheckboxes(selector) {
   const checkboxes = selector.querySelectorAll("input");
@@ -516,7 +534,7 @@ function checkState(btn) {
     }
   });
 }
-function showNextSlide(btn, number) {
+function showNextSlide(btn) {
   const activeSlide = document.querySelector(".form-quiz__list.active");
   const nextSlide = activeSlide.nextElementSibling;
   if (checkCheckboxes(activeSlide)) {
@@ -662,6 +680,10 @@ if (usefullSlider) {
         slidesPerView: 2,
         spaceBetween: 16
       },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 32
+      },
       1241: {
         slidesPerView: 4,
         spaceBetween: 32
@@ -705,38 +727,6 @@ if (feedbacksSlider) {
     }
   });
 }
-
-// if(relatedSlider) {
-//   const swiper = new Swiper(relatedSlider, {
-//     modules: [Autoplay, Navigation, Grid],
-//     observer: true,
-//     observeParents: true,
-//     navigation: {
-//       nextEl: ".slide-next",
-//       prevEl: ".slide-prev",
-//     },
-//     breakpoints:{
-//       576:{
-//         slidesPerView: 2,
-//         spaceBetween: 32,
-
-//         grid: {
-//           fill: 'row',
-//           rows: 2,
-//         },
-//       },
-//       1241:{
-//         slidesPerView: 3,
-//         spaceBetween: 32,
-//         grid: {
-//           fill: 'row',
-//           rows: 2,
-//         },
-//       },
-//     },
-//   });  
-// }
-
 if (relatedSlider) {
   (function () {
     "use strict";

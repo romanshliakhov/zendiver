@@ -62,8 +62,6 @@
             <div class="header-menu__box">
                 <div class="header-menu__inner">
                     <div class="explore">
-                        <span class="explore__heading">ExploRe ZenDiver:</span>
-
                         <a class="explore__link personal" href="#">
                             <svg width='20' height='20'>
                                 <use href='img/sprite/sprite.svg#avatar'></use>
@@ -91,6 +89,28 @@
 
                     <ul class="header-menu__navs">
                         <li class="header-menu__nav">
+                            <span>Topics</span>
+
+                            <ul class="main-nav">
+                                <li class="main-nav__item">
+                                    <a href="#" class="main-nav__link">Stress and Burnout</a>
+                                </li>
+                                <li class="main-nav__item">
+                                    <a href="#" class="main-nav__link">Anxiety</a>
+                                </li>
+                                <li class="main-nav__item">
+                                    <a href="#" class="main-nav__link">Guilt</a>
+                                </li>
+                                <li class="main-nav__item">
+                                    <a href="#" class="main-nav__link">Overweight</a>
+                                </li>
+                                <li class="main-nav__item">
+                                    <a href="#" class="main-nav__link">Explore more...</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="header-menu__nav">
                             <span>Fields</span>
 
                             <ul class="main-nav">
@@ -111,28 +131,6 @@
                                 </li>
                             </ul>
                         </li>
-
-                        <li class="header-menu__nav">
-                            <span>Topics</span>
-
-                            <ul class="main-nav">
-                                <li class="main-nav__item">
-                                    <a href="#" class="main-nav__link">Stress and Burnout</a>
-                                </li>
-                                <li class="main-nav__item">
-                                    <a href="#" class="main-nav__link">Anxiety</a>
-                                </li>
-                                <li class="main-nav__item">
-                                    <a href="#" class="main-nav__link">Guilt</a>
-                                </li>
-                                <li class="main-nav__item">
-                                    <a href="#" class="main-nav__link">Overweight</a>
-                                </li>
-                                <li class="main-nav__item">
-                                    <a href="#" class="main-nav__link">Sleep Quality</a>
-                                </li>
-                            </ul>
-                        </li>
                     </ul>
 
                     <div class="apps">
@@ -143,36 +141,51 @@
                             <img width='200' height='70' src='img/app-store.svg' alt='ios app'>
                         </a>
                     </div>
+
+                    <div class="header-menu__language">
+                        <span>Language:</span>
+              
+                        <ul class="header-menu__language-list">
+                            <li class="active">
+                                <a href="#">EN</a>
+                            </li>
+                            <li>
+                                <a href="#">ES</a>
+                            </li>
+                            <li>
+                                <a href="#">FR</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
                 <form id="menuForm" class="main-form">
-                    <div class="main-form__box">
-                        <span class="subtitle">Ask a Question</span>
+                    <div class="main-form__title">Ask a Question</div>
 
-                        <ul class="main-form__list">
-                            <li class="main-form__row">
-                                <label for="name_1" class="main-form__label">
-                                    <input type="text" id="name_1" class="main-form__input" placeholder="First Name">
-                                </label>
-                                <label for="last_2" class="main-form__label">
-                                    <input type="text" id="last_2" class="main-form__input" placeholder="Last Name">
-                                </label>
-                            </li>
-                            <li class="main-form__row">
-                                <label for="phone_3" class="main-form__label">
-                                    <input type="tel" id="phone_3" class="main-form__input" placeholder="Your phone">
-                                </label>
-                                <label for="device_3" class="main-form__label">
-                                    <input type="email" id="email_3" class="main-form__input" placeholder="Your email">
-                                </label>
-                            </li>
-                            <li class="main-form__row main-form__row--mode">
-                                <textarea class="main-form__area" id="message_2" placeholder="Message"></textarea>
-                            </li>
-                        </ul>
-
-                        <button type="submit" class="main-button">Apply</button>
+                    <div class="main-form__labels">
+                        <label class="name" for="name">
+                            <p>Name</p>
+                            <input id="name" type="text" name="name" placeholder="What's your preferred name?" required>
+                        </label>
+                        <label class="email" for="email">
+                            <p>Email</p>
+                            <input id="email" type="email" name="email" placeholder="What's your email address?" required>
+                        </label>
+                        <label class="topic" for="topic">
+                            <p>Topic</p>
+                        </label>
+                        <label class="message" for="message">
+                            <p>Message</p>
+                            <textarea name="message" id="message" placeholder="How we can help you? Leave your message here." required></textarea>
+                        </label>
                     </div>
+
+                    <button type="submit">
+                        Send
+                        <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#subscribe'></use>
+                        </svg>
+                    </button>
                 </form>
             </div>
         </div>
@@ -521,15 +534,13 @@
                                             <div class="usefull-section__material-image">
                                                 <picture>
                                                     <source type='image/webp' srcset='img/usefull/item1.webp'>
-                                                    <img width='250' height='116' src='img/usefull/item1.png'
-                                                        alt='item 1'>
+                                                    <img width='250' height='116' src='img/usefull/item1.png' alt='item 1'>
                                                 </picture>
                                             </div>
                                         </div>
 
                                         <div class="usefull-section__material-info">
-                                            <span class="usefull-section__material-title">Free Resources for
-                                                Transforming Limiting Beliefs</span>
+                                            <span class="usefull-section__material-title">Free Resources for Transforming Limiting Beliefs</span>
                                         </div>
                                     </a>
 
@@ -3622,20 +3633,15 @@
                                     </div>
                                 </div>
 
-                                <div class="filters-section__info">
-                                    <span class="filters-section__item-title">Free Resources for Transforming Limiting
-                                        Beliefs</span>
+                                <span class="filters-section__item-title">Free Resources for Transforming Limiting Beliefs</span>
 
-                                    <div class="filters-section__item-link">
-                                        Read the article
+                                <div class="filters-section__item-link">
+                                    Read the article
 
-                                        <svg width='21' height='20'>
-                                            <use href='img/sprite/sprite.svg#proceed-arrow'></use>
-                                        </svg>
-                                    </div>
+                                    <svg width='21' height='20'>
+                                        <use href='img/sprite/sprite.svg#proceed-arrow'></use>
+                                    </svg>
                                 </div>
-
-                                <div class="filters-section__bottom"></div>
                             </a>
 
                             <a class="filters-section__item" href="#">
@@ -3648,20 +3654,15 @@
                                     </div>
                                 </div>
 
-                                <div class="filters-section__info">
-                                    <span class="filters-section__item-title">ADHD & video games: Building important
-                                        skills or worsening your symptoms</span>
+                                <span class="filters-section__item-title">ADHD & video games: Building important skills or worsening your symptoms</span>
 
-                                    <div class="filters-section__item-link">
-                                        Read the article
+                                <div class="filters-section__item-link">
+                                    Read the article
 
-                                        <svg width='21' height='20'>
-                                            <use href='img/sprite/sprite.svg#proceed-arrow'></use>
-                                        </svg>
-                                    </div>
+                                    <svg width='21' height='20'>
+                                        <use href='img/sprite/sprite.svg#proceed-arrow'></use>
+                                    </svg>
                                 </div>
-
-                                <div class="filters-section__bottom"></div>
                             </a>
 
                             <a class="filters-section__item" href="#">
@@ -3674,20 +3675,15 @@
                                     </div>
                                 </div>
 
-                                <div class="filters-section__info">
-                                    <span class="filters-section__item-title">Transforming Guilt into
-                                        Self-Compassion</span>
+                                <span class="filters-section__item-title">Transforming Guilt into Self-Compassion</span>
 
-                                    <div class="filters-section__item-link">
-                                        Read the article
+                                <div class="filters-section__item-link">
+                                    Read the article
 
-                                        <svg width='21' height='20'>
-                                            <use href='img/sprite/sprite.svg#proceed-arrow'></use>
-                                        </svg>
-                                    </div>
+                                    <svg width='21' height='20'>
+                                        <use href='img/sprite/sprite.svg#proceed-arrow'></use>
+                                    </svg>
                                 </div>
-
-                                <div class="filters-section__bottom"></div>
                             </a>
 
                             <a class="filters-section__item" href="#">
@@ -3700,20 +3696,15 @@
                                     </div>
                                 </div>
 
-                                <div class="filters-section__info">
-                                    <span class="filters-section__item-title">Free Resources for Transforming Limiting
-                                        Beliefs</span>
+                                <span class="filters-section__item-title">Free Resources for Transforming Limiting Beliefs</span>
 
-                                    <div class="filters-section__item-link">
-                                        Read the article
+                                <div class="filters-section__item-link">
+                                    Read the article
 
-                                        <svg width='21' height='20'>
-                                            <use href='img/sprite/sprite.svg#proceed-arrow'></use>
-                                        </svg>
-                                    </div>
+                                    <svg width='21' height='20'>
+                                        <use href='img/sprite/sprite.svg#proceed-arrow'></use>
+                                    </svg>
                                 </div>
-
-                                <div class="filters-section__bottom"></div>
                             </a>
 
                             <a class="filters-section__item" href="#">
@@ -3726,20 +3717,15 @@
                                     </div>
                                 </div>
 
-                                <div class="filters-section__info">
-                                    <span class="filters-section__item-title">Transforming Guilt into
-                                        Self-Compassion</span>
+                                <span class="filters-section__item-title">Transforming Guilt into Self-Compassion</span>
 
-                                    <div class="filters-section__item-link">
-                                        Read the article
+                                <div class="filters-section__item-link">
+                                    Read the article
 
-                                        <svg width='21' height='20'>
-                                            <use href='img/sprite/sprite.svg#proceed-arrow'></use>
-                                        </svg>
-                                    </div>
+                                    <svg width='21' height='20'>
+                                        <use href='img/sprite/sprite.svg#proceed-arrow'></use>
+                                    </svg>
                                 </div>
-
-                                <div class="filters-section__bottom"></div>
                             </a>
 
                             <a class="filters-section__item" href="#">
@@ -3752,21 +3738,15 @@
                                     </div>
                                 </div>
 
-                                <div class="filters-section__info">
-                                    <span class="filters-section__item-title">ADHD & video games: Building important
-                                        skills or worsening your symptoms
-                                    </span>
+                                <span class="filters-section__item-title">ADHD & video games: Building important skills or worsening your symptoms </span>
 
-                                    <div class="filters-section__item-link">
-                                        Read the article
+                                <div class="filters-section__item-link">
+                                    Read the article
 
-                                        <svg width='21' height='20'>
-                                            <use href='img/sprite/sprite.svg#proceed-arrow'></use>
-                                        </svg>
-                                    </div>
+                                    <svg width='21' height='20'>
+                                        <use href='img/sprite/sprite.svg#proceed-arrow'></use>
+                                    </svg>
                                 </div>
-
-                                <div class="filters-section__bottom"></div>
                             </a>
                         </div>
                         
