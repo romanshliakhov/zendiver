@@ -149,8 +149,20 @@
                             <p>Email</p>
                             <input id="email" type="email" name="email" placeholder="What's your email address?" required>
                         </label>
-                        <label class="topic" for="topic">
+                        <label class="topics" for="topics">
                             <p>Topic</p>
+                            <select class="main-form__select" id="topics" name="topics">
+                                <option value="" disabled selected>Select one from list</option>
+                                <option value="stress">Stress and Burnout</option>
+                                <option value="anxiety">Anxiety</option>
+                                <option value="guilt">Guilt</option>
+                                <option value="overweight">Overweight</option>
+                            </select>
+                            <div class="arrow">
+                                <svg width='20' height='20'>
+                                <use href='img/sprite/sprite.svg#arrow-up'></use>
+                                </svg>
+                            </div>
                         </label>
                         <label class="message" for="message">
                             <p>Message</p>

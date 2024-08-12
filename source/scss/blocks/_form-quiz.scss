@@ -302,8 +302,6 @@
     &__results {
         width: 100%;
         position: relative;
-        // border: 1px solid #dcdcdc;
-        // border-radius: 100px;
 
         input {
             padding: 14px 24px;
@@ -386,6 +384,10 @@
 
             &:active::after {
                 opacity: 1;
+            }
+
+            svg {
+                stroke: currentColor;
             }
         }
 

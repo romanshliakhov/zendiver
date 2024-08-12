@@ -184,9 +184,9 @@
                 opacity: 1;
             }
 
-            // @include small-tablet {
-            //     background: linear-gradient(180deg, #e594aa 0%, #c069d8 100%);
-            // }
+            svg {
+                stroke: currentColor;
+            }
         }
 
         @include small-tablet {

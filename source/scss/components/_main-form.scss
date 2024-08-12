@@ -6,8 +6,7 @@
 
     @include mobile{
         flex-direction: column;
-        padding-bottom: 0;
-        grid-gap: 9px;
+
     }
 
     &__title {
@@ -24,6 +23,10 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 16px;
+
+        @include small-tablet{
+            grid-template-columns: 100%;
+        }
     }
 
     label {
@@ -88,14 +91,54 @@
             }
         }
 
-        &.topic,
-        &.message {
-            grid-column: span 2;
+        select {
+            position: relative;
+            padding: 15px;
+            border: 1px solid rgba(var(--bg-c), 0.24);
+            background: rgba(var(--bg-c), 0.04);
+            border-radius: 8px;
+            font-family: var(--font-second);
+            font-size: 17px;
+            line-height: 118%;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            color: rgba(var(--cl-c),1.0);
+            transition: all 0.2s ease-in-out;
+            appearance: none;
+            cursor: pointer;
+
+            &:focus ~ .arrow {
+                transform: scale(1);
+            }
+        }  
+
+        &.topics {
+            position: relative;
+
+            .arrow {
+                position: absolute;
+                display: flex;
+                right: 16px;
+                bottom: 16px;
+                pointer-events: none;
+                transform: scale(-1);
+                transition: transform 0.2s ease;
+                z-index: 10;
+            }
         }
 
+        &.topics,
+        &.message {
+            grid-column: span 2;
+
+            @include small-tablet{
+                grid-column: 1/-1;
+            }
+        }
     }
 
     button {
+        height: 48px;
         margin-top: 16px;
         margin-left: auto;
         position: relative;
@@ -146,13 +189,18 @@
         &:active::after {
             opacity: 1;
         }
+
+        svg {
+            stroke: currentColor;
+        }
     }
 
     &:invalid button {
+        padding: 13px 15px;
+        border: 2px solid rgba(17, 17, 17, 0.25);
         cursor: not-allowed;
         background: #fff;
         color: #111;
-        border: 2px solid rgba(17, 17, 17, 0.25);
         opacity: 0.5;
 
         svg {
@@ -167,15 +215,5 @@
             opacity: 0;
         }
     }
-
-    // &__inner{
-    //     display: grid;
-    //     grid-template-columns: repeat(2, 1fr);
-    //     grid-gap: clamp(14px, 1.5385vw, 20px);
-
-    //     @include tablet{
-    //         grid-template-columns: 1fr;
-    //     }
-    // }
 }
 

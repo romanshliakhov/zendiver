@@ -2822,8 +2822,6 @@ h2,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding-bottom: 0;
-    grid-gap: 9px;
   }
 }
 .main-form__title {
@@ -2839,6 +2837,11 @@ h2,
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 16px;
+}
+@media (max-width: 767px) {
+  .main-form__labels {
+    grid-template-columns: 100%;
+  }
 }
 .main-form label {
   display: -webkit-box;
@@ -2924,10 +2927,60 @@ h2,
 .main-form label textarea:focus, .main-form label textarea:valid {
   background-color: rgba(var(--bg-a), 1);
 }
-.main-form label.topic, .main-form label.message {
+.main-form label select {
+  position: relative;
+  padding: 15px;
+  border: 1px solid rgba(var(--bg-c), 0.24);
+  background: rgba(var(--bg-c), 0.04);
+  border-radius: 8px;
+  font-family: var(--font-second);
+  font-size: 17px;
+  line-height: 118%;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  color: rgba(var(--cl-c), 1);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+.main-form label select:focus ~ .arrow {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.main-form label.topics {
+  position: relative;
+}
+.main-form label.topics .arrow {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  right: 16px;
+  bottom: 16px;
+  pointer-events: none;
+  -webkit-transform: scale(-1);
+  -ms-transform: scale(-1);
+  transform: scale(-1);
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  z-index: 10;
+}
+.main-form label.topics, .main-form label.message {
   grid-column: span 2;
 }
+@media (max-width: 767px) {
+  .main-form label.topics, .main-form label.message {
+    grid-column: 1/-1;
+  }
+}
 .main-form button {
+  height: 48px;
   margin-top: 16px;
   margin-left: auto;
   position: relative;
@@ -2982,11 +3035,15 @@ h2,
 .main-form button:active::after {
   opacity: 1;
 }
+.main-form button svg {
+  stroke: currentColor;
+}
 .main-form:invalid button {
+  padding: 13px 15px;
+  border: 2px solid rgba(17, 17, 17, 0.25);
   cursor: not-allowed;
   background: #fff;
   color: #111;
-  border: 2px solid rgba(17, 17, 17, 0.25);
   opacity: 0.5;
 }
 .main-form:invalid button svg {
@@ -3485,20 +3542,23 @@ footer .container {
   visibility: hidden;
   opacity: 0;
 }
-@media (max-width: 576px) {
+@media (max-width: 1024px) {
   .header-menu {
-    left: 6px;
-    width: calc(100% - var(--container-offset) * 2 + 20px);
-    height: calc(100vh - 80px);
+    width: 100vw;
+    height: 100svh;
+    left: 0;
+    padding: 32px clamp(24px, 3.125vw, 32px);
+    border-radius: 0;
   }
 }
 .header-menu__box {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .header-menu__box {
     grid-template-columns: 1fr;
+    grid-gap: 32px;
   }
 }
 .header-menu__inner {
@@ -3512,20 +3572,24 @@ footer .container {
   flex-direction: column;
   grid-gap: 48px;
 }
+@media (max-width: 1024px) {
+  .header-menu__inner {
+    padding: 0;
+    gap: 32px;
+  }
+  .header-menu__inner .explore {
+    gap: 24px;
+  }
+}
 .header-menu__navs {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px 0;
 }
-@media (max-width: 1024px) {
+@media (max-width: 767px) {
   .header-menu__navs {
     grid-template-columns: 100%;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
+    gap: 32px clamp(24px, 3.125vw, 32px);
   }
 }
 .header-menu__navs span {
@@ -5842,6 +5906,9 @@ footer .container {
 .subscribe-section__form button:active::after {
   opacity: 1;
 }
+.subscribe-section__form button svg {
+  stroke: currentColor;
+}
 @media (max-width: 767px) {
   .subscribe-section__form label {
     padding: 0;
@@ -6270,6 +6337,17 @@ footer .container {
   font-weight: 500;
   letter-spacing: -0.02em;
   color: rgba(var(--cl-d), 1);
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.article__aside-download:hover {
+  color: rgba(var(--cl-g), 1);
+  background-color: #f5f5f5;
+}
+.article__aside-download:active {
+  color: rgba(var(--cl-g), 1);
+  background-color: #f5f5f5;
+  opacity: 0.75;
 }
 .article__aside-download svg {
   stroke: currentColor;
@@ -7095,6 +7173,9 @@ footer .container {
 }
 .form-quiz__results button:active::after {
   opacity: 1;
+}
+.form-quiz__results button svg {
+  stroke: currentColor;
 }
 @media (max-width: 767px) {
   .form-quiz__results {
